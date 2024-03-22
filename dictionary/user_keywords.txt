@@ -1,0 +1,9 @@
+user_id
+id
+user
+account
+acct_id
+admin
+administrator
+guest
+client
