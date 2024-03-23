@@ -1,7 +1,7 @@
 from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True):
-  colored_text = format(f'[!] {text}', '', ['bold'])
+  colored_text = format(f'[!] {text}', 'red', ['bold'])
   if print_console:
     print(colored_text)
 

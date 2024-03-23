@@ -20,7 +20,7 @@ def formatter(text, color, attrs = ['']) -> str:
     'bold': '\033[1m',
     'italic': '\033[3m',
     'underline': '\033[4m',
-        'strikethrough': '\033[9m'
+    'strikethrough': '\033[9m'
   }
 
   if color.lower() not in colors:
