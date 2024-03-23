@@ -21,3 +21,7 @@ def banner(text: str, print_console: bool = True):
 def light_red(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
+
+def warning(text: str, print_console: bool = True):
+  colored_text = ''
+  return colored_text
