@@ -5,3 +5,7 @@ def red(text: str, print_console: bool = True):
 def yellow(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
+
+def green(text: str, print_console: bool = True):
+  colored_text = ''
+  return colored_text
