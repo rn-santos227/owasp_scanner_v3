@@ -9,3 +9,7 @@ def yellow(text: str, print_console: bool = True):
 def green(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
+
+def light_yellow(text: str, print_console: bool = True):
+  colored_text = ''
+  return colored_text
