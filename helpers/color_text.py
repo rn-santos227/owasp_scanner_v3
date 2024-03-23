@@ -1,7 +1,10 @@
 from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True):
-  colored_text = ''
+  colored_text = format(f'[!] {text}', '', ['bold'])
+  if print_console:
+    print(colored_text)
+
   return colored_text
 
 def light_red(text: str, print_console: bool = True):
