@@ -1,4 +1,4 @@
-def colored(text, color):
+def colored(text, color) -> str:
   colors = {
     'black': '\033[30m',
     'red': '\033[31m',
@@ -20,4 +20,7 @@ def colored(text, color):
   }
 
   if color.lower() not in colors:
-    print("Invalid color")
+    return "Invalid color"
+  
+  colored_text = colors[color.lower()] + text + colors['reset']
+  return colored_text
