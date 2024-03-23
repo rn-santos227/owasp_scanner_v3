@@ -17,3 +17,7 @@ def light_yellow(text: str, print_console: bool = True):
 def banner(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
+
+def light_red(text: str, print_console: bool = True):
+  colored_text = ''
+  return colored_text
