@@ -1,4 +1,4 @@
-def colored(text, color) -> str:
+def formatter(text, color) -> str:
   colors = {
     'black': '\033[30m',
     'red': '\033[31m',

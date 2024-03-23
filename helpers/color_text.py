@@ -1,4 +1,4 @@
-from handlers.colored import colored
+from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True):
   colored_text = ''
