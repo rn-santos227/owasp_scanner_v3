@@ -26,7 +26,10 @@ def banner(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
 
-
 def warning(text: str, print_console: bool = True):
   colored_text = ''
   return colored_text
+
+def warning(text: str, print_console: bool = True):
+  verbose_text = (f"[VERBOSE] {text}")
+  return verbose_text
