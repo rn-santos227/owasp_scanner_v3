@@ -1,4 +1,4 @@
-def formatter(text, color) -> str:
+def formatter(text, color, attrs = ['']) -> str:
   colors = {
     'black': '\033[30m',
     'red': '\033[31m',
@@ -16,11 +16,16 @@ def formatter(text, color) -> str:
     'light_magenta': '\033[95m',
     'light_cyan': '\033[96m',
     'light_white': '\033[97m',
-    'reset': '\033[0m'
+    'reset': '\033[0m',
+    'bold': '\033[1m',
+    'italic': '\033[3m',
+    'underline': '\033[4m',
+        'strikethrough': '\033[9m'
   }
 
   if color.lower() not in colors:
     return "Invalid color"
   
-  colored_text = colors[color.lower()] + text + colors['reset']
+  attribute_codes = ''.join([colors[attr.lower()] for attr in attrs if attr.lower() in colors])
+  colored_text = attribute_codes + colors[color.lower()] + text + colors['reset']
   return colored_text
