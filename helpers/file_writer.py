@@ -1,3 +1,4 @@
+import helpers.color_text as color
 import os
 
 def file_writer(file_name : str, text):
@@ -10,7 +11,9 @@ def file_writer(file_name : str, text):
     with open(file_path, 'a') as file:
       file.write(str(text) + '\n')
 
-    print("text has been saved.")
+    message = color.light_green("text has been saved.")
+    print(message)
 
   except Exception as err:
-    print(f"An error occurred: {err}")
+    message = color.warning(f"An error occurred: {err}")
+    print(message)
