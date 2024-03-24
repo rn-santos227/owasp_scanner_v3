@@ -10,5 +10,7 @@ def file_writer(file_name : str, text):
     with open(file_path, 'a') as file:
       file.write(str(text) + '\n')
 
+    print("text has been saved.")
+
   except Exception as err:
     print(f"An error occurred: {err}")
