@@ -52,6 +52,9 @@ def banner(text: str, print_console: bool = True):
 
   return colored_text
 
-def warning(text: str, print_console: bool = True):
+def verbose(text: str, print_console: bool = True):
   verbose_text = (f"[VERBOSE] {text}")
+  if print_console:
+    print(verbose_text)
+    
   return verbose_text
