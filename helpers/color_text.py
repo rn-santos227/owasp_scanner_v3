@@ -3,14 +3,14 @@ from classes.TextStyle import TextStyle
 from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True):
-  colored_text = formatter(f'[!] {text}', Color.RED, [TextStyle.BOLD])
+  colored_text = formatter(f'[!!] {text}', Color.RED, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
 
   return colored_text
 
 def light_red(text: str, print_console: bool = True):
-  colored_text = formatter(f'[!] {text}', Color.LIGHT_RED, [TextStyle.BOLD])
+  colored_text = formatter(f'[!!] {text}', Color.LIGHT_RED, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
 
@@ -53,7 +53,9 @@ def banner(text: str, print_console: bool = True):
   return colored_text
 
 def warning(text: str, print_console: bool = True):
-  colored_text = ""
+  colored_text = formatter(f'[WARNING] {text}', Color.LIGHT_BLUE, [TextStyle.BOLD])
+  if print_console:
+    print(colored_text)
   return colored_text
 
 def verbose(text: str, print_console: bool = True):
