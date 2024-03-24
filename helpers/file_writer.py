@@ -1,3 +1,5 @@
+import os
+
 def file_writer(file : str):
   try:
     pass
