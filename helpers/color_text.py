@@ -46,11 +46,10 @@ def light_green(text: str, print_console: bool = True):
 
 
 def banner(text: str, print_console: bool = True):
-  colored_text = ''
-  return colored_text
+  colored_text = formatter(f'\n{text}\n', Color.MAGENTA, [TextStyle.BOLD])
+  if print_console:
+    print(colored_text)
 
-def warning(text: str, print_console: bool = True):
-  colored_text = ''
   return colored_text
 
 def warning(text: str, print_console: bool = True):
