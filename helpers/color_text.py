@@ -24,7 +24,10 @@ def yellow(text: str, print_console: bool = True):
   return colored_text
 
 def light_yellow(text: str, print_console: bool = True):
-  colored_text = ''
+  colored_text = formatter(f'[!] {text}', Color.LIGHT_YELLOW, [TextStyle.BOLD])
+  if print_console:
+    print(colored_text)
+
   return colored_text
 
 def green(text: str, print_console: bool = True):
