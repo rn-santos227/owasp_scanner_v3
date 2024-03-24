@@ -38,8 +38,12 @@ def green(text: str, print_console: bool = True):
   return colored_text
 
 def light_green(text: str, print_console: bool = True):
-  colored_text = ''
+  colored_text = formatter(f'[PASS] {text}', Color.LIGHT_GREEN, [TextStyle.BOLD])
+  if print_console:
+    print(colored_text)
+
   return colored_text
+
 
 def banner(text: str, print_console: bool = True):
   colored_text = ''
