@@ -52,7 +52,7 @@ def banner(text: str, print_console: bool = True) -> str:
 
   return colored_text
 
-def warning(text: str, print_console: bool = True):
+def warning(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[WARNING] {text}', Color.LIGHT_BLUE, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
