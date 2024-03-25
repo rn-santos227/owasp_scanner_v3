@@ -37,7 +37,7 @@ def green(text: str, print_console: bool = True) -> str:
 
   return colored_text
 
-def light_green(text: str, print_console: bool = True):
+def light_green(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[NOTIF] {text}', Color.LIGHT_GREEN, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
