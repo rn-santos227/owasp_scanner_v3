@@ -9,7 +9,7 @@ def red(text: str, print_console: bool = True):
 
   return colored_text
 
-def light_red(text: str, print_console: bool = True):
+def light_red(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[!!] {text}', Color.LIGHT_RED, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
