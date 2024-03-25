@@ -1,6 +1,4 @@
-import utils.format_text as formatter
 import requests;
-
 
 def handle_response(request : requests, match_string, default_testing_length, verbose):
   response = request.text
