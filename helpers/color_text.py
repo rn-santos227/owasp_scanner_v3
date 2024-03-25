@@ -30,7 +30,7 @@ def light_yellow(text: str, print_console: bool = True) -> str:
 
   return colored_text
 
-def green(text: str, print_console: bool = True):
+def green(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[PASS] {text}', Color.GREEN, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
