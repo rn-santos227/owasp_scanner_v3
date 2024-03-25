@@ -58,7 +58,7 @@ def warning(text: str, print_console: bool = True) -> str:
     print(colored_text)
   return colored_text
 
-def verbose(text: str, print_console: bool = True):
+def verbose(text: str, print_console: bool = True) -> str:
   verbose_text = (f"[VERBOSE] {text}")
   if print_console:
     print(verbose_text)
