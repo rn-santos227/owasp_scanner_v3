@@ -2,7 +2,7 @@ from classes.Color import Color
 from classes.TextStyle import TextStyle
 from utils.format_text import formatter
 
-def red(text: str, print_console: bool = True):
+def red(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[!!] {text}', Color.RED, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
