@@ -7,18 +7,25 @@ def main(stdscr):
 
   curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_GREEN) 
 
-  options = ["Option 1", "Option 2", "Option 3", "Exit Program"]
+  options = [
+    "Add Endpoint Collections", 
+    "Perform Full Scanning for Endpoint", 
+    "Check Bruteforce Dictionaries", 
+    "Adjust API Interaction Rate",
+    "Exit Program"
+  ]
+    
   selected_option = 0
 
   while True:
     stdscr.clear()
-    
+    stdscr.addstr(0, 0, "2023 OWASP Scanner Program")
     for index, option in enumerate(options):
       if index == selected_option:
-        stdscr.addstr(index, 0, "> ", curses.color_pair(1) | curses.A_REVERSE) 
+        stdscr.addstr(index + 2, 0, "> ", curses.color_pair(1) | curses.A_REVERSE) 
         stdscr.addstr(option + "\n", curses.color_pair(1)) 
       else:
-        stdscr.addstr(index, 0, "  " + option + "\n") 
+        stdscr.addstr(index + 2, 0, "  " + option + "\n") 
     
     stdscr.refresh()
     key = stdscr.getch()
