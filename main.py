@@ -1,30 +1,25 @@
-import curses
+import os
 import sys
-import time
+
+import classes.Cursor as Cursor
+
+def print_options(options, selected_option):
+  os.system("cls" if os.name == "nt" else "clear")
+  for i, option in enumerate(options):
+    if i == selected_option:
+      print(f"\033[7m{i + 1}. {option}\033[0m")
+    
+    else:
+      print(f"{i + 1}. {option}")
 
 def main():
-  window = curses.initscr()
-  dims = window.getmaxyx()
-  if not curses.has_colors():
-    curses.endwin()
-    print("No Colors")
-    sys.exit(0)
-  else:
-    curses.start_color()
-  curses.noecho()
-  curses.cbreak()
-  curses.curs_set(0)
-  main_loop(window, dims)
+  options = ["Option 1", "Option 2", "Option 3", "Exit"]
+  selected_option = 0
 
-def main_loop(window, dims):
-  window.clear()
-  window.addstr("Exiting Program...")
-  window.refresh()
-  time.sleep(1)
-  curses.noecho()
-  curses.cbreak()
-  curses.curs_set(1)
-  curses.endwin()
+
+  print_options(options, selected_option)
+  while True:
+    char = sys.stdin.read(1)
 
 if __name__ == "__main__":
   main()

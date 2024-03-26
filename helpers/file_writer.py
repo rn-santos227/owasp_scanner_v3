@@ -1,5 +1,6 @@
-import helpers.color_text as color
 import os
+
+import helpers.color_text as color
 
 def file_writer(file_name : str, text):
   try:
