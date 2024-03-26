@@ -1,71 +1,38 @@
-import os
-import sys
-import msvcrt
+import curses
 
-import classes.Cursor as Cursor
+def main(stdscr):
+  curses.curs_set(0)
+  stdscr.clear()
+  stdscr.refresh()
 
-def print_options(options, selected_option):
-  os.system("cls" if os.name == "nt" else "clear")
-  for i, option in enumerate(options):
-    if i == selected_option:
-      print(f"\033[7m{i + 1}. {option}\033[0m")
-    
-    else:
-      print(f"{i + 1}. {option}")
+  curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_GREEN) 
 
-def test():
-  options = ["Option 1", "Option 2", "Option 3", "Exit"]
+  options = ["Option 1", "Option 2", "Option 3", "Exit Program"]
   selected_option = 0
 
-  print_options(options, selected_option)
   while True:
-    char = sys.stdin.read(1)
-
-    if char == "\x1b":
-      char2 = sys.stdin.read(1)
-      char3 = sys.stdin.read(1)
-      if char2 == '[':
-        if char3 == 'A':
-          selected_option = (selected_option - 1) % len(options)
-        elif char3 == 'B':
-          selected_option = (selected_option + 1) % len(options)
-        print_options(options, selected_option)
+    stdscr.clear()
     
-    elif char == "\r":
-      if selected_option == len(options) - 1:
+    for index, option in enumerate(options):
+      if index == selected_option:
+        stdscr.addstr(index, 0, "> ", curses.color_pair(1) | curses.A_REVERSE) 
+        stdscr.addstr(option + "\n", curses.color_pair(1)) 
+      else:
+        stdscr.addstr(index, 0, "  " + option + "\n") 
+    
+    stdscr.refresh()
+    key = stdscr.getch()
+
+    if key == curses.KEY_UP:
+      selected_option = (selected_option - 1) % len(options)
+    elif key == curses.KEY_DOWN:
+      selected_option = (selected_option + 1) % len(options)
+    elif key == curses.KEY_ENTER or key in [10, 13]:
+      if selected_option == len(options) - 1: 
         break
-
-def move_cursor(x, y):
-  sys.stdout.write("\033[%d;%dH" % (y, x))
-  sys.stdout.flush()
-
-def getch():
-  return msvcrt.getch().decode("utf-8")
-
-def handle_arrow_key(key):
-  if key == 'H':
-    move_cursor(10, 5)
-    print("up")
-
-  elif key == 'P':
-    move_cursor(10, 5)
-    print("down")
-
-  elif key == 'M':
-    move_cursor(10, 5)
-    print("right")
-
-  elif key == 'K':
-    move_cursor(10, 5)
-    print("left")
-
-def main():
-  while True:
-    key = getch()
-    if key == "\x03":
-      print("bye")
-      break
-    handle_arrow_key(key)
+      else:
+        print(f"You selected: {options[selected_option]}")
+        stdscr.getch()
 
 if __name__ == "__main__":
-  main()
+  curses.wrapper(main)
