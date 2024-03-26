@@ -32,4 +32,6 @@ def main(stdscr):
         else:
           print(f"You selected: {options[selected_option]}")
           stdscr.getch()
-          
+
+if __name__ == "__main__":
+  curses.wrapper(main)
