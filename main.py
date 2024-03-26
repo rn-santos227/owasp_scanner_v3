@@ -8,11 +8,14 @@ def main(stdscr):
   curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_GREEN) 
 
   options = [
-    "Add Endpoint Collections", 
-    "Perform Full Scanning for Endpoint", 
+    "Add API Collections", 
+    "Perform Full Scan", 
+    "Perform Individual Scan"
+    "Perform Quick Scan"
     "Check Bruteforce Dictionaries", 
-    "Adjust API Interaction Rate",
-    "Exit Program"
+    "Check Sensitive Data Bank", 
+    "Adjust Endpoint Call Rate",
+    "Exit OWASP Scanner"
   ]
     
   selected_option = 0
