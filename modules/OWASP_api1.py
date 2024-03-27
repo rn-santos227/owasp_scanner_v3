@@ -1,3 +1,5 @@
 #API1:2023 - Broken Object Level Authorization
 def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  pass
+  vulnerabilities = []
+  logs = []
+  return vulnerabilities, logs
