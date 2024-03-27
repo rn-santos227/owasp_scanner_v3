@@ -1,5 +1,10 @@
 import curses
 
+import helpers.color_text as colors
+
+from utils.print_banner import print_banner
+
+
 def main(stdscr):
   curses.curs_set(0)
   stdscr.clear()
@@ -10,8 +15,8 @@ def main(stdscr):
   options = [
     "Add API Collections", 
     "Perform Full Scan", 
-    "Perform Individual Scan"
-    "Perform Quick Scan"
+    "Perform Individual Scan",
+    "Perform Quick Scan",
     "Check Bruteforce Dictionaries", 
     "Check Sensitive Data Bank", 
     "Adjust Endpoint Call Rate",
@@ -22,13 +27,13 @@ def main(stdscr):
 
   while True:
     stdscr.clear()
-    stdscr.addstr(0, 0, "2023 OWASP Scanner Program")
+    stdscr.addstr(1, 3, colors.banner(print_banner()))
     for index, option in enumerate(options):
       if index == selected_option:
-        stdscr.addstr(index + 2, 0, "> ", curses.color_pair(1) | curses.A_REVERSE) 
+        stdscr.addstr(index + 9, 3, "> ", curses.color_pair(1) | curses.A_REVERSE) 
         stdscr.addstr(option + "\n", curses.color_pair(1)) 
       else:
-        stdscr.addstr(index + 2, 0, "  " + option + "\n") 
+        stdscr.addstr(index + 9, 3, "  " + option + "\n") 
     
     stdscr.refresh()
     key = stdscr.getch()
