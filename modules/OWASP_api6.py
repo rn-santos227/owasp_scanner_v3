@@ -8,6 +8,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   if len(vulnerabilities) == 0:
-    color.green(f"API6:2023 - Unrestricted Access to Sensitive Business Flows")
+    endpoint_clean = color.green(f"API6:2023 - Unrestricted Access to Sensitive Business Flows")
+    logs.append(endpoint_clean)
 
   return vulnerabilities, logs
