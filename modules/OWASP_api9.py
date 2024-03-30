@@ -8,6 +8,7 @@ def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   if len(vulnerabilities) == 0:
-    color.green(f"API9:2023 - Improper Inventory Management")
+    endpoint_clean = color.green(f"API9:2023 - Improper Inventory Management")
+    logs.append(endpoint_clean)
 
   return vulnerabilities, logs
