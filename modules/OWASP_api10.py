@@ -8,6 +8,7 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
   logs = []
 
   if len(vulnerabilities) == 0:
-    color.green(f"API10:2023 - Unsafe Consumption of APIs")
+    endpoint_clean = color.green(f"API10:2023 - Unsafe Consumption of APIs")
+    logs.append(endpoint_clean)
 
   return vulnerabilities, logs
