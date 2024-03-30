@@ -8,6 +8,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   if len(vulnerabilities) == 0:
-    color.green(f"API2:2023 - Broken Authentication")
+    endpoint_clean = color.green(f"API2:2023 - Broken Authentication")
+    logs.append(endpoint_clean)
 
   return vulnerabilities, logs
