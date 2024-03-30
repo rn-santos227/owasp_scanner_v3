@@ -8,6 +8,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   if len(vulnerabilities) == 0:
-    color.green(f"API5:2023 - Broken Function Level Authorization")
+    endpoint_clean = color.green(f"API5:2023 - Broken Function Level Authorization")
+    logs.append(endpoint_clean)
 
   return vulnerabilities, logs
