@@ -8,6 +8,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
   
   if len(vulnerabilities) == 0:
-    color.green(f"API8:2023 - Security Misconfiguration")  
+    endpoint_clean = color.green(f"API8:2023 - Security Misconfiguration")
+    logs.append(endpoint_clean)
   
   return vulnerabilities, logs

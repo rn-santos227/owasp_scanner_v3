@@ -8,7 +8,7 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   if len(vulnerabilities) == 0:
-    endpoint_clean = color.green(f"API7:2023 - Server Side Request Forgery (SSRF)")  
+    endpoint_clean = color.green(f"API7:2023 - Server Side Request Forgery (SSRF)")
     logs.append(endpoint_clean)
 
   return vulnerabilities, logs
