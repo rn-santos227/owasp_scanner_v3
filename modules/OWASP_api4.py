@@ -6,4 +6,8 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.banner("------------------------ API3:2023 - Broken Object Property Level Authorization ------------------------") 
   vulnerabilities = []
   logs = []
+  
+  if len(vulnerabilities) == 0:
+    color.green(f"API4:2023 - Unrestricted Resource Consumption")
+
   return vulnerabilities, logs
