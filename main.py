@@ -8,11 +8,14 @@ questions = [
   inquirer.List("choice",
     message="Choose your Activity",
     choices=[
-      "Add an Endpoint", 
+      "Add New Endpoint", 
       "Manage Endpoints Collection", 
       "Perform Full Scan"
       "Perform Quick Scan", 
-      "Perform Specific Scan", 
+      "Perform Specific Scan",
+      "Check Bruteforce Dictionary",
+      "Check Sensitive Data Bank",
+      "Adjust Program Rate Call"
       "Exit Program"
     ],
   ),
