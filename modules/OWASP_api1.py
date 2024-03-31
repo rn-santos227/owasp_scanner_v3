@@ -1,12 +1,15 @@
 import requests
 
 import helpers.color_text as color
+from utils.validate_url import validate_url
 
 #API1:2023 - Broken Object Level Authorization
 def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   color.banner("------------------------ API1:2023 - Broken Object Level Authorization ------------------------")
   vulnerabilities = []
   logs = []
+
+  parsed_url = validate_url(endpoint)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"API1:2023 - Broken Object Level Authorization")
