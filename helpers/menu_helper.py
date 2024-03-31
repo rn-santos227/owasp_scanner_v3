@@ -12,6 +12,7 @@ menu = [
       "Check Bruteforce Dictionary",
       "Check Sensitive Data Bank",
       "Adjust Program Rate Call",
+      "Open Instruction Manual",
       "Exit Program"
     ],
   ),
