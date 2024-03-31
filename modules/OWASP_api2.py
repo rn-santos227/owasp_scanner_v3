@@ -1,5 +1,6 @@
-import helpers.color_text as color
 import requests
+
+import helpers.color_text as color
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
