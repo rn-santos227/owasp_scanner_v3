@@ -20,7 +20,7 @@ questions = [
 
 def main():
   color.banner(print_banner())
-  answers = inquirer.prompt(questions)
+  user_respond = inquirer.prompt(questions)
 
 if __name__ == "__main__":
   main()
