@@ -11,7 +11,7 @@ menu = [
       "Perform Specific Scan",
       "Check Bruteforce Dictionary",
       "Check Sensitive Data Bank",
-      "Adjust Program Rate Call"
+      "Adjust Program Rate Call",
       "Exit Program"
     ],
   ),
