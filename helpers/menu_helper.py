@@ -6,7 +6,7 @@ menu = [
     choices = [
       "Add New Endpoint", 
       "Manage Endpoints Collection", 
-      "Perform Full Scan"
+      "Perform Full Scan",
       "Perform Quick Scan", 
       "Perform Specific Scan",
       "Check Bruteforce Dictionary",
