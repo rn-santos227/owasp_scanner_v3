@@ -7,7 +7,8 @@ from utils.print_banner import print_banner
 
 def main():
   color.banner(print_banner())
-  user_respond = inquirer.prompt(menu)
+  while True:
+    user_respond = inquirer.prompt(menu)
 
 if __name__ == "__main__":
   main()

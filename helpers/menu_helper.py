@@ -17,3 +17,6 @@ menu = [
     ],
   ),
 ]
+
+def select_menu(respond):
+  pass
