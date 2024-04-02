@@ -18,5 +18,5 @@ menu = [
   ),
 ]
 
-def select_menu(respond):
+def handle_choice(respond):
   pass
