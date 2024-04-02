@@ -10,6 +10,7 @@ def main():
   color.banner(print_banner())
   while True:
     user_respond = inquirer.prompt(menu)
+    select_menu(user_respond)
 
 if __name__ == "__main__":
   main()
