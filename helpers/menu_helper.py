@@ -22,7 +22,7 @@ menu = [
 
 def handle_choice(respond):
   choice = respond["choice"]
-  if choice == 1:
+  if choice == "Add New Endpoint":
     print("You selected: Add New Endpoint")
 
   elif choice == "Exit Program":
