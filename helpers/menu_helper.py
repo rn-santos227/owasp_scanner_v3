@@ -19,4 +19,4 @@ menu = [
 ]
 
 def handle_choice(respond):
-  pass
+  choice = answers['choice']
