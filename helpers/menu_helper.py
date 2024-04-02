@@ -1,4 +1,5 @@
 import inquirer
+import sys
 
 menu = [
   inquirer.List("choice",
@@ -19,4 +20,10 @@ menu = [
 ]
 
 def handle_choice(respond):
-  choice = answers['choice']
+  choice = respond['choice']
+  if choice == 1:
+    print("You selected: Add New Endpoint")
+
+  elif choice == 10:
+    print("Exiting Program...")
+    sys.exit()
