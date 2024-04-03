@@ -1,6 +1,8 @@
 import inquirer
 import sys
 
+from enums.option import Option
+
 menu = [
   inquirer.List("choice",
     message = "Choose your Activity",
