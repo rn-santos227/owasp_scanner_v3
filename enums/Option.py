@@ -8,4 +8,5 @@ class Option(Enum):
   OPTION_5 = "Perform Specific Scan"
   OPTION_6 = "Check Bruteforce Dictionary"
   OPTION_7 = "Check Sensitive Data Bank"
+  OPTION_8 = "Adjust Program Rate Call"
   EXIT = "Exit Program"
