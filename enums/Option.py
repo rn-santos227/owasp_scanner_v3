@@ -6,4 +6,5 @@ class Option(Enum):
   OPTION_3 = "Perform Full Scan"
   OPTION_4 = "Perform Quick Scan"
   OPTION_5 = "Perform Specific Scan"
+  OPTION_6 = "Check Bruteforce Dictionary"
   EXIT = "Exit Program"
