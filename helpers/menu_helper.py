@@ -13,6 +13,7 @@ menu = [
       Option.OPTION_4.value,
       Option.OPTION_5.value,
       Option.OPTION_6.value,
+      Option.OPTION_7.value,
     ],
     carousel=True
   ),
