@@ -8,6 +8,7 @@ menu = [
     message = "Choose your Activity",
     choices=[
       Option.OPTION_1.value,
+      Option.OPTION_2.value,
     ],
     carousel=True
   ),
