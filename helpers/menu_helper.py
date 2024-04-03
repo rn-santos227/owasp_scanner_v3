@@ -7,7 +7,7 @@ menu = [
   inquirer.List("choice",
     message = "Choose your Activity",
     choices=[
-
+      Option.OPTION_1,
     ],
     carousel=True
   ),
