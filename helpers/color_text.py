@@ -1,5 +1,5 @@
 from enums.color import Color
-from classes.TextStyle import TextStyle
+from enums.text_style import TextStyle
 from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True) -> str:
