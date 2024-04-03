@@ -9,6 +9,7 @@ menu = [
     choices=[
       Option.OPTION_1.value,
       Option.OPTION_2.value,
+      Option.OPTION_3.value,
     ],
     carousel=True
   ),
