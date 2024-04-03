@@ -9,4 +9,5 @@ class Option(Enum):
   OPTION_6 = "Check Bruteforce Dictionary"
   OPTION_7 = "Check Sensitive Data Bank"
   OPTION_8 = "Adjust Program Rate Call"
+  OPTION_9 = "Open Instruction Manual"
   EXIT = "Exit Program"
