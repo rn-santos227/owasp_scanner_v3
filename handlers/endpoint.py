@@ -3,3 +3,6 @@ def create_endpoint():
 
 def read_endpoint():
   pass
+
+def update_endpoint():
+  pass
