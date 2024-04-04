@@ -30,7 +30,10 @@ def handle_choice(respond):
     print("You selected: Manage Endpoints Collection")
 
   elif choice == Option.OPTION_3.value:
-    print("You selected: Perform Full Scan") 
+    print("You selected: Perform Full Scan")
+
+  elif choice == Option.OPTION_4.value:
+    print("You selected: Perform Quick Scan") 
 
   elif choice == "Exit Program":
     print("Exiting Program...")
