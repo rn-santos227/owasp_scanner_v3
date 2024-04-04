@@ -44,6 +44,9 @@ def handle_choice(respond):
   elif choice == Option.OPTION_7.value:
     print("You selected: Check Sensitive Data Bank")
 
+  elif choice == Option.OPTION_8.value:
+    print("You selected: Adjust Program Rate Call")
+
   elif choice == "Exit Program":
     print("Exiting Program...")
     sys.exit()
