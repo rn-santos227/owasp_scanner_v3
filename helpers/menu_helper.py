@@ -25,19 +25,19 @@ menu = [
 def handle_choice(respond):
   choice = respond["choice"]
   if choice == Option.OPTION_1.value:
-    print(f"You selected: Add New Endpoint")
+    print(f"You selected: {Option.OPTION_1.value}")
 
   elif choice == Option.OPTION_2.value:
-    print(f"You selected: Manage Endpoints Collection")
+    print(f"You selected: {Option.OPTION_2.value}")
 
   elif choice == Option.OPTION_3.value:
-    print(f"You selected: Perform Full Scan")
+    print(f"You selected: {Option.OPTION_3.value}")
 
   elif choice == Option.OPTION_4.value:
-    print(f"You selected: Perform Quick Scan")
+    print(f"You selected: {Option.OPTION_4.value}")
 
   elif choice == Option.OPTION_5.value:
-    print(f"You selected: Perform Specific Scan")
+    print(f"You selected: {Option.OPTION_5.value}")
 
   elif choice == Option.OPTION_6.value:
     print(f"You selected: Check Bruteforce Dictionary")
