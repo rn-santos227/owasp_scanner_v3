@@ -51,6 +51,6 @@ def handle_choice(respond):
   elif choice == Option.OPTION_9.value:
     print("You selected: Open Instruction Manual")
 
-  elif choice == "Exit Program":
+  elif choice == Option.EXIT.value:
     print("Exiting Program...")
     sys.exit()
