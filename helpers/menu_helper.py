@@ -41,6 +41,9 @@ def handle_choice(respond):
   elif choice == Option.OPTION_6.value:
     print("You selected: Check Bruteforce Dictionary")
 
+  elif choice == Option.OPTION_7.value:
+    print("You selected: Check Sensitive Data Bank")
+
   elif choice == "Exit Program":
     print("Exiting Program...")
     sys.exit()
