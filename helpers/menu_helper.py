@@ -26,6 +26,9 @@ def handle_choice(respond):
   if choice == Option.OPTION_1.value:
     print("You selected: Add New Endpoint")
 
+  elif choice == Option.OPTION_2.value:
+    print("You selected: Manage Endpoints Collection")
+
   elif choice == "Exit Program":
     print("Exiting Program...")
     sys.exit()
