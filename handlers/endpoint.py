@@ -6,3 +6,6 @@ def read_endpoint():
 
 def update_endpoint():
   pass
+
+def delete_endpoint():
+  pass
