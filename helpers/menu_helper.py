@@ -33,7 +33,10 @@ def handle_choice(respond):
     print("You selected: Perform Full Scan")
 
   elif choice == Option.OPTION_4.value:
-    print("You selected: Perform Quick Scan") 
+    print("You selected: Perform Quick Scan")
+
+  elif choice == Option.OPTION_5.value:
+    print("You selected: Perform Specific Scan")
 
   elif choice == "Exit Program":
     print("Exiting Program...")
