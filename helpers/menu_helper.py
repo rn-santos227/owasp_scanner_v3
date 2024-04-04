@@ -29,6 +29,9 @@ def handle_choice(respond):
   elif choice == Option.OPTION_2.value:
     print("You selected: Manage Endpoints Collection")
 
+  elif choice == Option.OPTION_3.value:
+    print("You selected: Perform Full Scan") 
+
   elif choice == "Exit Program":
     print("Exiting Program...")
     sys.exit()
