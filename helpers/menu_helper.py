@@ -40,16 +40,16 @@ def handle_choice(respond):
     print(f"You selected: {Option.OPTION_5.value}")
 
   elif choice == Option.OPTION_6.value:
-    print(f"You selected: Check Bruteforce Dictionary")
+    print(f"You selected: {Option.OPTION_6.value}")
 
   elif choice == Option.OPTION_7.value:
-    print(f"You selected: Check Sensitive Data Bank")
+    print(f"You selected: {Option.OPTION_7.value}")
 
   elif choice == Option.OPTION_8.value:
-    print(f"You selected: Adjust Program Rate Call")
+    print(f"You selected: {Option.OPTION_8.value}")
 
   elif choice == Option.OPTION_9.value:
-    print(f"You selected: Open Instruction Manual")
+    print(f"You selected: {Option.OPTION_9.value}")
 
   elif choice == Option.EXIT.value:
     print("Exiting Program...")
