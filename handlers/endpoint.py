@@ -1,5 +1,4 @@
 import inquirer
-import sys
 
 from main import main
 from enums.option import Option
@@ -45,3 +44,6 @@ def handle_endpoint():
 
   elif choice == Option.ENDPOINT_4.value:
     delete_endpoint()
+
+  elif choice == Option.EXIT.value:
+    main()
