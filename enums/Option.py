@@ -13,4 +13,5 @@ class Option(Enum):
   ENDPOINT_1 = "Create Endpoint"
   ENDPOINT_2 = "Read Endpoint"
   ENDPOINT_3 = "Update Endpoint"
+  ENDPOINT_4 = "Delete Endpoint"
   EXIT = "Exit Program"
