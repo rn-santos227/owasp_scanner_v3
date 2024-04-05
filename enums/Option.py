@@ -10,4 +10,5 @@ class Option(Enum):
   OPTION_7 = "Check Sensitive Data Bank"
   OPTION_8 = "Adjust Program Settings"
   OPTION_9 = "Open Instruction Manual"
+  ENDPOINT_1 = "Create Endpoint"
   EXIT = "Exit Program"
