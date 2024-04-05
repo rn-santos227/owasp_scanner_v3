@@ -12,4 +12,5 @@ class Option(Enum):
   OPTION_9 = "Open Instruction Manual"
   ENDPOINT_1 = "Create Endpoint"
   ENDPOINT_2 = "Read Endpoint"
+  ENDPOINT_3 = "Update Endpoint"
   EXIT = "Exit Program"
