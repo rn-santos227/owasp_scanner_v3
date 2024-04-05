@@ -38,3 +38,6 @@ def handle_endpoint():
 
   elif choice == Option.ENDPOINT_2.value:
     read_endpoint()
+
+  elif choice == Option.ENDPOINT_3.value:
+    update_endpoint()
