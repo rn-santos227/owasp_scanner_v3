@@ -35,3 +35,6 @@ def handle_endpoint():
 
   if choice == Option.ENDPOINT_1.value:
     create_endpoint()
+
+  elif choice == Option.ENDPOINT_2.value:
+    read_endpoint()
