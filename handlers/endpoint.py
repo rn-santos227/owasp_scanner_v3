@@ -41,3 +41,6 @@ def handle_endpoint():
 
   elif choice == Option.ENDPOINT_3.value:
     update_endpoint()
+
+  elif choice == Option.ENDPOINT_4.value:
+    delete_endpoint()
