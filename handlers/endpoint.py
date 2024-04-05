@@ -30,4 +30,5 @@ def delete_endpoint():
   pass
 
 def handle_endpoint():
+  user_respond = inquirer.prompt(endpoint_menu)
   pass
