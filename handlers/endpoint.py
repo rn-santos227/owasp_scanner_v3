@@ -9,6 +9,7 @@ endpoint_menu = [
     choices=[
       Option.ENDPOINT_1.value,
       Option.ENDPOINT_2.value,
+      Option.ENDPOINT_3.value,
       Option.EXIT.value,
     ],
     carousel=True
