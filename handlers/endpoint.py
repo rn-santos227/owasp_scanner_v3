@@ -32,3 +32,6 @@ def delete_endpoint():
 def handle_endpoint():
   user_respond = inquirer.prompt(endpoint_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.ENDPOINT_1.value:
+    create_endpoint()
