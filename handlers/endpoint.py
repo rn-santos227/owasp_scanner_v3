@@ -9,3 +9,6 @@ def update_endpoint():
 
 def delete_endpoint():
   pass
+
+def handle_endpoint():
+  pass
