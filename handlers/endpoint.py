@@ -8,6 +8,7 @@ endpoint_menu = [
     message = "Choose your Endpoint Activity",
     choices=[
       Option.ENDPOINT_1.value,
+      Option.ENDPOINT_2.value,
       Option.EXIT.value,
     ],
     carousel=True
