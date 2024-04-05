@@ -31,4 +31,4 @@ def delete_endpoint():
 
 def handle_endpoint():
   user_respond = inquirer.prompt(endpoint_menu)
-  pass
+  choice = user_respond["choice"]
