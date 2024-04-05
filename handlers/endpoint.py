@@ -7,6 +7,7 @@ endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
     choices=[
+      Option.ENDPOINT_1.value,
       Option.EXIT.value,
     ],
     carousel=True
