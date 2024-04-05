@@ -2,4 +2,4 @@ import os
 import platform
 
 def clear_screen():
-  pass
+  operating_system = platform.system()
