@@ -3,6 +3,16 @@ import sys
 
 from enums.option import Option
 
+endpoint_menu = [
+  inquirer.List("choice",
+    message = "Choose your Endpoint Activity",
+    choices=[
+      Option.EXIT.value,
+    ],
+    carousel=True
+  ),
+]
+
 def create_endpoint():
   pass
 
