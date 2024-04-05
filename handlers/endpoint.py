@@ -1,6 +1,7 @@
 import inquirer
 import sys
 
+from main import main
 from enums.option import Option
 
 endpoint_menu = [
