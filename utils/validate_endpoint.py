@@ -10,3 +10,5 @@ def validate_endpoint(endpoint_input):
   if len(parts) < 2:
     print("[NOTICED] Invalid input. Please provide endpoint and method.")
     return None, None, None, None, None
+  
+  endpoint = parts[0]
