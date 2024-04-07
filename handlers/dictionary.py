@@ -6,3 +6,6 @@ def read_dictionary():
 
 def update_dictionary():
   pass
+
+def delete_dictionary():
+  pass
