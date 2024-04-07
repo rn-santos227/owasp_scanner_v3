@@ -1,6 +1,5 @@
 import inquirer
 
-from main import main
 from enums.option import Option
 
 from utils.clear_screen import clear_screen
@@ -49,4 +48,4 @@ def handle_endpoint():
     delete_endpoint()
 
   elif choice == Option.EXIT.value:
-    main()
+    clear_screen()

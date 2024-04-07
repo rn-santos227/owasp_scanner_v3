@@ -3,6 +3,8 @@ import sys
 
 from enums.option import Option
 
+from handlers.endpoint import handle_endpoint
+
 menu = [
   inquirer.List("choice",
     message = "Choose your Activity",
@@ -25,6 +27,7 @@ def handle_choice(respond):
   choice = respond["choice"]
   if choice == Option.OPTION_1.value:
     print(f"You selected: {Option.OPTION_1.value}")
+    handle_endpoint()
 
   elif choice == Option.OPTION_2.value:
     print(f"You selected: {Option.OPTION_2.value}")
