@@ -15,7 +15,6 @@ menu = [
       Option.OPTION_6.value,
       Option.OPTION_7.value,
       Option.OPTION_8.value,
-      Option.OPTION_9.value,
       Option.EXIT.value,
     ],
     carousel=True
@@ -47,9 +46,6 @@ def handle_choice(respond):
 
   elif choice == Option.OPTION_8.value:
     print(f"You selected: {Option.OPTION_8.value}")
-
-  elif choice == Option.OPTION_9.value:
-    print(f"You selected: {Option.OPTION_9.value}")
 
   elif choice == Option.EXIT.value:
     print("Exiting Program...")
