@@ -3,6 +3,8 @@ import inquirer
 from main import main
 from enums.option import Option
 
+from utils.clear_screen import clear_screen
+
 endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
@@ -30,6 +32,7 @@ def delete_endpoint():
   pass
 
 def handle_endpoint():
+  clear_screen()
   user_respond = inquirer.prompt(endpoint_menu)
   choice = user_respond["choice"]
 
