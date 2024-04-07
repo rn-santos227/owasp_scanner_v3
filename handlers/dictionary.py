@@ -9,3 +9,6 @@ def update_dictionary():
 
 def delete_dictionary():
   pass
+
+def handle_dictionary():
+  pass
