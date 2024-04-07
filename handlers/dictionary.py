@@ -3,3 +3,6 @@ def add_dictionary():
 
 def read_dictionary():
   pass
+
+def update_dictionary():
+  pass
