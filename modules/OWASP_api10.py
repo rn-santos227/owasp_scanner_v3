@@ -1,6 +1,8 @@
 import requests
 
 import helpers.color_text as color
+
+from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 #API10:2023 - Unsafe Consumption of APIs
