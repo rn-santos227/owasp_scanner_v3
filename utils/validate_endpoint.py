@@ -1,9 +1,8 @@
 import shlex
 
 def validate_endpoint(endpoint_input):
-  endpoint = method = token = None
+  data = endpoint = method = timeout = token = None
   headers = {}
-  timeout = None
 
   parts = shlex.split(endpoint_input)
 
@@ -12,3 +11,4 @@ def validate_endpoint(endpoint_input):
     return None, None, None, None, None
   
   endpoint = parts[0]
+  return endpoint, method, token, headers, timeout
