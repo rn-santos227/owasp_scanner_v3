@@ -1,8 +1,8 @@
 import configparser
 
-def parse_config(filename):
+def parse_config():
   config = configparser.ConfigParser()
-  config.read(filename)
+  config.read("settings.conf")
   settings = {}
 
   for section in config.sections():
