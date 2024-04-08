@@ -11,4 +11,8 @@ def validate_endpoint(endpoint_input):
     return None, None, None, None, None
   
   endpoint = parts[0]
+  for i in range(1, len(parts) - 1, 2):
+    if parts[i] == "--method":
+      method = parts[i + 1]
+  
   return endpoint, method, token, headers, timeout
