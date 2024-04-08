@@ -3,6 +3,7 @@ import shlex
 def validate_endpoint(endpoint_input):
   data = endpoint = method = timeout = token = None
   headers = {}
+  response = {}
 
   parts = shlex.split(endpoint_input)
 
