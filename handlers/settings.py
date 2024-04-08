@@ -8,4 +8,5 @@ def parse_config(filename):
   for section in config.sections():
     settings[section] = {}
     for option in config.options(section):
-      settings[section][option] = config.get(section, option)
+      settings[section][option] = config.get(section, option)    
+  return settings
