@@ -18,5 +18,8 @@ def validate_endpoint(endpoint_input):
 
     elif parts[i] == "--header":
       header_parts = parts[i + 1].split(':', 1)
+      
+      if len(header_parts) == 2:
+        header_parts = parts[i + 1].split(':', 1)
   
   return data, headers, method, response, timeout, token, url
