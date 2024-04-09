@@ -21,5 +21,10 @@ def validate_endpoint(endpoint_input):
       
       if len(header_parts) == 2:
         header_parts = parts[i + 1].split(':', 1)
+        
+        if len(header_parts) == 2:
+          headers[header_parts[0].strip()] = header_parts[1].strip()
+        else:
+          print("[NOTICE] Invalid header format. Please provide headers in the format 'Header-Name: Header-Value'.")
   
   return data, headers, method, response, timeout, token, url
