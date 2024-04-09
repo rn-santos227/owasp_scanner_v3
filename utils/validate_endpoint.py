@@ -1,7 +1,7 @@
 import shlex
 
 def validate_endpoint(endpoint_input):
-  data = method = timeout = token = url = None
+  data = method = timeout = url = None
   headers = {}
   response = {}
 
@@ -16,6 +16,9 @@ def validate_endpoint(endpoint_input):
     if parts[i] == "--method":
       method = parts[i + 1]
 
+    elif parts[i] == "--data":
+      data = parts[i + 1]
+
     elif parts[i] == "--header":
       header_parts = parts[i + 1].split(':', 1)
       
@@ -27,4 +30,4 @@ def validate_endpoint(endpoint_input):
         else:
           print("[NOTICE] Invalid header format. Please provide headers in the format 'Header-Name: Header-Value'.")
   
-  return data, headers, method, response, timeout, token, url
+  return data, headers, method, response, timeout, url
