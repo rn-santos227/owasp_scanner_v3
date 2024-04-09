@@ -13,3 +13,6 @@ def parse_config():
     for option in config.options(section):
       settings[section][option] = config.get(section, option)    
   return settings
+
+def update_config():
+  pass
