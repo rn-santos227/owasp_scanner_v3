@@ -29,5 +29,8 @@ def validate_endpoint(endpoint_input):
           headers[header_parts[0].strip()] = header_parts[1].strip()
         else:
           print("[NOTICE] Invalid header format. Please provide headers in the format 'Header-Name: Header-Value'.")
+
+    elif parts[i] == "--response":
+      response_parts = parts[i + 1].split(':', 1)
   
   return data, headers, method, response, timeout, url
