@@ -32,5 +32,13 @@ def validate_endpoint(endpoint_input):
 
     elif parts[i] == "--response":
       response_parts = parts[i + 1].split(':', 1)
+      
+      if len(header_parts) == 2:
+        response_parts = parts[i + 1].split(':', 1)
+
+        if len(header_parts) == 2:
+          response[response_parts[0].strip()] = response_parts[1].strip()
+        else:
+          print("[NOTICE] Invalid response format. Please provide response in the format 'Response-Name: Response-Value'.")
   
   return data, headers, method, response, timeout, url
