@@ -40,5 +40,12 @@ def validate_endpoint(endpoint_input):
           response[response_parts[0].strip()] = response_parts[1].strip()
         else:
           print("[NOTICE] Invalid response format. Please provide response in the format 'Response-Name: Response-Value'.")
-  
+
+    elif parts[i] == "--timeout":
+      try:
+        timeout = int(parts[i + 1])
+      except ValueError:
+        print("Invalid timeout value. Please provide a valid integer value.")
+        return None, None, None, None, None, None
+      
   return data, headers, method, response, timeout, url
