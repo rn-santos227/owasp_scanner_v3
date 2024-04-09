@@ -9,7 +9,7 @@ def validate_endpoint(endpoint_input):
 
   if len(parts) < 2:
     print("[NOTICE] Invalid input. Please provide endpoint and method.")
-    return None, None, None, None, None
+    return None, None, None, None, None, None
   
   url = parts[0]
   for i in range(1, len(parts) - 1, 2):
