@@ -7,7 +7,17 @@ from classes.Option import Option
 import helpers.color_text as color
 from utils.clear_screen import clear_screen
 
+settings_menu = [
+  inquirer.List("choice",
+    message = "Choose the Settings to Change",
+    choices=[
+      Option.EXIT.value,
+    ],
+    carousel=True
+  ),
+]
 settings = {}
+
 
 def parse_config():
   config = configparser.ConfigParser()
