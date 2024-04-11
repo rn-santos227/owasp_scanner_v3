@@ -30,7 +30,8 @@ def adjust_response_time_threshold():
   color.light_green(message)
 
 def adjust_rate_limit():
-  pass
+  message = f"Current Value: {settings["rate_limit"]}"
+  color.light_green(message)
 
 def change_proxy_urls():
   pass
