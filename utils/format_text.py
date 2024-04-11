@@ -1,4 +1,4 @@
-from enums.color import Color
+from classes.Color import Color
 from enums.text_style import TextStyle
 
 def formatter(text, color, attrs=None) -> str:
