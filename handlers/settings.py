@@ -34,7 +34,8 @@ def adjust_rate_limit():
   color.light_green(message)
 
 def change_proxy_urls():
-  pass
+  message = f"Current Value: {settings["proxies"]}"
+  color.light_green(message)
 
 def handle_config():
   pass
