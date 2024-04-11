@@ -21,5 +21,8 @@ def adjust_request_count():
 def adjust_response_size_threshold():
   pass
 
+def adjust_response_time_threshold():
+  pass
+
 def handle_config():
   pass
