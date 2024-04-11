@@ -16,4 +16,5 @@ class Option(Enum):
   CONFIG_1 = "Request Count"
   CONFIG_2 = "Size Threshold"
   CONFIG_3 = "Time Threshold"
+  CONFIG_4 = "Rate Limit"
   EXIT = "Exit Program"
