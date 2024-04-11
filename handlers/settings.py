@@ -15,5 +15,8 @@ def parse_config():
       settings[section][option] = config.get(section, option)    
   return settings
 
+def adjust_request_count():
+  pass
+
 def handle_config():
   pass
