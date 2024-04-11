@@ -14,4 +14,5 @@ class Option(Enum):
   ENDPOINT_3 = "Update Endpoint"
   ENDPOINT_4 = "Delete Endpoint"
   CONFIG_1 = "Request Count"
+  CONFIG_2 = "Size Threshold"
   EXIT = "Exit Program"
