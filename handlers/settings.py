@@ -1,6 +1,8 @@
 import configparser
 import os
 
+import helpers.color_text as color
+
 settings = {}
 
 def parse_config():
@@ -16,10 +18,11 @@ def parse_config():
   return settings
 
 def adjust_request_count():
+  message = f"Current Value: {settings["requests_count"]}"
+  color.light_green(message)
   pass
 
 def adjust_response_size_threshold():
-  print(f"[NOTICE] Current Value: {settings['requests_count']}")
   pass
 
 def adjust_response_time_threshold():

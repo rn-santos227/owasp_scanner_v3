@@ -1,5 +1,5 @@
 from classes.Color import Color
-from enums.text_style import TextStyle
+from classes.TextStyle import TextStyle
 from utils.format_text import formatter
 
 def red(text: str, print_console: bool = True) -> str:
@@ -38,7 +38,7 @@ def green(text: str, print_console: bool = True) -> str:
   return colored_text
 
 def light_green(text: str, print_console: bool = True) -> str:
-  colored_text = formatter(f'[NOTIF] {text}', Color.LIGHT_GREEN, [TextStyle.BOLD])
+  colored_text = formatter(f'[INFO] {text}', Color.LIGHT_GREEN, [TextStyle.BOLD])
   if print_console:
     print(colored_text)
 
