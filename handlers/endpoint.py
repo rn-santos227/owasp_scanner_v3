@@ -1,6 +1,6 @@
 import inquirer
 
-from enums.option import Option
+from classes.Option import Option
 
 from utils.clear_screen import clear_screen
 

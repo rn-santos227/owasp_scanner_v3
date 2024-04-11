@@ -1,7 +1,7 @@
 import inquirer
 import sys
 
-from enums.option import Option
+from classes.Option import Option
 
 from handlers.endpoint import handle_endpoint
 
