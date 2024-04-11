@@ -17,4 +17,5 @@ class Option(Enum):
   CONFIG_2 = "Size Threshold"
   CONFIG_3 = "Time Threshold"
   CONFIG_4 = "Rate Limit"
+  CONFIG_5 = "Change Proxies"
   EXIT = "Exit Program"
