@@ -39,6 +39,7 @@ def parse_config():
 def adjust_request_count():
   message = f"Current Value: {settings["requests_count"]}"
   color.light_green(message)
+  new_value = input("New Value: ")
 
 def adjust_response_size_threshold():
   message = f"Current Value: {settings["response_size_threshold"]}"
