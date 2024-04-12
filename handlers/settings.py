@@ -62,7 +62,7 @@ def handle_config():
   choice = user_respond["choice"]
 
   if choice == Option.CONFIG_1.value:
-    pass
+    adjust_request_count()
 
   elif choice == Option.CONFIG_2.value:
     pass
