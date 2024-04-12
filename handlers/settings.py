@@ -60,3 +60,6 @@ def handle_config():
   clear_screen()
   user_respond = inquirer.prompt(settings_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.CONFIG_1.value:
+    pass
