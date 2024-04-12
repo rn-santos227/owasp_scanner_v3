@@ -57,4 +57,4 @@ def change_proxy_urls():
   color.light_green(message)
 
 def handle_config():
-  pass
+  clear_screen()
