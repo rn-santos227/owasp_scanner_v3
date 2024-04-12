@@ -39,27 +39,27 @@ def parse_config():
 def adjust_request_count():
   message = f"Current Value: {settings["requests_count"]}"
   color.light_green(message)
-  new_value = input("New Value: ")
+  new_value = input("New Request Count Value: ")
 
 def adjust_response_size_threshold():
   message = f"Current Value: {settings["response_size_threshold"]}"
   color.light_green(message)
-  new_value = input("New Value: ")
+  new_value = input("New Size Threshold Value: ")
 
 def adjust_response_time_threshold():
   message = f"Current Value: {settings["response_time_threshold"]}"
   color.light_green(message)
-  new_value = input("New Value: ")
+  new_value = input("New Time Threshold Value: ")
 
 def adjust_rate_limit():
   message = f"Current Value: {settings["rate_limit"]}"
   color.light_green(message)
-  new_value = input("New Value: ")
+  new_value = input("New Rate Limit Value: ")
 
 def change_proxy_urls():
   message = f"Current Value: {settings["proxies"]}"
   color.light_green(message)
-  new_value = input("New Value: ")
+  new_value = input("New Proxies Value: ")
 
 def handle_config():
   clear_screen()
