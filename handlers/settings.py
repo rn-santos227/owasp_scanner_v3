@@ -11,6 +11,7 @@ settings_menu = [
   inquirer.List("choice",
     message = "Choose the Settings to Change",
     choices=[
+      Option.CONFIG_1.value,
       Option.EXIT.value,
     ],
     carousel=True
