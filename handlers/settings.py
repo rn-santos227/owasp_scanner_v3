@@ -13,6 +13,7 @@ settings_menu = [
     choices=[
       Option.CONFIG_1.value,
       Option.CONFIG_2.value,
+      Option.CONFIG_3.value,
       Option.EXIT.value,
     ],
     carousel=True
