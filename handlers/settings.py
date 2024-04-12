@@ -71,7 +71,7 @@ def handle_config():
     adjust_response_time_threshold()
 
   elif choice == Option.CONFIG_4.value:
-    pass
+    adjust_rate_limit()
 
   elif choice == Option.CONFIG_5.value:
     pass
