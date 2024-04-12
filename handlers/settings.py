@@ -12,6 +12,7 @@ settings_menu = [
     message = "Choose the Settings to Change",
     choices=[
       Option.CONFIG_1.value,
+      Option.CONFIG_2.value,
       Option.EXIT.value,
     ],
     carousel=True
