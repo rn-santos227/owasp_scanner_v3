@@ -54,6 +54,7 @@ def adjust_response_time_threshold():
 def adjust_rate_limit():
   message = f"Current Value: {settings["rate_limit"]}"
   color.light_green(message)
+  new_value = input("New Value: ")
 
 def change_proxy_urls():
   message = f"Current Value: {settings["proxies"]}"
