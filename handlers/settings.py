@@ -75,3 +75,6 @@ def handle_config():
 
   elif choice == Option.CONFIG_5.value:
     pass
+
+  elif choice == Option.EXIT.value:
+    clear_screen()
