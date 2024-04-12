@@ -58,3 +58,5 @@ def change_proxy_urls():
 
 def handle_config():
   clear_screen()
+  user_respond = inquirer.prompt(settings_menu)
+  choice = user_respond["choice"]
