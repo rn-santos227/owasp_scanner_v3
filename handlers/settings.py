@@ -66,3 +66,6 @@ def handle_config():
 
   elif choice == Option.CONFIG_2.value:
     pass
+
+  elif choice == Option.CONFIG_3.value:
+    pass
