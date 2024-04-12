@@ -65,7 +65,7 @@ def handle_config():
     adjust_request_count()
 
   elif choice == Option.CONFIG_2.value:
-    pass
+    adjust_response_size_threshold()
 
   elif choice == Option.CONFIG_3.value:
     pass
