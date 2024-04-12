@@ -68,7 +68,7 @@ def handle_config():
     adjust_response_size_threshold()
 
   elif choice == Option.CONFIG_3.value:
-    pass
+    adjust_response_time_threshold()
 
   elif choice == Option.CONFIG_4.value:
     pass
