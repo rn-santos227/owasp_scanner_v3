@@ -23,6 +23,8 @@ settings_menu = [
 ]
 settings = {}
 
+def config_writer(settings_name, new_value):
+  pass
 
 def parse_config():
   config = configparser.ConfigParser()
