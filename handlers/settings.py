@@ -23,8 +23,8 @@ settings_menu = [
 ]
 settings = {}
 
-def config_writer(settings_name, new_value):
-  pass
+def update_config(settings_name, new_value):
+  settings, config_path = parse_config()
 
 def parse_config():
   config = configparser.ConfigParser()
@@ -36,7 +36,7 @@ def parse_config():
     settings[section] = {}
     for option in config.options(section):
       settings[section][option] = config.get(section, option)    
-  return settings
+  return settings, config_path
 
 def adjust_request_count():
   message = f"Current Value: {settings["requests_count"]}"
