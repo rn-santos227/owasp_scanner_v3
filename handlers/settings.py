@@ -27,6 +27,8 @@ def update_config(settings_name, new_value):
   settings, config_path = parse_config()
   if settings_name in settings and "value" in settings[settings_name]:
     config = configparser.ConfigParser()
+    config.read(config_path)
+    config.set(settings_name, "value", new_value)
 
 def parse_config():
   config = configparser.ConfigParser()
