@@ -29,6 +29,9 @@ def update_config(settings_name, new_value):
     config = configparser.ConfigParser()
     config.read(config_path)
     config.set(settings_name, "value", new_value)
+    
+    with open(config_path, 'w') as config_file:
+      config.write(config_file)
 
 def parse_config():
   config = configparser.ConfigParser()
