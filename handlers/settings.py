@@ -71,6 +71,7 @@ def adjust_rate_limit():
   message = f"Current Value: {settings["rate_limit"]}"
   color.light_green(message)
   new_value = input("New Rate Limit Value: ")
+  update_config("rate_limit", new_value)
 
 def change_proxy_urls():
   message = f"Current Value: {settings["proxies"]}"
