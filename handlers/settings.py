@@ -53,6 +53,7 @@ def adjust_request_count():
   message = f"Current Value: {settings["requests_count"]}"
   color.light_green(message)
   new_value = input("New Request Count Value: ")
+  update_config("requests_count", new_value)
 
 def adjust_response_size_threshold():
   message = f"Current Value: {settings["response_size_threshold"]}"
