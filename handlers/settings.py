@@ -59,6 +59,7 @@ def adjust_response_size_threshold():
   message = f"Current Value: {settings["response_size_threshold"]}"
   color.light_green(message)
   new_value = input("New Size Threshold Value: ")
+  update_config("response_size_threshold", new_value)
 
 def adjust_response_time_threshold():
   message = f"Current Value: {settings["response_time_threshold"]}"
