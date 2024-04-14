@@ -32,6 +32,10 @@ def update_config(settings_name, new_value):
     
     with open(config_path, 'w') as config_file:
       config.write(config_file)
+    return True
+  
+  else:
+    return False
 
 def parse_config():
   config = configparser.ConfigParser()
