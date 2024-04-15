@@ -4,8 +4,9 @@ def validate_input(data_type = "str"):
     try:
       if data_type == "int":
         value = int(user_input)
-      
+      elif data_type == "float":
+        value = float(user_input)      
       return value
-    
+
     except ValueError:
       print(f"[NOTICE] Invalid input. Please enter a valid value of type {data_type}.")
