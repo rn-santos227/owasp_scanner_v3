@@ -11,6 +11,9 @@ def validate_input(data_type = "str"):
       elif data_type == "str":
         value = str(user_input) 
       
+      elif data_type == "bool":
+        value = bool(user_input)
+      
       return value
 
     except ValueError:
