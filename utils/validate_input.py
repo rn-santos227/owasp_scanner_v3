@@ -24,6 +24,10 @@ def validate_input(data_type = "str"):
         if not isinstance(value, dict):
           raise ValueError
 
+      else:
+        print("Invalid data type specified.")
+        continue
+      
       return value
 
     except ValueError:
