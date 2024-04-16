@@ -6,6 +6,7 @@ from classes.Option import Option
 
 import helpers.color_text as color
 from utils.clear_screen import clear_screen
+from utils.validate_input import validate_input
 
 settings_menu = [
   inquirer.List("choice",
