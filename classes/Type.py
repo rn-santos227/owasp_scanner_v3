@@ -1,4 +1,5 @@
 from enum import Enum
 
 class Type(Enum):
-  INT = "int"
+  INTEGER = "int"
+  FLOAT = "float"
