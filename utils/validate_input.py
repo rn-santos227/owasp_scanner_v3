@@ -1,6 +1,6 @@
 from classes.Type import Type 
 
-def validate_input(data_type = "str"):
+def validate_input(data_type: Type = Type.STRING):
   while True:
     user_input = input(f"Please enter a Value [{data_type}]: ")
     try:
