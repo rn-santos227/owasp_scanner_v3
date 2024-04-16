@@ -21,6 +21,8 @@ def validate_input(data_type = "str"):
         
       elif data_type == "dict":
         value = eval(user_input)
+        if not isinstance(value, dict):
+          raise ValueError
 
       return value
 
