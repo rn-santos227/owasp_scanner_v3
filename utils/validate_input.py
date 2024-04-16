@@ -10,7 +10,7 @@ def validate_input(data_type: Type = Type.STRING):
       elif data_type == Type.FLOAT:
         value = float(user_input)     
       
-      elif data_type == "str":
+      elif data_type == Type.STRING:
         value = str(user_input) 
       
       elif data_type == "bool":
