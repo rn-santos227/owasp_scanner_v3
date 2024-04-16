@@ -13,7 +13,12 @@ def validate_input(data_type = "str"):
       
       elif data_type == "bool":
         value = bool(user_input)
-      
+
+      elif data_type == "list":
+        value = eval(user_input)
+        if not isinstance(value, list):
+          raise ValueError
+
       return value
 
     except ValueError:
