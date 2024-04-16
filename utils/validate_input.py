@@ -1,3 +1,5 @@
+from classes.Type import Type 
+
 def validate_input(data_type = "str"):
   while True:
     user_input = input(f"Please enter a Value [{data_type}]: ")
@@ -27,7 +29,7 @@ def validate_input(data_type = "str"):
       else:
         print("Invalid data type specified.")
         continue
-      
+
       return value
 
     except ValueError:
