@@ -55,7 +55,7 @@ def parse_config():
 def adjust_request_count():
   message = f"Current Value: {settings["requests_count"]}"
   color.light_green(message)
-  new_value = input("New Request Count Value: ")
+  new_value = validate_input(Type.INTEGER)
   update_config("requests_count", new_value)
 
 def adjust_response_size_threshold():
