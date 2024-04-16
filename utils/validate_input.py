@@ -4,7 +4,7 @@ def validate_input(data_type: Type = Type.STRING):
   while True:
     user_input = input(f"Please enter a Value [{data_type}]: ")
     try:
-      if data_type == "int":
+      if data_type == Type.INTEGER:
         value = int(user_input)
       
       elif data_type == "float":
