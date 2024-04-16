@@ -6,3 +6,4 @@ class Type(Enum):
   STRING = "str"
   BOOLEAN = "bool"
   LIST = "list"
+  DICTIONARY = "dict"
