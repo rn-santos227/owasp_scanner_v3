@@ -5,3 +5,4 @@ class Type(Enum):
   FLOAT = "float"
   STRING = "str"
   BOOLEAN = "bool"
+  LIST = "list"
