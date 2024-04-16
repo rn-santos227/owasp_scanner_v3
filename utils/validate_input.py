@@ -7,7 +7,7 @@ def validate_input(data_type: Type = Type.STRING):
       if data_type == Type.INTEGER:
         value = int(user_input)
       
-      elif data_type == "float":
+      elif data_type == Type.FLOAT:
         value = float(user_input)     
       
       elif data_type == "str":
