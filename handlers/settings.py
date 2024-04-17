@@ -72,7 +72,7 @@ def adjust_response_time_threshold():
   update_config("response_time_threshold", new_value)
 
 def adjust_rate_limit():
-  message = f"Current Value: {settings["rate_limit"]}"
+  message = f"Current Value: {settings[Config.CONFIG_4]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
   update_config("rate_limit", new_value)
