@@ -4,6 +4,7 @@ import sys
 from classes.Option import Option
 
 from handlers.endpoint import handle_endpoint
+from handlers.settings import handle_config
 
 menu = [
   inquirer.List("choice",
@@ -46,6 +47,7 @@ def handle_choice(respond):
 
   elif choice == Option.OPTION_7.value:
     print(f"You selected: {Option.OPTION_7.value}")
+    handle_config()
 
   elif choice == Option.OPTION_8.value:
     print(f"You selected: {Option.OPTION_8.value}")
