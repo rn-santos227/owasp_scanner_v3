@@ -67,7 +67,7 @@ def adjust_response_size_threshold():
 def adjust_response_time_threshold():
   message = f"Current Value: {settings["response_time_threshold"]}"
   color.light_green(message)
-  new_value = input("New Time Threshold Value: ")
+  new_value = validate_input(Type.FLOAT)
   update_config("response_time_threshold", new_value)
 
 def adjust_rate_limit():
