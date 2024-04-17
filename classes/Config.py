@@ -1,4 +1,4 @@
 from enum import Enum
 
 class Config(Enum):
-  pass
+  CONFIG_1 = "requests_count"
