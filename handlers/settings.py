@@ -83,23 +83,24 @@ def change_proxy_urls(settings):
 def handle_config():
   clear_screen()
   settings = parse_config()
-  # user_respond = inquirer.prompt(settings_menu)
-  # choice = user_respond["choice"]
+  print(settings[Config.CONFIG_1])
+  user_respond = inquirer.prompt(settings_menu)
+  choice = user_respond["choice"]
 
-  # if choice == Option.CONFIG_1.value:
-  #   adjust_request_count(requests_count)
+  if choice == Option.CONFIG_1.value:
+    adjust_request_count(settings)
 
-  # elif choice == Option.CONFIG_2.value:
-  #   adjust_response_size_threshold()
+  elif choice == Option.CONFIG_2.value:
+    adjust_response_size_threshold()
 
-  # elif choice == Option.CONFIG_3.value:
-  #   adjust_response_time_threshold()
+  elif choice == Option.CONFIG_3.value:
+    adjust_response_time_threshold()
 
-  # elif choice == Option.CONFIG_4.value:
-  #   adjust_rate_limit()
+  elif choice == Option.CONFIG_4.value:
+    adjust_rate_limit()
 
-  # elif choice == Option.CONFIG_5.value:
-  #   change_proxy_urls()
+  elif choice == Option.CONFIG_5.value:
+    change_proxy_urls()
 
-  # elif choice == Option.EXIT.value:
-  #   clear_screen()
+  elif choice == Option.EXIT.value:
+    clear_screen()
