@@ -48,9 +48,7 @@ def parse_config():
   config.read(config_path)
 
   for section in config.sections():
-    settings[section] = {}
-    for option in config.options(section):
-      settings[section][option] = config.get(section, option)    
+    settings[section] =  config.get(section, "value")   
   return settings, config_path
 
 def adjust_request_count():
