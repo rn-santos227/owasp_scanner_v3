@@ -25,7 +25,6 @@ settings_menu = [
     carousel=True
   ),
 ]
-settings = {}
 
 def update_config(settings_name, new_value):
   settings, config_path = parse_config()
@@ -42,6 +41,7 @@ def update_config(settings_name, new_value):
     return False
 
 def parse_config():
+  settings = {}
   config = configparser.ConfigParser()
   root_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  
   config_path = os.path.join(root_folder, "settings.conf")  
