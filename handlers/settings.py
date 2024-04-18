@@ -83,7 +83,6 @@ def change_proxy_urls(settings):
 def handle_config():
   clear_screen()
   settings = parse_config()
-  print(settings[Config.CONFIG_1])
   user_respond = inquirer.prompt(settings_menu)
   choice = user_respond["choice"]
 
@@ -91,7 +90,7 @@ def handle_config():
     adjust_request_count(settings)
 
   elif choice == Option.CONFIG_2.value:
-    adjust_response_size_threshold()
+    adjust_response_size_threshold(settings)
 
   elif choice == Option.CONFIG_3.value:
     adjust_response_time_threshold()
