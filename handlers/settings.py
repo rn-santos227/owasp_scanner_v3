@@ -96,7 +96,7 @@ def handle_config():
     adjust_response_time_threshold(settings)
 
   elif choice == Option.CONFIG_4.value:
-    adjust_rate_limit()
+    adjust_rate_limit(settings)
 
   elif choice == Option.CONFIG_5.value:
     change_proxy_urls()
