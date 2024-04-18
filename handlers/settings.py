@@ -51,8 +51,8 @@ def parse_config():
     settings[section] = config.get(section, "value")
   return settings
 
-def adjust_request_count(requests_count):
-  message = f"Current Value: {requests_count}"
+def adjust_request_count(settings):
+  message = f"Current Value: {settings[Config.CONFIG_1]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
   update_config(Config.CONFIG_1, new_value)
