@@ -47,12 +47,10 @@ def parse_config():
   config_path = os.path.join(root_folder, "settings.conf")  
   config.read(config_path)
 
-  for section in config.sections():
-    settings[section] =  config.get(section, "value")   
   return settings
 
-def adjust_request_count(settings):
-  message = f"Current Value: {settings[Config.CONFIG_1]}"
+def adjust_request_count(requests_count):
+  message = f"Current Value: {requests_count}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
   update_config(Config.CONFIG_1, new_value)
@@ -82,24 +80,24 @@ def change_proxy_urls(settings):
 
 def handle_config():
   clear_screen()
-  settings = parse_config()
+  requests_count = parse_config()
   user_respond = inquirer.prompt(settings_menu)
   choice = user_respond["choice"]
 
   if choice == Option.CONFIG_1.value:
-    adjust_request_count(settings)
+    adjust_request_count(requests_count)
 
   elif choice == Option.CONFIG_2.value:
-    adjust_response_size_threshold(settings)
+    adjust_response_size_threshold()
 
   elif choice == Option.CONFIG_3.value:
-    adjust_response_time_threshold(settings)
+    adjust_response_time_threshold()
 
   elif choice == Option.CONFIG_4.value:
-    adjust_rate_limit(settings)
+    adjust_rate_limit()
 
   elif choice == Option.CONFIG_5.value:
-    change_proxy_urls(settings)
+    change_proxy_urls()
 
   elif choice == Option.EXIT.value:
     clear_screen()
