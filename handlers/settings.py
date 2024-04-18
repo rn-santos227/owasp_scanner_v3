@@ -87,7 +87,7 @@ def handle_config():
   choice = user_respond["choice"]
 
   if choice == Option.CONFIG_1.value:
-    adjust_request_count()
+    adjust_request_count(settings)
 
   elif choice == Option.CONFIG_2.value:
     adjust_response_size_threshold()
