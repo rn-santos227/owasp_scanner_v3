@@ -69,7 +69,7 @@ def adjust_response_time_threshold(settings):
   new_value = validate_input(Type.FLOAT)
   update_config(Config.CONFIG_3, new_value)
 
-def adjust_rate_limit():
+def adjust_rate_limit(settings):
   message = f"Current Value: {settings[Config.CONFIG_4]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
