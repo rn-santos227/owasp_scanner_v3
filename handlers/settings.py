@@ -63,7 +63,7 @@ def adjust_response_size_threshold():
   message = f"Current Value: {settings[Config.CONFIG_2]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
-  update_config("response_size_threshold", new_value)
+  update_config(Config.CONFIG_2, new_value)
 
 def adjust_response_time_threshold():
   message = f"Current Value: {settings[Config.CONFIG_3]}"
