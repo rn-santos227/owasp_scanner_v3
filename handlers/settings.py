@@ -49,7 +49,7 @@ def parse_config():
 
   for section in config.sections():
     settings[section] =  config.get(section, "value")   
-  return settings, config_path
+  return settings
 
 def adjust_request_count():
   message = f"Current Value: {settings[Config.CONFIG_1]}"
@@ -82,6 +82,7 @@ def change_proxy_urls():
 
 def handle_config():
   clear_screen()
+  settings = parse_config()
   user_respond = inquirer.prompt(settings_menu)
   choice = user_respond["choice"]
 
