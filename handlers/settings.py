@@ -90,7 +90,7 @@ def handle_config():
     adjust_request_count(settings)
 
   elif choice == Option.CONFIG_2.value:
-    adjust_response_size_threshold()
+    adjust_response_size_threshold(settings)
 
   elif choice == Option.CONFIG_3.value:
     adjust_response_time_threshold()
