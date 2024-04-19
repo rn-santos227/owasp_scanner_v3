@@ -16,7 +16,7 @@ def validate_input(data_type: Type = Type.STRING.value):
       elif data_type == Type.BOOLEAN.value:
         value = bool(user_input)
 
-      elif data_type == Type.LIST:
+      elif data_type == Type.LIST.value:
         value = eval(user_input)
         if not isinstance(value, list):
           raise ValueError
