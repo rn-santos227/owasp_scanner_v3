@@ -21,7 +21,7 @@ def validate_input(data_type: Type = Type.STRING.value):
         if not isinstance(value, list):
           raise ValueError
         
-      elif data_type == Type.DICTIONARY:
+      elif data_type == Type.DICTIONARY.value:
         value = eval(user_input)
         if not isinstance(value, dict):
           raise ValueError
