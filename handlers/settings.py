@@ -28,7 +28,8 @@ settings_menu = [
 ]
 
 def update_config(settings_name, new_value):
-  settings, config_path = parse_config()
+  settings = parse_config()
+  config_path = root.path()
   if settings_name in settings and "value" in settings[settings_name]:
     config = configparser.ConfigParser()
     config.read(config_path)
@@ -49,10 +50,10 @@ def parse_config():
 
   for section in config.sections():
     settings[section] = config.get(section, "value")
-  return settings, config_path
+  return settings
 
 def adjust_request_count(settings):
-  message = f"Current Value: {settings[Config.CONFIG_1.value]}"
+  message = f"Current Value: {settings[Config.CONFIG_1]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER.value)
   update_config(Config.CONFIG_1.value, new_value)
