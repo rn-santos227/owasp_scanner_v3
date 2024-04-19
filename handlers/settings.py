@@ -7,6 +7,7 @@ from classes.Option import Option
 from classes.Type import Type
 
 import helpers.color_text as color
+import helpers.root_path as root
 
 from utils.clear_screen import clear_screen
 from utils.validate_input import validate_input
@@ -43,8 +44,7 @@ def update_config(settings_name, new_value):
 def parse_config():
   settings = {}
   config = configparser.ConfigParser()
-  root_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  
-  config_path = os.path.join(root_folder, "settings.conf")  
+  config_path = root.path()
   config.read(config_path)
 
   for section in config.sections():
