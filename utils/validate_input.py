@@ -13,7 +13,7 @@ def validate_input(data_type: Type = Type.STRING.value):
       elif data_type == Type.STRING.value:
         value = str(user_input) 
       
-      elif data_type == Type.BOOLEAN:
+      elif data_type == Type.BOOLEAN.value:
         value = bool(user_input)
 
       elif data_type == Type.LIST:
