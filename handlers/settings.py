@@ -49,7 +49,7 @@ def parse_config():
 
   for section in config.sections():
     settings[section] = config.get(section, "value")
-  return settings
+  return settings, config_path
 
 def adjust_request_count(settings):
   message = f"Current Value: {settings[Config.CONFIG_1.value]}"
