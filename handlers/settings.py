@@ -52,7 +52,7 @@ def parse_config():
   return settings
 
 def adjust_request_count(settings):
-  message = f"Current Value: {settings[Config.CONFIG_1]}"
+  message = f"Current Value: {settings[Config.CONFIG_1.value]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER)
   update_config(Config.CONFIG_1, new_value)
