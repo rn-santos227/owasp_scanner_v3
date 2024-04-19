@@ -99,7 +99,7 @@ def handle_config():
     adjust_rate_limit(settings)
 
   elif choice == Option.CONFIG_5.value:
-    change_proxy_urls()
+    change_proxy_urls(settings)
 
   elif choice == Option.EXIT.value:
     clear_screen()
