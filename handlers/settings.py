@@ -74,7 +74,7 @@ def adjust_rate_limit(settings):
   message = f"Current Value: {settings[Config.CONFIG_4.value]}"
   color.light_green(message)
   new_value = validate_input(Type.INTEGER.value)
-  update_config(Config.CONFIG_4, new_value)
+  update_config(Config.CONFIG_4.value, new_value)
 
 def change_proxy_urls(settings):
   message = f"Current Value: {settings[Config.CONFIG_5]}"
