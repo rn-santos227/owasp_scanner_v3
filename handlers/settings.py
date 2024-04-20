@@ -1,6 +1,5 @@
 import configparser
 import inquirer
-import os
 
 from classes.Config import Config
 from classes.Option import Option
