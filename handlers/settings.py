@@ -31,7 +31,7 @@ def update_config(settings_name, new_value):
   config_path = root.path()
   config = configparser.ConfigParser()
   config.read(config_path)
-  config.set(settings_name, "value", new_value)
+  config.set(settings_name, "value", str(new_value))
   
   with open(config_path, 'w') as config_file:
     config.write(config_file)
