@@ -28,19 +28,13 @@ settings_menu = [
 ]
 
 def update_config(settings_name, new_value):
-  settings = parse_config()
   config_path = root.path()
-  if settings_name in settings and "value" in settings[settings_name]:
-    config = configparser.ConfigParser()
-    config.read(config_path)
-    config.set(settings_name, "value", new_value)
-    
-    with open(config_path, 'w') as config_file:
-      config.write(config_file)
-    return True
+  config = configparser.ConfigParser()
+  config.read(config_path)
+  config.set(settings_name, "value", new_value)
   
-  else:
-    return False
+  with open(config_path, 'w') as config_file:
+    config.write(config_file)
 
 def parse_config():
   settings = {}
