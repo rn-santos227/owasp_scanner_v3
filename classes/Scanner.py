@@ -7,3 +7,4 @@ class Scanner(Enum):
   OWASP_4 = "Unrestricted Resource Consumption"
   OWASP_5 = "Broken Function Level Authorization"
   OWASP_6 = "Unrestricted Access to Sensitive Business Flows"
+  OWASP_7 = "Server Side Request Forgery (SSRF)"
