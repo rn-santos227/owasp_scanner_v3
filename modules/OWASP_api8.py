@@ -2,12 +2,14 @@ import requests
 
 import helpers.color_text as color
 
+from classes.Scanner import Scanner
+
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 #API8:2023 - Security Misconfiguration
 def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner("------------------------ API8:2023 - Security Misconfiguration ------------------------") 
+  color.banner(f"------------------------ API8:2023 - {Scanner.OWASP_8.value} ------------------------") 
   vulnerabilities = []
   logs = []
 
