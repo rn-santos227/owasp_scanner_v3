@@ -6,3 +6,4 @@ class Scanner(Enum):
   OWASP_3 = "Broken Object Property Level Authorization"
   OWASP_4 = "Unrestricted Resource Consumption"
   OWASP_5 = "Broken Function Level Authorization"
+  OWASP_6 = "Unrestricted Access to Sensitive Business Flows"
