@@ -2,12 +2,14 @@ import requests
 
 import helpers.color_text as color
 
+from classes.Scanner import Scanner
+
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner("------------------------ API4:2023 - Unrestricted Resource Consumption ------------------------") 
+  color.banner(f"------------------------ API4:2023 - {Scanner.OWASP_2.value} ------------------------") 
   vulnerabilities = []
   logs = []
 
