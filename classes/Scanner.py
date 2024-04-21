@@ -9,3 +9,4 @@ class Scanner(Enum):
   OWASP_6 = "Unrestricted Access to Sensitive Business Flows"
   OWASP_7 = "Server Side Request Forgery (SSRF)"
   OWASP_8 = "Security Misconfiguration"
+  OWASP_9 = "Improper Inventory Management"
