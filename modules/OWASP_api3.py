@@ -9,7 +9,7 @@ from utils.validate_url import validate_url
 
 #API3:2023 - Broken Object Property Level Authorization
 def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ API3:2023 - {Scanner.OWASP_2.value} ------------------------") 
+  color.banner(f"------------------------ API3:2023 - {Scanner.OWASP_3.value} ------------------------") 
   vulnerabilities = []
   logs = []
 

@@ -9,7 +9,7 @@ from utils.validate_url import validate_url
 
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ API4:2023 - {Scanner.OWASP_2.value} ------------------------") 
+  color.banner(f"------------------------ API4:2023 - {Scanner.OWASP_4.value} ------------------------") 
   vulnerabilities = []
   logs = []
 
