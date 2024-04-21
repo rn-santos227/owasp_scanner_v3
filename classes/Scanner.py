@@ -10,3 +10,4 @@ class Scanner(Enum):
   OWASP_7 = "Server Side Request Forgery (SSRF)"
   OWASP_8 = "Security Misconfiguration"
   OWASP_9 = "Improper Inventory Management"
+  OWASP_10 = "Unsafe Consumption of APIs"
