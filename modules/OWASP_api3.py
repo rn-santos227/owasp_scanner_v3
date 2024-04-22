@@ -2,14 +2,14 @@ import requests
 
 import helpers.color_text as color
 
-from classes.Scanner import Scanner
+from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 #API3:2023 - Broken Object Property Level Authorization
 def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ API3:2023 - {Scanner.OWASP_3.value} ------------------------") 
+  color.banner(f"------------------------ API3:2023 - {OWASP.OWASP_3.value.scanner_name}  ------------------------") 
   vulnerabilities = []
   logs = []
 
