@@ -16,6 +16,4 @@ class OWASP(Enum):
   OWASP_7 = Scanner("API7:2023", "Server Side Request Forgery (SSRF)", "check_api_7")
   OWASP_8 = Scanner("API8:2023", "Security Misconfiguration", "check_api_8")
   OWASP_9 = Scanner("API9:2023", "Improper Inventory Management", "check_api_9")
-  # OWASP_8 = "Security Misconfiguration"
-  # OWASP_9 = "Improper Inventory Management"
-  # OWASP_10 = "Unsafe Consumption of APIs"
+  OWASP_10 = Scanner("API10:2023", "Unsafe Consumption of APIs", "check_api_10")
