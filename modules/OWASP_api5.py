@@ -2,14 +2,14 @@ import requests
 
 import helpers.color_text as color
 
-from classes.Scanner import Scanner
+from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ API5:2023 - {Scanner.OWASP_5.value} ------------------------") 
+  color.banner(f"------------------------ API5:2023 - {OWASP.OWASP_5.value.scanner_name} ------------------------") 
   vulnerabilities = []
   logs = []
 
