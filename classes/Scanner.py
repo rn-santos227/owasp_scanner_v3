@@ -1,6 +1,10 @@
 from enum import Enum
 
-class Scanner(Enum):
+class Scanner:
+  def __init__(self, scanner_id, name, function_name):
+    pass
+
+class ScannerEnum(Enum):
   OWASP_1 = "Broken Object Level Authorization"
   OWASP_2 = "Broken Authentication"
   OWASP_3 = "Broken Object Property Level Authorization"
