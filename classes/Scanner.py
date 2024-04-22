@@ -2,7 +2,7 @@ from enum import Enum
 
 class Scanner:
   def __init__(self, scanner_id, name, function_name):
-    pass
+    self.scanner_id = scanner_id
 
 class ScannerEnum(Enum):
   OWASP_1 = "Broken Object Level Authorization"
