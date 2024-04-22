@@ -9,7 +9,7 @@ class Scanner:
 class OWASP(Enum):
   OWASP_1 = Scanner("API1:2023", "Broken Object Level Authorization", "check_api_1")
   OWASP_2 = Scanner("API2:2023", "Broken Authentication", "check_api_2")
-  # OWASP_3 = "Broken Object Property Level Authorization"
+  OWASP_3 = Scanner("API3:2023", "Broken Object Property Level Authorization", "check_api_3")
   # OWASP_4 = "Unrestricted Resource Consumption"
   # OWASP_5 = "Broken Function Level Authorization"
   # OWASP_6 = "Unrestricted Access to Sensitive Business Flows"
