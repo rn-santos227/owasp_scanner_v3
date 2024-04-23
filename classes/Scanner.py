@@ -4,6 +4,7 @@ from modules.OWASP_api1 import check_api_1
 from modules.OWASP_api2 import check_api_2
 from modules.OWASP_api3 import check_api_3
 from modules.OWASP_api4 import check_api_4
+from modules.OWASP_api5 import check_api_5
 
 class Scanner:
   def __init__(self, scanner_id, function, scanner_name):
