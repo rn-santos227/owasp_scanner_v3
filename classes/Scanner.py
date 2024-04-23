@@ -1,5 +1,7 @@
 from enum import Enum
 
+from modules.OWASP_api1 import check_api_1
+
 class Scanner:
   def __init__(self, scanner_id, function, scanner_name):
     self.scanner_id = scanner_id
@@ -7,7 +9,7 @@ class Scanner:
     self.scanner_name = scanner_name
 
 class OWASP(Enum):
-  OWASP_1 = Scanner("API1:2023", "Broken Object Level Authorization")
+  OWASP_1 = Scanner(scanner_id="API1:2023", function=check_api_1, scanner_name="Broken Object Level Authorization")
   OWASP_2 = Scanner("API2:2023", "Broken Authentication")
   OWASP_3 = Scanner("API3:2023", "Broken Object Property Level Authorization")
   OWASP_4 = Scanner("API4:2023", "Unrestricted Resource Consumption")
