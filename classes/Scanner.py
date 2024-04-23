@@ -21,7 +21,7 @@ class OWASP(Enum):
   OWASP_1 = Scanner(scanner_id="API1:2023", function=check_api_1, scanner_name="Broken Object Level Authorization")
   OWASP_2 = Scanner(scanner_id="API2:2023", function=check_api_2, scanner_name="Broken Authentication")
   OWASP_3 = Scanner(scanner_id="API3:2023", function=check_api_3, scanner_name="Broken Object Property Level Authorization")
-  OWASP_4 = Scanner("API4:2023", "Unrestricted Resource Consumption")
+  OWASP_4 = Scanner(scanner_id="API4:2023", function=check_api_4, scanner_name="Unrestricted Resource Consumption")
   OWASP_5 = Scanner("API5:2023", "Broken Function Level Authorization")
   OWASP_6 = Scanner("API6:2023", "Unrestricted Access to Sensitive Business Flows")
   OWASP_7 = Scanner("API7:2023", "Server Side Request Forgery (SSRF)")
