@@ -9,6 +9,7 @@ from modules.OWASP_api5 import check_api_6
 from modules.OWASP_api5 import check_api_7
 from modules.OWASP_api8 import check_api_8
 from modules.OWASP_api9 import check_api_9
+from modules.OWASP_api10 import check_api_10
 
 class Scanner:
   def __init__(self, scanner_id, function, scanner_name):
