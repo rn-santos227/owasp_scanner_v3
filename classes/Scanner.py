@@ -25,6 +25,6 @@ class OWASP(Enum):
   OWASP_5 = Scanner(scanner_id="API5:2023", function=check_api_5, scanner_name="Broken Function Level Authorization")
   OWASP_6 = Scanner(scanner_id="API6:2023", function=check_api_6, scanner_name="Unrestricted Access to Sensitive Business Flows")
   OWASP_7 = Scanner(scanner_id="API7:2023", function=check_api_7, scanner_name="Server Side Request Forgery (SSRF)")
-  OWASP_8 = Scanner("API8:2023", "Security Misconfiguration")
+  OWASP_8 = Scanner(scanner_id="API8:2023", function=check_api_8, scanner_name="Security Misconfiguration")
   OWASP_9 = Scanner("API9:2023", "Improper Inventory Management")
   OWASP_10 = Scanner("API10:2023", "Unsafe Consumption of APIs")
