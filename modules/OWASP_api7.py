@@ -9,7 +9,7 @@ from utils.validate_url import validate_url
 
 #API7:2023 - Server Side Request Forgery
 def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_7.value.scanner_id} - {OWASP.OWASP_7.value.scanner_name} ------------------------")
+  color.banner(f"------------------------ {OWASP.OWASP_7.value.id} - {OWASP.OWASP_7.value.name} ------------------------")
   vulnerabilities = []
   logs = []
 
