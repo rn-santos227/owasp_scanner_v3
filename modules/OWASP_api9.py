@@ -9,7 +9,7 @@ from utils.validate_url import validate_url
 
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ API9:2023 - {OWASP.OWASP_8.value.scanner_name} ------------------------")
+  color.banner(f"------------------------ {OWASP.OWASP_9.value.scanner_id} - {OWASP.OWASP_9.value.scanner_name} ------------------------")
   vulnerabilities = []
   logs = []
 
