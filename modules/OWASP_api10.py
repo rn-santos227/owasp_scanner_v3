@@ -17,7 +17,7 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
   parsed_url = validate_url(endpoint)
 
   if len(vulnerabilities) == 0:
-    endpoint_clean = color.green(f"API10:2023 - Unsafe Consumption of APIs")
+    endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
 
   return vulnerabilities, logs
