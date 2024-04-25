@@ -9,7 +9,8 @@ from utils.validate_url import validate_url
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_5.value.id} - {OWASP.OWASP_5.value.name} ------------------------") 
+  flag_title = f"{OWASP.OWASP_5.value.id} - {OWASP.OWASP_5.value.name}"
+  color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
   logs = []
 
