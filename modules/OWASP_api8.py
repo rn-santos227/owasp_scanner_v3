@@ -9,7 +9,8 @@ from utils.validate_url import validate_url
 
 #API8:2023 - Security Misconfiguration
 def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_8.value.id} - {OWASP.OWASP_8.value.name} ------------------------") 
+  flag_title = f"{OWASP.OWASP_8.value.id} - {OWASP.OWASP_8.value.name}"
+  color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
   logs = []
 
