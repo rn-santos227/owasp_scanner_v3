@@ -9,7 +9,8 @@ from utils.validate_url import validate_url
 
 #API1:2023 - Broken Object Level Authorization
 def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_1.value.id} - {OWASP.OWASP_1.value.name} ------------------------")
+  flag_title = f"{OWASP.OWASP_1.value.id} - {OWASP.OWASP_1.value.name}"
+  color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
   logs = []
 
