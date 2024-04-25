@@ -17,7 +17,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
   parsed_url = validate_url(endpoint)
   
   if len(vulnerabilities) == 0:
-    endpoint_clean = color.green(f"API8:2023 - Security Misconfiguration")
+    endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
   
   return vulnerabilities, logs
