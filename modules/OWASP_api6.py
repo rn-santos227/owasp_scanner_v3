@@ -9,7 +9,8 @@ from utils.validate_url import validate_url
 
 #API6:2023 - Unrestricted Access to Sensitive Business Flows
 def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_6.value.id} - {OWASP.OWASP_6.value.name} ------------------------") 
+  flag_title = f"{OWASP.OWASP_6.value.id} - {OWASP.OWASP_6.value.name}"
+  color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
   logs = []
 
