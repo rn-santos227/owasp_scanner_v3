@@ -9,7 +9,8 @@ from utils.validate_url import validate_url
 
 #API10:2023 - Unsafe Consumption of APIs
 def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
-  color.banner(f"------------------------ {OWASP.OWASP_10.value.id} - {OWASP.OWASP_10.value.name} ------------------------")
+  flag_title = f"{OWASP.OWASP_10.value.id} - {OWASP.OWASP_10.value.name}"
+  color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
   logs = []
 
