@@ -5,3 +5,4 @@ from utils.validate_method import validate_method
 
 def parse_args():
   parser = argparse.ArgumentParser(description='Check API for broken object-level authorization.')
+  parser.add_argument('endpoint', type=str, help='Endpoint URL')
