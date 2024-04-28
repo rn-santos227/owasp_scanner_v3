@@ -13,3 +13,5 @@ def parse_args():
 
   args = parser.parse_args()
   headers_dict = parse_headers(args.header)
+
+  return args, headers_dict
