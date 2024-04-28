@@ -10,3 +10,6 @@ def parse_args():
   parser.add_argument('--header', type=str, action='append', help='Endpoint Header Configuration (optional)')
   parser.add_argument('--method', type=validate_method, required=True, help='Endpoint Method')
   parser.add_argument('--timeout', type=int, help='Endpoint Timeout')
+
+  args = parser.parse_args()
+  headers_dict = parse_headers(args.header)
