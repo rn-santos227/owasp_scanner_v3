@@ -9,6 +9,7 @@ class Option(Enum):
   OPTION_6 = "Check Sensitive Data Bank"
   OPTION_7 = "Adjust Program Settings"
   OPTION_8 = "Open Instruction Manual"
+  DICTIONARY_1 = "Add Text in Dictionary"
   ENDPOINT_1 = "Create Endpoint"
   ENDPOINT_2 = "Read Endpoint"
   ENDPOINT_3 = "Update Endpoint"
