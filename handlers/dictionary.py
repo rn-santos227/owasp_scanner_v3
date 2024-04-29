@@ -1,5 +1,7 @@
 import inquirer
 
+from classes.Option import Option
+
 from utils.clear_screen import clear_screen
 
 def add_dictionary():
