@@ -10,7 +10,8 @@ dictionary_menu = [
     choices=[
       Option.DICTIONARY_1.value,
       Option.DICTIONARY_2.value,
-      Option.ENDPOINT_3.value,
+      Option.DICTIONARY_3.value,
+      Option.DICTIONARY_4.value,
       Option.EXIT.value,
     ],
     carousel=True
