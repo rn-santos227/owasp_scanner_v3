@@ -9,6 +9,7 @@ dictionary_menu = [
     message = "Choose your Endpoint Activity",
     choices=[
       Option.DICTIONARY_1.value,
+      Option.DICTIONARY_2.value,
       Option.EXIT.value,
     ],
     carousel=True
