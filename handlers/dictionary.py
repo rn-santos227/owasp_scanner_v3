@@ -8,7 +8,7 @@ dictionary_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
     choices=[
-
+      Option.DICTIONARY_1.value,
       Option.EXIT.value,
     ],
     carousel=True
