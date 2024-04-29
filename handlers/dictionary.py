@@ -43,3 +43,6 @@ def handle_dictionary():
 
   elif choice == Option.DICTIONARY_3.value:
     update_dictionary()
+
+  elif choice == Option.DICTIONARY_4.value:
+    delete_dictionary()
