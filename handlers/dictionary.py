@@ -40,3 +40,6 @@ def handle_dictionary():
 
   elif choice == Option.DICTIONARY_2.value:
     read_dictionary()
+
+  elif choice == Option.DICTIONARY_3.value:
+    update_dictionary()
