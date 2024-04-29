@@ -4,6 +4,17 @@ from classes.Option import Option
 
 from utils.clear_screen import clear_screen
 
+dictionary_menu = [
+  inquirer.List("choice",
+    message = "Choose your Endpoint Activity",
+    choices=[
+
+      Option.EXIT.value,
+    ],
+    carousel=True
+  ),
+]
+
 def add_dictionary():
   pass
 
