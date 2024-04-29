@@ -46,3 +46,6 @@ def handle_dictionary():
 
   elif choice == Option.DICTIONARY_4.value:
     delete_dictionary()
+
+  elif choice == Option.EXIT.value:
+    clear_screen()
