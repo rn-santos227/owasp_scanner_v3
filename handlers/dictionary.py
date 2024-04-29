@@ -31,4 +31,4 @@ def delete_dictionary():
   pass
 
 def handle_dictionary():
-  pass
+  clear_screen()
