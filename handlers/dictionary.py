@@ -37,3 +37,6 @@ def handle_dictionary():
 
   if choice == Option.DICTIONARY_1.value:
     add_dictionary()
+
+  elif choice == Option.DICTIONARY_2.value:
+    read_dictionary()
