@@ -33,3 +33,4 @@ def delete_dictionary():
 def handle_dictionary():
   clear_screen()
   user_respond = inquirer.prompt(dictionary_menu)
+  choice = user_respond["choice"]
