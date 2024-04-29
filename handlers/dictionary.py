@@ -34,3 +34,6 @@ def handle_dictionary():
   clear_screen()
   user_respond = inquirer.prompt(dictionary_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.DICTIONARY_1.value:
+    add_dictionary()
