@@ -2,10 +2,13 @@ import requests
 
 import helpers.color_text as color
 
+from classes.Config import Config
 from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
+
+proxies = parse_config()[Config.CONFIG_5.value]
 
 #API10:2023 - Unsafe Consumption of APIs
 def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
