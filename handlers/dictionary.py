@@ -21,7 +21,7 @@ dictionary_menu = [
 def count_dictionary():
   pass
 
-def read_dictionary():
+def search_dictionary():
   pass
 
 def update_dictionary():
@@ -39,7 +39,7 @@ def handle_dictionary():
     count_dictionary()
 
   elif choice == Option.DICTIONARY_2.value:
-    read_dictionary()
+    search_dictionary()
 
   elif choice == Option.DICTIONARY_3.value:
     update_dictionary()
