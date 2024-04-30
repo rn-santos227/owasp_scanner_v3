@@ -24,7 +24,7 @@ def count_dictionary():
 def search_dictionary():
   pass
 
-def update_dictionary():
+def add_dictionary():
   pass
 
 def delete_dictionary():
@@ -42,7 +42,7 @@ def handle_dictionary():
     search_dictionary()
 
   elif choice == Option.DICTIONARY_3.value:
-    update_dictionary()
+    add_dictionary()
 
   elif choice == Option.DICTIONARY_4.value:
     delete_dictionary()
