@@ -18,7 +18,7 @@ dictionary_menu = [
   ),
 ]
 
-def add_dictionary():
+def count_dictionary():
   pass
 
 def read_dictionary():
@@ -36,7 +36,7 @@ def handle_dictionary():
   choice = user_respond["choice"]
 
   if choice == Option.DICTIONARY_1.value:
-    add_dictionary()
+    count_dictionary()
 
   elif choice == Option.DICTIONARY_2.value:
     read_dictionary()
