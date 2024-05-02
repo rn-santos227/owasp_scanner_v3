@@ -12,4 +12,4 @@ sensitive_data_menu = [
 ]
 
 def count_sensitive_data():
-  pass
+    content = file_reader("dictionary/sensitive_keys.txt")
