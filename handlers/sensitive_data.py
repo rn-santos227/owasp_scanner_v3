@@ -19,3 +19,6 @@ def count_sensitive_data():
 
 def search_sensitive_data():
   pass
+
+def add_sensitive_data():
+  pass
