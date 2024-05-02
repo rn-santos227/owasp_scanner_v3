@@ -23,6 +23,8 @@ dictionary_menu = [
 def count_dictionary():
   content = file_reader("/dictionary/passwords.txt")
   message = f"There are total of {len(content)} words available in passwords."
+  print(color.light_green(message))
+  
 def search_dictionary():
   pass
 
