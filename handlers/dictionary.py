@@ -20,7 +20,7 @@ dictionary_menu = [
 ]
 
 def count_dictionary():
-  pass
+  content = file_reader("/dictionary/passwords.txt")
 
 def search_dictionary():
   pass
