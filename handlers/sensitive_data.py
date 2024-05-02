@@ -9,3 +9,6 @@ sensitive_data_menu = [
     carousel=True
   ),
 ]
+
+def count_sensitive_data():
+  pass
