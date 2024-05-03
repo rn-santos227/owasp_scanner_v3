@@ -22,3 +22,6 @@ def search_sensitive_data():
 
 def add_sensitive_data():
   pass
+
+def delete_sensitve_data():
+  pass
