@@ -13,6 +13,7 @@ class Option(Enum):
   DICTIONARY_2 = "Search Dictionary Text"
   DICTIONARY_3 = "Add Text in Dictionary"
   DICTIONARY_4 = "Remove Text in Dictionary"
+  DATA_1 = "Show Sensitive Data Count"
   ENDPOINT_1 = "Create Endpoint"
   ENDPOINT_2 = "Read Endpoint"
   ENDPOINT_3 = "Update Endpoint"
