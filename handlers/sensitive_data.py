@@ -27,4 +27,4 @@ def delete_sensitve_data():
   pass
 
 def handle_sensitive_data():
-   pass
+  clear_screen()
