@@ -42,5 +42,8 @@ def handle_sensitive_data():
   if choice == Option.DATA_1.value:
     count_sensitive_data()
 
+  elif choice == Option.DATA_2.value:
+    search_sensitive_data()
+
   elif choice == Option.EXIT.value:
     clear_screen()
