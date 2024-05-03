@@ -11,6 +11,7 @@ sensitive_data_menu = [
     message = "Choose your Endpoint Activity",
     choices=[
       Option.DATA_1.value,
+      Option.DATA_2.value,
     ],
     carousel=True
   ),
