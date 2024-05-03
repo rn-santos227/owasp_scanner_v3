@@ -12,6 +12,7 @@ sensitive_data_menu = [
     choices=[
       Option.DATA_1.value,
       Option.DATA_2.value,
+      Option.DATA_3.value,
     ],
     carousel=True
   ),
