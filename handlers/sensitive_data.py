@@ -28,3 +28,4 @@ def delete_sensitve_data():
 
 def handle_sensitive_data():
   clear_screen()
+  user_respond = inquirer.prompt(sensitive_data_menu)
