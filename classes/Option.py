@@ -11,6 +11,7 @@ class Option(Enum):
   OPTION_8 = "Open Instruction Manual"
   DATA_1 = "Show Sensitive Data Count"
   DATA_2 = "Search Sensitive Data in List"
+  DATA_3 = "Add New Sensitive Data in List"
   DICTIONARY_1 = "Show Dictionary Text Count"
   DICTIONARY_2 = "Search Dictionary Text"
   DICTIONARY_3 = "Add Text in Dictionary"
