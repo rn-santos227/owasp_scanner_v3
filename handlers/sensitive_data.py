@@ -48,5 +48,8 @@ def handle_sensitive_data():
   elif choice == Option.DATA_3.value:
     add_sensitive_data()
 
+  elif choice == Option.DATA_4.value:
+    delete_sensitve_data()
+
   elif choice == Option.EXIT.value:
     clear_screen()
