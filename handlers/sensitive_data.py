@@ -38,3 +38,6 @@ def handle_sensitive_data():
   clear_screen()
   user_respond = inquirer.prompt(sensitive_data_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.DATA_1.value:
+    count_sensitive_data()
