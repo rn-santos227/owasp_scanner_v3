@@ -47,7 +47,8 @@ def handle_choice(respond):
 
   elif choice == Option.OPTION_6.value:
     banner = f"You selected: {Option.OPTION_6.value}"
-
+    handle_sensitive_data(banner)
+    
   elif choice == Option.OPTION_7.value:
     banner = f"You selected: {Option.OPTION_7.value}"
     handle_config(banner)
