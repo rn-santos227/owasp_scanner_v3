@@ -18,3 +18,6 @@ def file_writer(file_name : str, text):
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
     print(message)
+
+def create_files_folder():
+  pass
