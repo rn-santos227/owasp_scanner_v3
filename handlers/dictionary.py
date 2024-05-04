@@ -34,8 +34,9 @@ def add_dictionary():
 def delete_dictionary():
   pass
 
-def handle_dictionary():
+def handle_dictionary(banner):
   clear_screen()
+  color.banner(banner)
   user_respond = inquirer.prompt(dictionary_menu)
   choice = user_respond["choice"]
 
