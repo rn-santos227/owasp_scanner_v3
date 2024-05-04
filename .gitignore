@@ -23,7 +23,9 @@ env/
 # Miscellaneous
 *.DS_Store
 Thumbs.db
-files/api.txt
 plugins/
 .DS_Store
 .txt
+
+# External Files
+files/
