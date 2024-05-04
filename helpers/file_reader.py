@@ -1,3 +1,5 @@
+import os
+
 import helpers.color_text as color
 
 def file_reader(file : str):
