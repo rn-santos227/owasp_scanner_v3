@@ -26,7 +26,7 @@ def count_sensitive_data():
   color.light_green(message)
 
 def search_sensitive_data():
-  banner = "Search a Text in Sensitive Data"
+  info = "Search a Text in Sensitive Data"
 
 def add_sensitive_data():
   pass
@@ -34,8 +34,9 @@ def add_sensitive_data():
 def delete_sensitve_data():
   pass
 
-def handle_sensitive_data():
+def handle_sensitive_data(banner):
   clear_screen()
+  color.banner(banner)
   user_respond = inquirer.prompt(sensitive_data_menu)
   choice = user_respond["choice"]
 
