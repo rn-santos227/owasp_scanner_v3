@@ -48,8 +48,8 @@ def handle_choice(respond):
     print(f"You selected: {Option.OPTION_6.value}")
 
   elif choice == Option.OPTION_7.value:
-    print(f"You selected: {Option.OPTION_7.value}")
-    handle_config()
+    banner = f"You selected: {Option.OPTION_7.value}"
+    handle_config(banner)
 
   elif choice == Option.OPTION_8.value:
     print(f"You selected: {Option.OPTION_8.value}")
