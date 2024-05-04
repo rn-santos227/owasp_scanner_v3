@@ -20,4 +20,6 @@ def file_writer(file_name : str, text):
     print(message)
 
 def create_files_folder():
-  pass
+  folder_path = "files"
+  if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
