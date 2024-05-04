@@ -5,6 +5,7 @@ from classes.Option import Option
 
 from handlers.dictionary import handle_dictionary
 from handlers.endpoint import handle_endpoint
+from handlers.sensitive_data import handle_sensitive_data
 from handlers.settings import handle_config
 
 menu = [
