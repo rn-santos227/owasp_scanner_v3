@@ -74,8 +74,9 @@ def change_proxy_urls(settings):
   color.light_green(message)
   new_value = input("New Proxies Value: ")
 
-def handle_config():
+def handle_config(banner):
   clear_screen()
+  color.banner(banner)
   settings = parse_config()
   user_respond = inquirer.prompt(settings_menu)
   choice = user_respond["choice"]
