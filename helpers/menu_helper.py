@@ -28,8 +28,8 @@ menu = [
 def handle_choice(respond):
   choice = respond["choice"]
   if choice == Option.OPTION_1.value:
-    print(f"You selected: {Option.OPTION_1.value}")
-    handle_endpoint()
+    banner = f"You selected: {Option.OPTION_1.value}"
+    handle_endpoint(banner)
 
   elif choice == Option.OPTION_2.value:
     print(f"You selected: {Option.OPTION_2.value}")
