@@ -18,6 +18,9 @@ def file_writer(file_name : str, text):
     message = color.warning(f"An error occurred: {err}")
     print(message)
 
+def overwrite_file(file_name: str, new_content: list):
+  pass
+
 def create_files_folder():
   folder_path = "files"
   if not os.path.exists(folder_path):
