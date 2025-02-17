@@ -27,6 +27,7 @@ def count_dictionary():
   
 def search_dictionary():
   query = input("Enter password to search: ").strip()
+  content = file_reader("dictionary/passwords.txt")
 
 def add_dictionary():
   pass
