@@ -30,7 +30,9 @@ def search_dictionary():
   content = file_reader("dictionary/passwords.txt")
 
   if query in content:
-    pass
+    color.light_green(f"Password '{query}' found in dictionary.\n")
+  else:
+    color.warning(f"Password '{query}' not found.\n")
 
 def add_dictionary():
   pass
