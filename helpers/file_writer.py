@@ -27,6 +27,8 @@ def overwrite_file(file_name: str, new_content: list):
     with open(file_path, 'w') as file:
       file.writelines(f"{line}\n" for line in new_content)
 
+    message = color.light_green("File has been updated.")
+
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
     print(message)
