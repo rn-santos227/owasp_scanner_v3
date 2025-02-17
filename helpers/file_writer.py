@@ -24,6 +24,7 @@ def overwrite_file(file_name: str, new_content: list):
 
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
+    print(message)
 
 def create_files_folder():
   folder_path = "files"
