@@ -12,7 +12,7 @@ from utils.validate_url import validate_url
 proxies = parse_config()[Config.CONFIG_5.value]
 
 def _load_test_ids(file_path):
-  pass
+  test_ids = file_reader(file_path)
 
 #API1:2023 - Broken Object Level Authorization
 def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
