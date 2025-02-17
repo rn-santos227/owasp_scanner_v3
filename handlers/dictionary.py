@@ -22,12 +22,11 @@ dictionary_menu = [
 
 def count_dictionary():
   content = file_reader("dictionary/passwords.txt")
-  message = f"\nThere are total of {len(content)} words available in passwords.\n"
+  message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
   
 def search_dictionary():
-  info = "\nSearch a Text in Sensitive Data"
-  color.banner(info)
+  query = input("Enter password to search: ").strip()
 
 def add_dictionary():
   pass
@@ -35,9 +34,8 @@ def add_dictionary():
 def delete_dictionary():
   pass
 
-def handle_dictionary(banner):
+def handle_dictionary():
   clear_screen()
-  color.banner(banner)
   user_respond = inquirer.prompt(dictionary_menu)
   choice = user_respond["choice"]
 
