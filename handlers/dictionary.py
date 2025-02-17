@@ -35,7 +35,7 @@ def search_dictionary():
     color.warning(f"Password '{query}' not found.\n")
 
 def add_dictionary():
-  pass
+  new_password = input("Enter new password to add: ").strip()
 
 def delete_dictionary():
   pass
