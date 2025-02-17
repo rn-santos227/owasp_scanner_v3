@@ -29,6 +29,9 @@ def search_dictionary():
   query = input("Enter password to search: ").strip()
   content = file_reader("dictionary/passwords.txt")
 
+  if query in content:
+    pass
+
 def add_dictionary():
   pass
 
