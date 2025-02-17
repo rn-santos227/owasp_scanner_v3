@@ -23,6 +23,8 @@ def overwrite_file(file_name: str, new_content: list):
     create_files_folder()
     folder_path = ""
 
+    file_path = os.path.join(folder_path, file_name)
+
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
     print(message)
