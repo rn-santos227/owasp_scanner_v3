@@ -20,7 +20,7 @@ def file_writer(file_name : str, text):
 
 def overwrite_file(file_name: str, new_content: list):
   try:
-    pass
+    create_files_folder()
 
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
