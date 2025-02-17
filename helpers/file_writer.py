@@ -24,6 +24,8 @@ def overwrite_file(file_name: str, new_content: list):
     folder_path = ""
 
     file_path = os.path.join(folder_path, file_name)
+    with open(file_path, 'w') as file:
+      file.writelines(f"{line}\n" for line in new_content)
 
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
