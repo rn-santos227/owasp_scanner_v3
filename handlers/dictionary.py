@@ -37,6 +37,8 @@ def search_dictionary():
 
 def add_dictionary():
   new_password = input("Enter new password to add: ").strip()
+  if new_password:
+    pass
 
 def delete_dictionary():
   pass
