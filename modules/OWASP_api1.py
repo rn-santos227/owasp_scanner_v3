@@ -27,6 +27,7 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   if not test_ids:
     color.warning("[!] No test IDs found. Skipping BOLA check.")
+    return vulnerabilities, logs
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
