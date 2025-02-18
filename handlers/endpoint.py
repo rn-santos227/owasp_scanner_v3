@@ -21,7 +21,8 @@ endpoint_menu = [
 ]
 
 def create_endpoint():
-  pass
+  input("Press Enter to Continue...")
+  handle_endpoint()
 
 def read_endpoint():
   pass
