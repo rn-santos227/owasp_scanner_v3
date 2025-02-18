@@ -7,6 +7,8 @@ from helpers.file_reader import file_reader
 from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
+PASSWORDS_FILE = "dictionaries/passwords.txt"
+
 dictionary_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
