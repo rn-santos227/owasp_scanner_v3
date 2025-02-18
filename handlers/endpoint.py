@@ -25,7 +25,8 @@ def create_endpoint():
   handle_endpoint()
 
 def read_endpoint():
-  pass
+  input("Press Enter to Continue...")
+  handle_endpoint()
 
 def update_endpoint():
   pass
