@@ -22,7 +22,7 @@ dictionary_menu = [
 ]
 
 def count_dictionary():
-  content = file_reader("dictionary/passwords.txt")
+  content = file_reader("dictionaries/passwords.txt")
   message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
 
@@ -31,7 +31,7 @@ def count_dictionary():
   
 def search_dictionary():
   query = input("Enter password to search: ").strip()
-  content = file_reader("dictionary/passwords.txt")
+  content = file_reader("dictionaries/passwords.txt")
 
   if query in content:
     color.light_green(f"Password '{query}' found in dictionary.\n")
@@ -44,18 +44,18 @@ def search_dictionary():
 def add_dictionary():
   new_password = input("Enter new password to add: ").strip()
   if new_password:
-    file_writer("dictionary/passwords.txt", new_password)
+    file_writer("dictionaries/passwords.txt", new_password)
 
   input("Press Enter to Continue...")
   handle_dictionary()
 
 def delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
-  content = file_reader("dictionary/passwords.txt")
+  content = file_reader("dictionaries/passwords.txt")
 
   if password_to_delete in content:
     content.remove(password_to_delete + "\n")
-    overwrite_file("dictionary/passwords.txt", content)
+    overwrite_file("dictionaries/passwords.txt", content)
 
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")

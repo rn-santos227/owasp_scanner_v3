@@ -21,7 +21,7 @@ sensitive_data_menu = [
 ]
 
 def count_sensitive_data():
-  content = file_reader("dictionary/sensitive_keys.txt")
+  content = file_reader("dictionaries/sensitive_keys.txt")
   message = f"\nThere are total of {len(content)} words available in sensitive keys.\n"
   color.light_green(message)
 
