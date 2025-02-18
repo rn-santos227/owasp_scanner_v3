@@ -60,6 +60,9 @@ def delete_dictionary():
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")
 
+  input("Press Enter to Continue...")
+  handle_dictionary()
+
 def handle_dictionary(banner = ""):
   clear_screen()
   
