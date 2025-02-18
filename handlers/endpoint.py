@@ -32,9 +32,12 @@ def update_endpoint():
 def delete_endpoint():
   pass
 
-def handle_endpoint(banner):
+def handle_endpoint(banner = ""):
   clear_screen()
-  color.banner(banner)
+
+  if banner:
+    color.banner(banner)
+  
   user_respond = inquirer.prompt(endpoint_menu)
   choice = user_respond["choice"]
 
