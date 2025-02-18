@@ -4,7 +4,7 @@ import helpers.color_text as color
 from classes.Option import Option
 
 from helpers.file_reader import file_reader
-from helpers.file_writer import file_writer
+from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
 dictionary_menu = [
@@ -42,6 +42,8 @@ def add_dictionary():
 
 def delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
+  if password_to_delete:
+    pass
 
 def handle_dictionary():
   clear_screen()
