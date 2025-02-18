@@ -7,6 +7,8 @@ from helpers.file_reader import file_reader
 from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
+ENDPOINTS_FILE = "files/endpoints.txt"
+
 endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
