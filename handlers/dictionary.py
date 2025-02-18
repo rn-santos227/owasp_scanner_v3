@@ -47,6 +47,9 @@ def delete_dictionary():
   if password_to_delete in content:
     pass
 
+  else:
+    color.warning(f"Password '{password_to_delete}' not found.\n")
+
 def handle_dictionary():
   clear_screen()
   user_respond = inquirer.prompt(dictionary_menu)
