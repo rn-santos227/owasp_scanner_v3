@@ -37,6 +37,9 @@ def search_dictionary():
     color.light_green(f"Password '{query}' found in dictionary.\n")
   else:
     color.warning(f"Password '{query}' not found.\n")
+  
+  input("Press Enter to Continue...")
+  handle_dictionary()
 
 def add_dictionary():
   new_password = input("Enter new password to add: ").strip()
