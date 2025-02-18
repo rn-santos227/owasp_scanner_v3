@@ -25,6 +25,8 @@ def count_dictionary():
   content = file_reader("dictionary/passwords.txt")
   message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
+
+  input("Press Enter to Continue...")
   handle_dictionary()
   
 def search_dictionary():
