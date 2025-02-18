@@ -45,7 +45,7 @@ def delete_dictionary():
   content = file_reader("dictionary/passwords.txt")
 
   if password_to_delete in content:
-    pass
+    content.remove(password_to_delete + "\n")
 
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")
