@@ -33,7 +33,8 @@ def update_endpoint():
   handle_endpoint()
 
 def delete_endpoint():
-  pass
+  input("Press Enter to Continue...")
+  handle_endpoint()
 
 def handle_endpoint(banner = ""):
   clear_screen()
