@@ -51,10 +51,12 @@ def delete_dictionary():
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")
 
-def handle_dictionary(banner):
+def handle_dictionary(banner = ""):
   clear_screen()
-  color.banner(banner)
   
+  if banner:
+    color.banner(banner)
+
   user_respond = inquirer.prompt(dictionary_menu)
   choice = user_respond["choice"]
 
