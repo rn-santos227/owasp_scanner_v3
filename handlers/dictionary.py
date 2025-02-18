@@ -7,7 +7,7 @@ from helpers.file_reader import file_reader
 from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
-PASSWORDS_FILE = "dictionaries/passwords.txt"
+_PASSWORDS_FILE = "dictionaries/passwords.txt"
 
 dictionary_menu = [
   inquirer.List("choice",
@@ -24,7 +24,7 @@ dictionary_menu = [
 ]
 
 def count_dictionary():
-  content = file_reader(PASSWORDS_FILE)
+  content = file_reader(_PASSWORDS_FILE)
   message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
 
@@ -33,7 +33,7 @@ def count_dictionary():
   
 def search_dictionary():
   query = input("Enter password to search: ").strip()
-  content = file_reader(PASSWORDS_FILE)
+  content = file_reader(_PASSWORDS_FILE)
 
   if query in content:
     color.light_green(f"Password '{query}' found in dictionary.\n")
@@ -46,14 +46,14 @@ def search_dictionary():
 def add_dictionary():
   new_password = input("Enter new password to add: ").strip()
   if new_password:
-    file_writer(PASSWORDS_FILE, new_password)
+    file_writer(_PASSWORDS_FILE, new_password)
 
   input("Press Enter to Continue...")
   handle_dictionary()
 
 def delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
-  content = file_reader("dictionaries/passwords.txt")
+  content = file_reader(_PASSWORDS_FILE)
 
   if password_to_delete in content:
     content.remove(password_to_delete + "\n")
