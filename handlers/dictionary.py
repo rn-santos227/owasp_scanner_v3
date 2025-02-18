@@ -42,6 +42,8 @@ def add_dictionary():
 
 def delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
+  content = file_reader("dictionary/passwords.txt")
+  
   if password_to_delete:
     pass
 
