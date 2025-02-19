@@ -70,6 +70,9 @@ def update_endpoint():
       overwrite_file(_ENDPOINTS_FILE, endpoints)
       color.light_green(f"✓ Endpoint updated to '{new_endpoint}'.\n")
 
+    else:
+      color.warning("No new value entered. Endpoint remains unchanged.")
+
 def delete_endpoint():
   input("Press Enter to Continue...")
   handle_endpoint()
