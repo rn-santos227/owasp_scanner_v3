@@ -56,6 +56,8 @@ def update_endpoint():
     input("Press Enter to Continue...")
     handle_endpoint()
     return
+  
+  choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(endpoints)}
 
 def delete_endpoint():
   input("Press Enter to Continue...")
