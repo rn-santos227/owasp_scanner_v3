@@ -42,6 +42,9 @@ def read_endpoint():
   if endpoints:
     pass
 
+  else:
+    pass
+
   input("Press Enter to Continue...")
   handle_endpoint()
 
