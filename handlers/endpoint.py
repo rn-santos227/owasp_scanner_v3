@@ -63,6 +63,8 @@ def update_endpoint():
 
   if answer:
     selected_endpoint = choices[answer["selected"]]
+    new_endpoint = input(f"Enter the new value for '{selected_endpoint}': ").strip()
+
 
 def delete_endpoint():
   input("Press Enter to Continue...")
