@@ -62,7 +62,7 @@ def update_endpoint():
   answer = inquirer.prompt(question)
 
   if answer:
-    pass
+    selected_endpoint = choices[answer["selected"]]
 
 def delete_endpoint():
   input("Press Enter to Continue...")
