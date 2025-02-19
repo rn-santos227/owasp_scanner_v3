@@ -44,7 +44,7 @@ def read_endpoint():
       print(f"{i}. {endpoint.strip()}")
 
   else:
-    pass
+    color.warning("No endpoints found.")
 
   input("Press Enter to Continue...")
   handle_endpoint()
