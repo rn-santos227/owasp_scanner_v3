@@ -67,6 +67,7 @@ def update_endpoint():
 
     if new_endpoint:
       endpoints = [new_endpoint if ep.strip() == selected_endpoint else ep for ep in endpoints]
+      overwrite_file(_ENDPOINTS_FILE, endpoints)
 
 def delete_endpoint():
   input("Press Enter to Continue...")
