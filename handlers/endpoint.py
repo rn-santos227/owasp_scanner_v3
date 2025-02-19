@@ -37,6 +37,8 @@ def create_endpoint():
   handle_endpoint()
 
 def read_endpoint():
+  endpoints = file_reader(_ENDPOINTS_FILE)
+
   input("Press Enter to Continue...")
   handle_endpoint()
 
