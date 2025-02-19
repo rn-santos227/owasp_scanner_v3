@@ -65,6 +65,8 @@ def update_endpoint():
     selected_endpoint = choices[answer["selected"]]
     new_endpoint = input(f"Enter the new value for '{selected_endpoint}': ").strip()
 
+    if new_endpoint:
+      endpoints = [new_endpoint if ep.strip() == selected_endpoint else ep for ep in endpoints]
 
 def delete_endpoint():
   input("Press Enter to Continue...")
