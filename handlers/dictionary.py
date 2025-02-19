@@ -47,6 +47,7 @@ def add_dictionary():
   new_password = input("Enter new password to add: ").strip()
   if new_password:
     file_writer(_PASSWORDS_FILE, new_password)
+    color.light_green(f"✓ Password '{new_password}' has been added.\n")
 
   input("Press Enter to Continue...")
   handle_dictionary()
