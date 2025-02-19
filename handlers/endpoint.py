@@ -29,8 +29,9 @@ def create_endpoint():
   if new_endpoint:
     file_writer(_ENDPOINTS_FILE, new_endpoint)
     color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
+  
   else:
-    pass
+    color.warning("No endpoint entered. Returning to menu.")
 
   input("Press Enter to Continue...")
   handle_endpoint()
