@@ -41,7 +41,7 @@ def read_endpoint():
 
   if endpoints:
     for i, endpoint in enumerate(endpoints, 1):
-      pass
+      print(f"{i}. {endpoint.strip()}")
 
   else:
     pass
