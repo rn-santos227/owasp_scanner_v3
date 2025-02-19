@@ -29,6 +29,9 @@ def create_endpoint():
   if new_endpoint:
     pass
 
+  else:
+    pass
+
   input("Press Enter to Continue...")
   handle_endpoint()
 
