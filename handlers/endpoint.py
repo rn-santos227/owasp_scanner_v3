@@ -50,6 +50,9 @@ def read_endpoint():
   handle_endpoint()
 
 def update_endpoint():
+  endpoints = file_reader(_ENDPOINTS_FILE)
+
+  
   input("Press Enter to Continue...")
   handle_endpoint()
 
