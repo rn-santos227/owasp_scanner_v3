@@ -24,6 +24,8 @@ endpoint_menu = [
 ]
 
 def create_endpoint():
+  new_endpoint = input("Enter the new endpoint: ").strip()
+  
   input("Press Enter to Continue...")
   handle_endpoint()
 
