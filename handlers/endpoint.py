@@ -27,7 +27,7 @@ def create_endpoint():
   new_endpoint = input("Enter the new endpoint: ").strip()
 
   if new_endpoint:
-    pass
+    file_writer(_ENDPOINTS_FILE, new_endpoint)
 
   else:
     pass
