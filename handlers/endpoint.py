@@ -53,9 +53,9 @@ def update_endpoint():
   endpoints = file_reader(_ENDPOINTS_FILE)
   if not endpoints:
     color.warning("No endpoints found.")
-
-  input("Press Enter to Continue...")
-  handle_endpoint()
+    input("Press Enter to Continue...")
+    handle_endpoint()
+    return
 
 def delete_endpoint():
   input("Press Enter to Continue...")
