@@ -40,7 +40,8 @@ def read_endpoint():
   endpoints = file_reader(_ENDPOINTS_FILE)
 
   if endpoints:
-    pass
+    for i, endpoint in enumerate(endpoints, 1):
+      pass
 
   else:
     pass
