@@ -58,6 +58,7 @@ def update_endpoint():
     return
   
   choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(endpoints)}
+  question = [inquirer.List("selected", message="Select an endpoint to update", choices=list(choices.keys()))]
 
 def delete_endpoint():
   input("Press Enter to Continue...")
