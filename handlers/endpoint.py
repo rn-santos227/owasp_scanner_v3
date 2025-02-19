@@ -61,6 +61,9 @@ def update_endpoint():
   question = [inquirer.List("selected", message="Select an endpoint to update", choices=list(choices.keys()))]
   answer = inquirer.prompt(question)
 
+  if answer:
+    pass
+
 def delete_endpoint():
   input("Press Enter to Continue...")
   handle_endpoint()
