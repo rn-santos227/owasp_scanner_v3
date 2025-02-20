@@ -5,5 +5,8 @@ def file_maker(file_path):
   try:
     folder_path = os.path.dirname(file_path)
 
+    if folder_path and not os.path.exists(folder_path):
+      os.makedirs(folder_path)
+
   except Exception as err:
     color.warning(f"An error occurred: {err}")
