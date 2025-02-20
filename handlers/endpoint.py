@@ -74,6 +74,7 @@ def update_endpoint():
       color.warning("No new value entered. Endpoint remains unchanged.")
 
   input("\nPress Enter to Continue...")
+  handle_endpoint()
 
 def delete_endpoint():
   input("Press Enter to Continue...")
