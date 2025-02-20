@@ -12,6 +12,7 @@ def file_maker(file_path):
     if not os.path.exists(file_path):
       with open(file_path, 'w') as file:
         pass
+      color.light_green(f"✓ File '{file_path}' has been created.")
 
   except Exception as err:
     color.warning(f"An error occurred: {err}")
