@@ -30,6 +30,9 @@ def create_endpoint():
   if new_endpoint:
     file_writer(_ENDPOINTS_FILE, new_endpoint)
     color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
+
+  elif not validate_url(new_endpoint):
+    pass
   
   else:
     color.warning("No endpoint entered. Returning to menu.")
