@@ -92,6 +92,7 @@ def delete_endpoint():
   if answer:
     selected_endpoint = choices[answer["selected"]]
     endpoints = [ep for ep in endpoints if ep.strip() != selected_endpoint]
+    overwrite_file(_ENDPOINTS_FILE, endpoints)
 
   input("Press Enter to Continue...")
   handle_endpoint()
