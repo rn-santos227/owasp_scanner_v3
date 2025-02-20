@@ -77,6 +77,8 @@ def update_endpoint():
   handle_endpoint()
 
 def delete_endpoint():
+  endpoints = file_reader(_ENDPOINTS_FILE)
+
   input("Press Enter to Continue...")
   handle_endpoint()
 
