@@ -89,6 +89,9 @@ def delete_endpoint():
   question = [inquirer.List("selected", message="Select an endpoint to delete", choices=list(choices.keys()))]
   answer = inquirer.prompt(question)
 
+  if answer:
+    pass
+
   input("Press Enter to Continue...")
   handle_endpoint()
 
