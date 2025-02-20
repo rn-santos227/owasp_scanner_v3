@@ -83,6 +83,7 @@ def delete_endpoint():
     color.warning("No endpoints found.")
     input("\nPress Enter to Continue...")
     handle_endpoint()
+    return
 
   input("Press Enter to Continue...")
   handle_endpoint()
