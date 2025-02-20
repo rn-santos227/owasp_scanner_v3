@@ -32,7 +32,7 @@ def create_endpoint():
     color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
 
   elif not validate_url(new_endpoint):
-    pass
+    color.warning("Invalid URL! Please enter a valid HTTP or HTTPS URL.")
   
   else:
     color.warning("No endpoint entered. Returning to menu.")
