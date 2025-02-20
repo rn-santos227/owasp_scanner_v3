@@ -7,6 +7,7 @@ def file_maker(file_path):
 
     if folder_path and not os.path.exists(folder_path):
       os.makedirs(folder_path)
+      color.light_green(f"✓ Folder '{folder_path}' created.")
 
   except Exception as err:
     color.warning(f"An error occurred: {err}")
