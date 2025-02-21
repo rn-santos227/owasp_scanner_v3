@@ -59,7 +59,7 @@ def delete_dictionary():
 
   if password_to_delete in content:
     content.remove(password_to_delete + "\n")
-    overwrite_file(_PASSWORDS_FILE, content)
+    overwrite_file(File.FILE_PASSWORDS, content)
 
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")
