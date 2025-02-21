@@ -11,12 +11,10 @@ def file_writer(file_name : str, text):
     with open(file_path, 'a') as file:
       file.write(str(text) + '\n')
 
-    message = color.light_green("text has been saved.")
-    print(message)
+    color.light_green("text has been saved.")
 
   except Exception as err:
-    message = color.warning(f"An error occurred: {err}")
-    print(message)
+    color.warning(f"An error occurred: {err}")
 
 def overwrite_file(file_name: str, new_content: list):
   try:
@@ -27,12 +25,10 @@ def overwrite_file(file_name: str, new_content: list):
     with open(file_path, 'w') as file:
       file.writelines(f"{line}\n" for line in new_content)
 
-    message = color.light_green("File has been updated.")
-    print(message)
+    color.light_green("File has been updated.")
 
   except Exception as err:
-    message = color.warning(f"An error occurred: {err}")
-    print(message)
+    color.warning(f"An error occurred: {err}")
 
 def create_files_folder():
   folder_path = "files"
