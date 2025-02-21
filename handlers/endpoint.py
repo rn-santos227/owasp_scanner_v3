@@ -9,8 +9,6 @@ from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 from utils.validate_url import validate_url
 
-_ENDPOINTS_FILE = "files/endpoints.txt"
-
 endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
@@ -97,7 +95,7 @@ def delete_endpoint():
   if answer:
     selected_endpoint = choices[answer["selected"]]
     endpoints = [ep for ep in endpoints if ep.strip() != selected_endpoint]
-    overwrite_file(_ENDPOINTS_FILE, endpoints)
+    overwrite_file(File.FILE_ENDPOINTS, endpoints)
     
     color.light_red(f"✗ Endpoint '{selected_endpoint}' has been deleted.\n")
 
