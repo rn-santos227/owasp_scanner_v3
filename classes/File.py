@@ -1,6 +1,7 @@
 from enum import Enum
 
 class File(Enum):
+  FILE_COMMANDS = "dictionaries/sql_commands_list.txt"
   FILE_ENDPOINTS = "files/endpoints.txt"
   FILE_IDS = "dictionaries/test_ids.txt"
   FILE_KEYS = "dictionaries/sensitive_keys.txt"
