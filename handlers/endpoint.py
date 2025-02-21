@@ -1,6 +1,7 @@
 import inquirer
 import helpers.color_text as color
 
+from classes.File import File
 from classes.Option import Option
 
 from helpers.file_reader import file_reader
