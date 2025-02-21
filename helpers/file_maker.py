@@ -15,7 +15,7 @@ def file_maker(file_path):
       color.light_green(f"✓ File '{file_path}' has been created.")
 
     else:
-      color.light_green(f"File '{file_path}' already exists.")
+      color.verbose(f"File '{file_path}' already exists.")
 
   except Exception as err:
     color.warning(f"An error occurred: {err}")
