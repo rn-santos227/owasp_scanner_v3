@@ -34,7 +34,7 @@ def count_dictionary():
   
 def search_dictionary():
   query = input("Enter password to search: ").strip()
-  content = file_reader(_PASSWORDS_FILE)
+  content = file_reader(File.FILE_PASSWORDS)
 
   if query in content:
     color.light_green(f"Password '{query}' found in dictionary.\n")
