@@ -29,7 +29,7 @@ def create_endpoint():
   new_endpoint = input("Enter the new endpoint: ").strip()
 
   if new_endpoint:
-    file_writer(_ENDPOINTS_FILE, new_endpoint)
+    file_writer(File.FILE_ENDPOINTS, new_endpoint)
     color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
 
   elif not validate_url(new_endpoint):
