@@ -1,4 +1,4 @@
 from enum import Enum
 
 class File(Enum):
-  pass
+  FILE_PASSWORDS = "dictionaries/passwords.txt"
