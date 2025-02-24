@@ -25,8 +25,7 @@ def count_sensitive_data():
   content = file_reader(File.FILE_KEYS)
 
   if content:
-    message = f"\nThere are total of {len(content)} words available in sensitive keys.\n"
-  color.light_green(message)
+    color.light_green(f"\n✓ There are total of {len(content)} words available in sensitive keys.\n")
 
 def search_sensitive_data():
   info = "\nSearch a Text in Sensitive Data"
