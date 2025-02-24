@@ -29,7 +29,9 @@ def count_sensitive_data():
   else:
     color.warning("\n[!] No sensitive data found.\n")
 
+  input("Press Enter to Continue...")
 
+  
 def search_sensitive_data():
   info = "\nSearch a Text in Sensitive Data"
   color.banner(info)
