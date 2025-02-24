@@ -47,6 +47,8 @@ def search_sensitive_data():
     matches = [line.strip() for line in content if query.lower() in line.lower()]
     if matches:
       color.light_green("\n✓ Found matches:\n")
+      for match in matches:
+        pass
 
 
 def add_sensitive_data():
