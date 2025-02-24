@@ -43,6 +43,9 @@ def search_sensitive_data():
   elif not content:
     color.warning("\n[!] No sensitive data found.")
 
+  else:
+    pass
+
 def add_sensitive_data():
   pass
 
