@@ -50,6 +50,9 @@ def search_sensitive_data():
       for match in matches:
         print(f"  - {match}")
 
+    else:
+      color.warning("\n[!] No matches found.")
+
 
 def add_sensitive_data():
   pass
