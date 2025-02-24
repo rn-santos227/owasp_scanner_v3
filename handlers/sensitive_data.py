@@ -34,6 +34,7 @@ def count_sensitive_data():
 
 def search_sensitive_data():
   query = input("Enter the keyword to search: ").strip()
+  content = file_reader(File.FILE_KEYS)
 
 def add_sensitive_data():
   pass
