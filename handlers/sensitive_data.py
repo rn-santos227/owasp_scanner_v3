@@ -60,7 +60,7 @@ def add_sensitive_data():
   new_data = input("Enter the new sensitive key: ").strip()
 
   if not new_data:
-    pass
+    color.warning("\n[!] No input provided. Returning to menu.")
 
 def delete_sensitve_data():
   pass
