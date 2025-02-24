@@ -26,6 +26,7 @@ def count_sensitive_data():
 
   if content:
     color.light_green(f"\n✓ There are total of {len(content)} words available in sensitive keys.\n")  
+  
   else:
     color.warning("\n[!] No sensitive data found.\n")
 
@@ -38,6 +39,9 @@ def search_sensitive_data():
 
   if not query:
      color.warning("\n[!] No input provided. Returning to menu.")
+
+  elif not content:
+    pass
 
 def add_sensitive_data():
   pass
