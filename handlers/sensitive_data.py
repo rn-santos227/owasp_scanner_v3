@@ -53,6 +53,8 @@ def search_sensitive_data():
     else:
       color.warning("\n[!] No matches found.")
 
+  input("\nPress Enter to Continue...")
+
 
 def add_sensitive_data():
   pass
