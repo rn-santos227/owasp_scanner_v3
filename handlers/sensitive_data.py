@@ -37,7 +37,7 @@ def search_sensitive_data():
   content = file_reader(File.FILE_KEYS)
 
   if not query:
-    pass
+     color.warning("\n[!] No input provided. Returning to menu.")
 
 def add_sensitive_data():
   pass
