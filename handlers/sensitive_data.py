@@ -36,6 +36,9 @@ def search_sensitive_data():
   query = input("Enter the keyword to search: ").strip()
   content = file_reader(File.FILE_KEYS)
 
+  if not query:
+    pass
+
 def add_sensitive_data():
   pass
 
