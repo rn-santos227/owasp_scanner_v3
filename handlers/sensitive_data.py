@@ -57,7 +57,7 @@ def search_sensitive_data():
   handle_sensitive_data()
 
 def add_sensitive_data():
-  pass
+  new_data = input("Enter the new sensitive key: ").strip()
 
 def delete_sensitve_data():
   pass
