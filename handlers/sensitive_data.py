@@ -38,10 +38,10 @@ def search_sensitive_data():
   content = file_reader(File.FILE_KEYS)
 
   if not query:
-     color.warning("\n[!] No input provided. Returning to menu.")
+    color.warning("\n[!] No input provided. Returning to menu.")
 
   elif not content:
-    pass
+    color.warning("\n[!] No sensitive data found.")
 
 def add_sensitive_data():
   pass
