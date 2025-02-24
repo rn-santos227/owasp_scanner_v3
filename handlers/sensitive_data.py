@@ -44,7 +44,7 @@ def search_sensitive_data():
     color.warning("\n[!] No sensitive data found.")
 
   else:
-    pass
+    matches = [line.strip() for line in content if query.lower() in line.lower()]
 
 def add_sensitive_data():
   pass
