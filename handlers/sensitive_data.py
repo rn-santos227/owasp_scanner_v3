@@ -44,7 +44,10 @@ def delete_sensitve_data():
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
-  color.banner(banner)
+
+  if banner:
+    color.banner(banner)
+
   user_respond = inquirer.prompt(sensitive_data_menu)
   choice = user_respond["choice"]
 
