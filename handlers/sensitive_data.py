@@ -33,8 +33,7 @@ def count_sensitive_data():
   handle_sensitive_data()
 
 def search_sensitive_data():
-  info = "\nSearch a Text in Sensitive Data"
-  color.banner(info)
+  query = input("Enter the keyword to search: ").strip()
 
 def add_sensitive_data():
   pass
