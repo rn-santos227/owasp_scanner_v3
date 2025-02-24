@@ -48,7 +48,7 @@ def search_sensitive_data():
     if matches:
       color.light_green("\n✓ Found matches:\n")
       for match in matches:
-        pass
+        print(f"  - {match}")
 
 
 def add_sensitive_data():
