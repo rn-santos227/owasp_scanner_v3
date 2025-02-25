@@ -79,6 +79,8 @@ def delete_sensitve_data():
     handle_sensitive_data()
     return
 
+  choices = {f"{i+1}. {key.strip()}": key.strip() for i, key in enumerate(content)}
+
 def handle_sensitive_data(banner = ""):
   clear_screen()
 
