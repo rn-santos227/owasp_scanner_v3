@@ -71,7 +71,7 @@ def add_sensitive_data():
   handle_sensitive_data()
 
 def delete_sensitve_data():
-  pass
+  content = file_reader(File.FILE_KEYS)
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
