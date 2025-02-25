@@ -38,10 +38,10 @@ def search_sensitive_data():
   content = file_reader(File.FILE_KEYS)
 
   if not query:
-    color.warning("\n[!] No input provided. Returning to menu.")
+    color.warning("\nNo input provided. Returning to menu.")
 
   elif not content:
-    color.warning("\n[!] No sensitive data found.")
+    color.warning("\nNo sensitive data found.")
 
   else:
     matches = [line.strip() for line in content if query.lower() in line.lower()]
@@ -51,7 +51,7 @@ def search_sensitive_data():
         print(f"  - {match}")
 
     else:
-      color.warning("\n[!] No matches found.")
+      color.warning("\nNo matches found.")
 
   input("\nPress Enter to Continue...")
   handle_sensitive_data()
@@ -60,7 +60,7 @@ def add_sensitive_data():
   new_data = input("Enter the new sensitive key: ").strip()
 
   if not new_data:
-    color.warning("\n[!] No input provided. Returning to menu.")
+    color.warning("\nNo input provided. Returning to menu.")
 
 def delete_sensitve_data():
   pass
