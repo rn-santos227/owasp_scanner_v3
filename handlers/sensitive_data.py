@@ -88,6 +88,7 @@ def delete_sensitve_data():
     selected_data = choices[answer["selected"]]
     updated_data = [key for key in content if key.strip() != selected_data]
     overwrite_file(File.FILE_KEYS, updated_data)
+    color.light_green(f"\n✗ '{selected_data}' has been deleted.\n")
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
