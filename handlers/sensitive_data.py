@@ -84,6 +84,9 @@ def delete_sensitve_data():
   question = [inquirer.List("selected", message="Select a sensitive key to delete", choices=list(choices.keys()))]
   answer = inquirer.prompt(question)
 
+  if answer:
+    pass
+
 def handle_sensitive_data(banner = ""):
   clear_screen()
 
