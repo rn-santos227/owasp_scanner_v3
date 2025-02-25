@@ -5,6 +5,7 @@ from classes.File import File
 from classes.Option import Option
 
 from helpers.file_reader import file_reader
+from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
 sensitive_data_menu = [
@@ -28,7 +29,7 @@ def count_sensitive_data():
     color.light_green(f"\n✓ There are total of {len(content)} words available in sensitive keys.\n")  
   
   else:
-    color.warning("\n[!] No sensitive data found.\n")
+    color.warning("\nNo sensitive data found.\n")
 
   input("Press Enter to Continue...")
   handle_sensitive_data()
