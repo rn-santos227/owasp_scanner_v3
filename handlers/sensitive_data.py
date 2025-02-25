@@ -63,6 +63,9 @@ def add_sensitive_data():
   if not new_data:
     color.warning("\nNo input provided. Returning to menu.")
 
+  else:
+    file_writer(File.FILE_KEYS, new_data)
+
 def delete_sensitve_data():
   pass
 
