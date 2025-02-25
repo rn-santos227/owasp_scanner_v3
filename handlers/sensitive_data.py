@@ -85,7 +85,7 @@ def delete_sensitve_data():
   answer = inquirer.prompt(question)
 
   if answer:
-    pass
+    selected_data = choices[answer["selected"]]
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
