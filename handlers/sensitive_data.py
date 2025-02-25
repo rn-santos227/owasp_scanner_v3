@@ -75,6 +75,7 @@ def delete_sensitve_data():
 
   if not content:
     color.warning("\nNo sensitive data found.")
+    input("Press Enter to Continue...")
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
