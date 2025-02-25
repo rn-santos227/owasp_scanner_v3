@@ -91,6 +91,7 @@ def delete_sensitve_data():
     color.light_green(f"\n✗ '{selected_data}' has been deleted.\n")
 
   input("Press Enter to Continue...")
+  handle_sensitive_data()
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
