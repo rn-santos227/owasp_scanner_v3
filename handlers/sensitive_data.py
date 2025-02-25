@@ -68,6 +68,7 @@ def add_sensitive_data():
     color.light_green(f"\n✓ '{new_data}' has been added.\n")
 
   input("Press Enter to Continue...")
+  handle_sensitive_data()
 
 def delete_sensitve_data():
   pass
