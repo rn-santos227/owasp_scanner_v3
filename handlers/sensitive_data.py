@@ -74,7 +74,7 @@ def delete_sensitve_data():
   content = file_reader(File.FILE_KEYS)
 
   if not content:
-    pass
+    color.warning("\nNo sensitive data found.")
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
