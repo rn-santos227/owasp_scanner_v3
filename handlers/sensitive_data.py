@@ -81,6 +81,8 @@ def delete_sensitve_data():
 
   choices = {f"{i+1}. {key.strip()}": key.strip() for i, key in enumerate(content)}
 
+  question = [inquirer.List("selected", message="Select a sensitive key to delete", choices=list(choices.keys()))]
+
 def handle_sensitive_data(banner = ""):
   clear_screen()
 
