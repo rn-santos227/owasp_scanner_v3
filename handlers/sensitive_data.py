@@ -86,6 +86,7 @@ def delete_sensitve_data():
 
   if answer:
     selected_data = choices[answer["selected"]]
+    updated_data = [key for key in content if key.strip() != selected_data]
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
