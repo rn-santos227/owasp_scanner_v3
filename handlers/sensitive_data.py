@@ -38,7 +38,7 @@ def count_sensitive_data():
 
 def search_sensitive_data():
   query = input("Enter the keyword to search: ").strip()
-  content = file_reader(File.FILE_KEYS)
+  content = file_reader(_FILE_KEYS)
 
   if not query:
     color.warning("\nNo input provided. Returning to menu.")
