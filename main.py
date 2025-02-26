@@ -12,10 +12,11 @@ from utils.clear_screen import clear_screen
 from utils.print_banner import print_banner
 
 def main():
+  file_maker(File.FILE_COMMANDS.value)
+  file_maker(File.FILE_ENDPOINTS.value)
+
   clear_screen()
   color.banner(print_banner())
-
-  file_maker(File.FILE_ENDPOINTS.value)
   
   while True:
     user_respond = inquirer.prompt(menu)
