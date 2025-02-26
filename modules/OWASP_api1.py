@@ -4,6 +4,7 @@ import helpers.color_text as color
 from helpers.file_reader import file_reader
 
 from classes.Config import Config
+from classes.File import File
 from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
