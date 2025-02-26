@@ -42,7 +42,7 @@ def create_endpoint():
   handle_endpoint()
 
 def read_endpoint():
-  endpoints = file_reader(File.FILE_ENDPOINTS.value)
+  endpoints = file_reader(_FILE_ENDPOINTS)
 
   if endpoints:
     for i, endpoint in enumerate(endpoints, 1):
