@@ -73,7 +73,7 @@ def add_sensitive_data():
   handle_sensitive_data()
 
 def delete_sensitve_data():
-  content = file_reader(File.FILE_KEYS)
+  content = file_reader(_FILE_KEYS)
 
   if not content:
     color.warning("\nNo sensitive data found.")
