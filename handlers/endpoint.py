@@ -9,6 +9,8 @@ from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 from utils.validate_url import validate_url
 
+_FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
+
 endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
@@ -27,7 +29,7 @@ def create_endpoint():
   new_endpoint = input("Enter the new endpoint: ").strip()
 
   if new_endpoint:
-    file_writer(File.FILE_ENDPOINTS.value, new_endpoint)
+    file_writer(_FILE_ENDPOINTS, new_endpoint)
     color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
 
   elif not validate_url(new_endpoint):
@@ -40,7 +42,7 @@ def create_endpoint():
   handle_endpoint()
 
 def read_endpoint():
-  endpoints = file_reader(File.FILE_ENDPOINTS)
+  endpoints = file_reader(File.FILE_ENDPOINTS.value)
 
   if endpoints:
     for i, endpoint in enumerate(endpoints, 1):
