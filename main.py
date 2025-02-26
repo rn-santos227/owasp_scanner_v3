@@ -14,6 +14,7 @@ from utils.print_banner import print_banner
 def main():
   file_maker(File.FILE_COMMANDS.value)
   file_maker(File.FILE_ENDPOINTS.value)
+  file_maker(File.FILE_ERRORS.value)
 
   clear_screen()
   color.banner(print_banner())
