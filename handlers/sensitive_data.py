@@ -25,7 +25,7 @@ sensitive_data_menu = [
 ]
 
 def count_sensitive_data():
-  content = file_reader(File.FILE_KEYS)
+  content = file_reader(_FILE_KEYS)
 
   if content:
     color.light_green(f"\n✓ There are total of {len(content)} words available in sensitive keys.\n")  
