@@ -18,6 +18,7 @@ def main():
   file_maker(File.FILE_IDS.value)
   file_maker(File.FILE_KEYS.value)
   file_maker(File.FILE_KEYWORDS.value)
+  file_maker(File.FILE_PASSWORDS.value)
 
   clear_screen()
   color.banner(print_banner())
