@@ -12,13 +12,8 @@ from utils.clear_screen import clear_screen
 from utils.print_banner import print_banner
 
 def main():
-  file_maker(File.FILE_COMMANDS.value)
-  file_maker(File.FILE_ENDPOINTS.value)
-  file_maker(File.FILE_ERRORS.value)
-  file_maker(File.FILE_IDS.value)
-  file_maker(File.FILE_KEYS.value)
-  file_maker(File.FILE_KEYWORDS.value)
-  file_maker(File.FILE_PASSWORDS.value)
+  for file in File:
+    pass
 
   clear_screen()
   color.banner(print_banner())
