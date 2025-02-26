@@ -97,7 +97,7 @@ def delete_endpoint():
   if answer:
     selected_endpoint = choices[answer["selected"]]
     endpoints = [ep for ep in endpoints if ep.strip() != selected_endpoint]
-    overwrite_file(File.FILE_ENDPOINTS, endpoints)
+    overwrite_file(_FILE_ENDPOINTS, endpoints)
     
     color.light_red(f"✗ Endpoint '{selected_endpoint}' has been deleted.\n")
 
