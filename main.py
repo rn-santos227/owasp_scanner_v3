@@ -15,6 +15,7 @@ def main():
   file_maker(File.FILE_COMMANDS.value)
   file_maker(File.FILE_ENDPOINTS.value)
   file_maker(File.FILE_ERRORS.value)
+  file_maker(File.FILE_IDS.value)
 
   clear_screen()
   color.banner(print_banner())
