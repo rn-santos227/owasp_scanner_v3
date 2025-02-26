@@ -66,7 +66,7 @@ def add_sensitive_data():
     color.warning("\nNo input provided. Returning to menu.")
 
   else:
-    file_writer(File.FILE_KEYS, new_data)
+    file_writer(_FILE_KEYS, new_data)
     color.light_green(f"\n✓ '{new_data}' has been added.\n")
 
   input("Press Enter to Continue...")
