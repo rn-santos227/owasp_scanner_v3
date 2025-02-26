@@ -13,7 +13,7 @@ from utils.print_banner import print_banner
 
 def main():
   for file in File:
-    pass
+    file_maker(file.value)
 
   clear_screen()
   color.banner(print_banner())
