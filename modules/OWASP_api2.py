@@ -15,8 +15,9 @@ def _load_test_tokens(file_path):
   test_tokens = file_reader(file_path)
   return [line.strip() for line in test_tokens if line.strip()]
 
-def load_passwords(file_path):
+def _load_passwords(file_path):
   passwords = file_reader(file_path)
+  return [line.strip() for line in passwords if line.strip()]
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
