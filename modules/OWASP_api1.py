@@ -41,9 +41,12 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
         data = data,
         json = json,
         timeout = timeout,
-        proxies=proxies,
-        verify=False
+        proxies = proxies,
+        verify = False
       )
+
+      if response.status_code == 200:
+        pass
 
     except requests.RequestException as e:
       color.warning(f"Error checking {test_endpoint}: {e}")
