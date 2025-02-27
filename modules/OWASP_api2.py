@@ -12,7 +12,7 @@ from utils.validate_url import validate_url
 proxies = parse_config()[Config.CONFIG_5.value]
 
 def _load_test_tokens(file_path):
-  pass
+  test_tokens = file_reader(file_path)
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
