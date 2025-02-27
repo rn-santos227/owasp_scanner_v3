@@ -11,6 +11,7 @@ from helpers.file_reader import file_reader
 from utils.validate_url import validate_url
 
 proxies = parse_config()[Config.CONFIG_5.value]
+_FILE_TEST_IDS = File.FILE_IDS.value
 
 def _load_test_ids(file_path):
   test_ids = file_reader(file_path)
@@ -24,7 +25,7 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
-  test_ids = _load_test_ids("dictionaries/test_ids.txt")
+  test_ids = _load_test_ids(_FILE_TEST_IDS)
 
   if not test_ids:
     color.warning("No test IDs found. Skipping BOLA check.")
