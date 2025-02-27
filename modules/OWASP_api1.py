@@ -47,6 +47,7 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
 
       if response.status_code == 200:
         color.red(f"Potential BOLA Vulnerability detected at {test_endpoint}")
+        vulnerabilities.append(test_endpoint)
 
     except requests.RequestException as e:
       color.warning(f"Error checking {test_endpoint}: {e}")
