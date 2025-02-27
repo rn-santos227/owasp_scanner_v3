@@ -33,6 +33,12 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
   for test_id in test_ids:
     test_endpoint = f"{parsed_url}/{test_id}"
 
+    try:
+      pass
+
+    except requests.RequestException as e:
+      color.warning(f"Error checking {test_endpoint}: {e}")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
