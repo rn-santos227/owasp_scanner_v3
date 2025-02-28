@@ -53,10 +53,14 @@ def handle_choice(respond):
     
   elif choice == Option.OPTION_7.value:
     banner = f"You selected: {Option.OPTION_7.value}"
-    handle_config(banner)
+    handle_token(banner)
 
   elif choice == Option.OPTION_8.value:
-    print(f"You selected: {Option.OPTION_8.value}")
+    banner = f"You selected: {Option.OPTION_7.value}"
+    handle_config(banner)
+
+  elif choice == Option.OPTION_9.value:
+    print(f"You selected: {Option.OPTION_9.value}")
 
   elif choice == Option.EXIT.value:
     print("Exiting Program...")
