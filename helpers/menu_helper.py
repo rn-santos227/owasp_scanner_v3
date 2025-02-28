@@ -7,6 +7,7 @@ from handlers.dictionary import handle_dictionary
 from handlers.endpoint import handle_endpoint
 from handlers.sensitive_data import handle_sensitive_data
 from handlers.settings import handle_config
+from handlers.token import handle_token
 
 menu = [
   inquirer.List("choice",
