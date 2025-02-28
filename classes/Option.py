@@ -27,4 +27,5 @@ class Option(Enum):
   CONFIG_4 = "Adjust Rate Limit"
   CONFIG_5 = "Change Proxy URLs"
   TOKEN_1 = "Save Auth Token"
+  TOKEN_1 = "Remove Auth Token"
   EXIT = "Exit Program"
