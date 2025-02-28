@@ -14,7 +14,7 @@ _token_menu = [
   inquirer.List("choice",
     message = "Choose your Auth Token Activity",
     choices=[
-        
+      Option.EXIT.value,
     ],
     carousel=True
   )
