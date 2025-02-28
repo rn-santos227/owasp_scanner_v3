@@ -18,7 +18,7 @@ _dictionary_menu = [
       Option.DICTIONARY_2.value,
       Option.DICTIONARY_3.value,
       Option.DICTIONARY_4.value,
-      Option.EXIT.value,
+      Option.EXIT.value
     ],
     carousel=True
   ),

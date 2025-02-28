@@ -19,7 +19,7 @@ _endpoint_menu = [
       Option.ENDPOINT_2.value,
       Option.ENDPOINT_3.value,
       Option.ENDPOINT_4.value,
-      Option.EXIT.value,
+      Option.EXIT.value
     ],
     carousel=True
   ),
