@@ -26,7 +26,10 @@ _token_menu = [
 def _show_tokens():
   pass
 
-def _add_tokens():
+def _add_token():
+  pass
+
+def _delete_token():
   pass
 
 def handle_token(banner = ""):
