@@ -26,6 +26,9 @@ _token_menu = [
 def _show_tokens():
   pass
 
+def _add_tokens():
+  pass
+
 def handle_token(banner = ""):
   clear_screen()
 
