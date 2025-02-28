@@ -17,11 +17,14 @@ _token_menu = [
       Option.TOKEN_1.value,
       Option.TOKEN_2.value,
       Option.TOKEN_3.value,
-      Option.EXIT.value,
+      Option.EXIT.value
     ],
     carousel=True
   )
 ]
+
+def _show_tokens():
+  pass
 
 def handle_token(banner = ""):
   clear_screen()
