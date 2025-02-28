@@ -10,7 +10,7 @@ from utils.clear_screen import clear_screen
 
 _FILE_KEYS = File.FILE_KEYS.value
 
-sensitive_data_menu = [
+_sensitive_data_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
     choices=[
@@ -101,7 +101,7 @@ def handle_sensitive_data(banner = ""):
   if banner:
     color.banner(banner)
 
-  user_respond = inquirer.prompt(sensitive_data_menu)
+  user_respond = inquirer.prompt(_sensitive_data_menu)
   choice = user_respond["choice"]
 
   if choice == Option.DATA_1.value:

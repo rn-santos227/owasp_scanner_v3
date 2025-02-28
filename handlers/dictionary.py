@@ -10,7 +10,7 @@ from utils.clear_screen import clear_screen
 
 _FILE_PASSWORDS = File.FILE_PASSWORDS.value
 
-dictionary_menu = [
+_dictionary_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
     choices=[
@@ -73,7 +73,7 @@ def handle_dictionary(banner = ""):
   if banner:
     color.banner(banner)
 
-  user_respond = inquirer.prompt(dictionary_menu)
+  user_respond = inquirer.prompt(_dictionary_menu)
   choice = user_respond["choice"]
 
   if choice == Option.DICTIONARY_1.value:

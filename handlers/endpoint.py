@@ -11,7 +11,7 @@ from utils.validate_url import validate_url
 
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
-endpoint_menu = [
+_endpoint_menu = [
   inquirer.List("choice",
     message = "Choose your Endpoint Activity",
     choices=[
@@ -110,7 +110,7 @@ def handle_endpoint(banner = ""):
   if banner:
     color.banner(banner)
   
-  user_respond = inquirer.prompt(endpoint_menu)
+  user_respond = inquirer.prompt(_endpoint_menu)
   choice = user_respond["choice"]
 
   if choice == Option.ENDPOINT_1.value:
