@@ -26,4 +26,5 @@ class Option(Enum):
   CONFIG_3 = "Adjust Time Threshold"
   CONFIG_4 = "Adjust Rate Limit"
   CONFIG_5 = "Change Proxy URLs"
+  TOKEN_1 = "Save Auth Token"
   EXIT = "Exit Program"
