@@ -10,6 +10,13 @@ from utils.clear_screen import clear_screen
 
 _FILE_TOKENS = File.FILE_TOKENS.value
 
+token_menu = [
+  inquirer.List("choice",
+                
+
+  )
+]
+
 def handle_token(banner = ""):
   clear_screen()
 
