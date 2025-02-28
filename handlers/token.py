@@ -11,4 +11,7 @@ from utils.clear_screen import clear_screen
 _FILE_TOKENS = File.FILE_TOKENS.value
 
 def handle_token(banner = ""):
-  pass
+  clear_screen()
+
+  if banner:
+    color.banner(banner)
