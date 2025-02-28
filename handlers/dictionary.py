@@ -24,7 +24,7 @@ dictionary_menu = [
   ),
 ]
 
-def count_dictionary():
+def _count_dictionary():
   content = file_reader(_FILE_PASSWORDS)
   message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
@@ -32,7 +32,7 @@ def count_dictionary():
   input("Press Enter to Continue...")
   handle_dictionary()
   
-def search_dictionary():
+def _search_dictionary():
   query = input("Enter password to search: ").strip()
   content = file_reader(_FILE_PASSWORDS)
 
@@ -44,7 +44,7 @@ def search_dictionary():
   input("Press Enter to Continue...")
   handle_dictionary()
 
-def add_dictionary():
+def _add_dictionary():
   new_password = input("Enter new password to add: ").strip()
   if new_password:
     file_writer(_FILE_PASSWORDS, new_password)
@@ -53,7 +53,7 @@ def add_dictionary():
   input("Press Enter to Continue...")
   handle_dictionary()
 
-def delete_dictionary():
+def _delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
   content = file_reader(_FILE_PASSWORDS)
 
@@ -77,16 +77,16 @@ def handle_dictionary(banner = ""):
   choice = user_respond["choice"]
 
   if choice == Option.DICTIONARY_1.value:
-    count_dictionary()
+    _count_dictionary()
 
   elif choice == Option.DICTIONARY_2.value:
-    search_dictionary()
+    _search_dictionary()
 
   elif choice == Option.DICTIONARY_3.value:
-    add_dictionary()
+    _add_dictionary()
 
   elif choice == Option.DICTIONARY_4.value:
-    delete_dictionary()
+    _delete_dictionary()
 
   elif choice == Option.EXIT.value:
     clear_screen()
