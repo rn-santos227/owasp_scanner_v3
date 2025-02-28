@@ -37,3 +37,5 @@ def handle_token(banner = ""):
 
   if banner:
     color.banner(banner)
+
+  user_respond = inquirer.prompt(_token_menu)
