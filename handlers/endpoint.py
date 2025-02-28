@@ -25,7 +25,7 @@ endpoint_menu = [
   ),
 ]
 
-def create_endpoint():
+def _create_endpoint():
   new_endpoint = input("Enter the new endpoint: ").strip()
 
   if new_endpoint:
@@ -41,7 +41,7 @@ def create_endpoint():
   input("Press Enter to Continue...")
   handle_endpoint()
 
-def read_endpoint():
+def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
   if endpoints:
@@ -54,7 +54,7 @@ def read_endpoint():
   input("Press Enter to Continue...")
   handle_endpoint()
 
-def update_endpoint():
+def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
     color.warning("No endpoints found.")
@@ -81,7 +81,7 @@ def update_endpoint():
   input("\nPress Enter to Continue...")
   handle_endpoint()
 
-def delete_endpoint():
+def _delete_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
   if not endpoints:
@@ -114,16 +114,16 @@ def handle_endpoint(banner = ""):
   choice = user_respond["choice"]
 
   if choice == Option.ENDPOINT_1.value:
-    create_endpoint()
+    _create_endpoint()
 
   elif choice == Option.ENDPOINT_2.value:
-    read_endpoint()
+    _read_endpoint()
 
   elif choice == Option.ENDPOINT_3.value:
-    update_endpoint()
+    _update_endpoint()
 
   elif choice == Option.ENDPOINT_4.value:
-    delete_endpoint()
+    _delete_endpoint()
 
   elif choice == Option.EXIT.value:
     clear_screen()
