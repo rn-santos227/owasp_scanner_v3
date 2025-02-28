@@ -13,7 +13,9 @@ _FILE_TOKENS = File.FILE_TOKENS.value
 _token_menu = [
   inquirer.List("choice",
     message = "Choose your Auth Token Activity",
-
+    choices=[
+        
+    ],
   )
 ]
 
