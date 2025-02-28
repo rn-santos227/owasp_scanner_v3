@@ -24,7 +24,7 @@ sensitive_data_menu = [
   ),
 ]
 
-def count_sensitive_data():
+def _count_sensitive_data():
   content = file_reader(_FILE_KEYS)
 
   if content:
@@ -36,7 +36,7 @@ def count_sensitive_data():
   input("Press Enter to Continue...")
   handle_sensitive_data()
 
-def search_sensitive_data():
+def _search_sensitive_data():
   query = input("Enter the keyword to search: ").strip()
   content = file_reader(_FILE_KEYS)
 
@@ -59,7 +59,7 @@ def search_sensitive_data():
   input("\nPress Enter to Continue...")
   handle_sensitive_data()
 
-def add_sensitive_data():
+def _add_sensitive_data():
   new_data = input("Enter the new sensitive key: ").strip()
 
   if not new_data:
@@ -72,7 +72,7 @@ def add_sensitive_data():
   input("Press Enter to Continue...")
   handle_sensitive_data()
 
-def delete_sensitve_data():
+def _delete_sensitve_data():
   content = file_reader(_FILE_KEYS)
 
   if not content:
@@ -105,16 +105,16 @@ def handle_sensitive_data(banner = ""):
   choice = user_respond["choice"]
 
   if choice == Option.DATA_1.value:
-    count_sensitive_data()
+    _count_sensitive_data()
 
   elif choice == Option.DATA_2.value:
-    search_sensitive_data()
+    _search_sensitive_data()
 
   elif choice == Option.DATA_3.value:
-    add_sensitive_data()
+    _add_sensitive_data()
 
   elif choice == Option.DATA_4.value:
-    delete_sensitve_data()
+    _delete_sensitve_data()
 
   elif choice == Option.EXIT.value:
     clear_screen()
