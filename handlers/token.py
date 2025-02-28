@@ -16,6 +16,7 @@ _token_menu = [
     choices=[
         
     ],
+    carousel=True
   )
 ]
 
