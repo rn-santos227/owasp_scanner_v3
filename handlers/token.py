@@ -9,3 +9,6 @@ from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
 _FILE_TOKENS = File.FILE_TOKENS.value
+
+def handle_token(banner = ""):
+  pass
