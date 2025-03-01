@@ -36,7 +36,7 @@ def _show_tokens():
     print(f"{index}. {token.strip()}")
 
 def _add_token():
-  pass
+  new_token = input("\nEnter new authentication token: ").strip()
 
 def _delete_token():
   pass
