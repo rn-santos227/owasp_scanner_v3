@@ -33,7 +33,7 @@ def _show_tokens():
 
   color.banner("\nStored Authentication Tokens:")
   for index, token in enumerate(tokens, 1):
-    pass
+    print(f"{index}. {token.strip()}")
 
 def _add_token():
   pass
