@@ -62,7 +62,9 @@ def _delete_token():
   ])["token"]
 
   updated_tokens = [t for t in tokens if t.strip() != token_to_delete]
+  
   overwrite_file(_FILE_TOKENS, "\n".join(updated_tokens))
+  color.light_green(f"\n Token '{token_to_delete}' successfully deleted.\n")
 
 def handle_token(banner = ""):
   clear_screen()
