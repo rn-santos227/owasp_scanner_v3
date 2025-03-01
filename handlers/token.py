@@ -57,6 +57,10 @@ def _delete_token():
   color.banner("\nSelect a Token to Delete:")
   choices = [token.strip() for token in tokens]
 
+  token_to_delete = inquirer.prompt([
+
+  ])["token"]
+
 def handle_token(banner = ""):
   clear_screen()
 
