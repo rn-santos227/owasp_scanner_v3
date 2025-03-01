@@ -48,6 +48,9 @@ def _add_token():
 def _delete_token():
   tokens = file_reader(_FILE_TOKENS)
 
+  if not tokens:
+    color.warning("\nNo authentication tokens to delete.\n")
+
 def handle_token(banner = ""):
   clear_screen()
 
