@@ -31,6 +31,8 @@ def _show_tokens():
     input("Press Enter to Continue...")
     handle_token()
 
+  color.banner("\nStored Authentication Tokens:")
+
 def _add_token():
   pass
 
