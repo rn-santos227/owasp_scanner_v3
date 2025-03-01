@@ -39,7 +39,8 @@ def _add_token():
   new_token = input("\nEnter new authentication token: ").strip()
 
   if not new_token:
-    pass
+    color.warning("\nToken cannot be empty.")
+    return
 
 def _delete_token():
   pass
