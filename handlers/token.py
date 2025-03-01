@@ -43,3 +43,6 @@ def handle_token(banner = ""):
 
   if choice == Option.TOKEN_1.value:
     _show_tokens()
+
+  elif choice == Option.TOKEN_2.value:
+    _add_token()
