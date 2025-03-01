@@ -49,3 +49,6 @@ def handle_token(banner = ""):
 
   elif choice == Option.TOKEN_3.value:
     _delete_token()
+
+  elif choice == Option.EXIT.value:
+    clear_screen()
