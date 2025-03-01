@@ -43,6 +43,7 @@ def _add_token():
     return
   
   file_writer(_FILE_TOKENS, new_token)
+  color.light_green("\nToken successfully added.\n")
 
 def _delete_token():
   pass
