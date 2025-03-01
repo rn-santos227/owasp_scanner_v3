@@ -61,6 +61,8 @@ def _delete_token():
     inquirer.List("token", message="Choose a token to remove:", choices=choices)
   ])["token"]
 
+  updated_tokens = [t for t in tokens if t.strip() != token_to_delete]
+
 def handle_token(banner = ""):
   clear_screen()
 
