@@ -42,4 +42,4 @@ def handle_token(banner = ""):
   choice = user_respond["choice"]
 
   if choice == Option.TOKEN_1.value:
-    pass
+    _show_tokens()
