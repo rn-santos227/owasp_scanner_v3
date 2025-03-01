@@ -27,6 +27,7 @@ def _show_tokens():
   tokens  = file_reader(_FILE_TOKENS)
 
   if not tokens:
+    color.warning("\nNo authentication tokens found.\n")
     input("Press Enter to Continue...")
     handle_token()
 
