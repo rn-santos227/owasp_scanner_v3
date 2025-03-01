@@ -46,3 +46,6 @@ def handle_token(banner = ""):
 
   elif choice == Option.TOKEN_2.value:
     _add_token()
+
+  elif choice == Option.TOKEN_3.value:
+    _delete_token()
