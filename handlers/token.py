@@ -27,7 +27,8 @@ def _show_tokens():
   tokens  = file_reader(_FILE_TOKENS)
 
   if not tokens:
-    pass
+    input("Press Enter to Continue...")
+    handle_token()
 
 def _add_token():
   pass
