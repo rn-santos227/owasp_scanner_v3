@@ -46,7 +46,7 @@ def _add_token():
   color.light_green("\nToken successfully added.\n")
 
 def _delete_token():
-  pass
+  tokens = file_reader(_FILE_TOKENS)
 
 def handle_token(banner = ""):
   clear_screen()
