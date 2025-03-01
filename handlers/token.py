@@ -55,6 +55,7 @@ def _delete_token():
     color.warning("\nNo authentication tokens to delete.\n")
 
   color.banner("\nSelect a Token to Delete:")
+  choices = [token.strip() for token in tokens]
 
 def handle_token(banner = ""):
   clear_screen()
