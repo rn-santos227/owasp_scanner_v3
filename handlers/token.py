@@ -24,7 +24,10 @@ _token_menu = [
 ]
 
 def _show_tokens():
-  content = file_reader(_FILE_TOKENS)
+  tokens  = file_reader(_FILE_TOKENS)
+
+  if not tokens:
+    pass
 
 def _add_token():
   pass
