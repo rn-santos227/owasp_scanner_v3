@@ -45,6 +45,8 @@ def _add_token():
   file_writer(_FILE_TOKENS, new_token)
   color.light_green("\nToken successfully added.\n")
 
+  input("Press Enter to Continue...")
+
 def _delete_token():
   tokens = file_reader(_FILE_TOKENS)
 
