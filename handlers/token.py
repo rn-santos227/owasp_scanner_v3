@@ -38,6 +38,9 @@ def _show_tokens():
 def _add_token():
   new_token = input("\nEnter new authentication token: ").strip()
 
+  if not new_token:
+    pass
+
 def _delete_token():
   pass
 
