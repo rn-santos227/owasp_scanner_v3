@@ -41,6 +41,8 @@ def _add_token():
   if not new_token:
     color.warning("\nToken cannot be empty.")
     return
+  
+  file_writer(_FILE_TOKENS, new_token)
 
 def _delete_token():
   pass
