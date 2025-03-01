@@ -58,7 +58,7 @@ def _delete_token():
   choices = [token.strip() for token in tokens]
 
   token_to_delete = inquirer.prompt([
-
+    inquirer.List("token", message="Choose a token to remove:", choices=choices)
   ])["token"]
 
 def handle_token(banner = ""):
