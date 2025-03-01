@@ -40,3 +40,6 @@ def handle_token(banner = ""):
 
   user_respond = inquirer.prompt(_token_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.TOKEN_1.value:
+    pass
