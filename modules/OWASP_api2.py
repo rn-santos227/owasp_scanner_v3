@@ -15,8 +15,8 @@ proxies = parse_config()[Config.CONFIG_5.value]
 _FILE_PASSWORDS = File.FILE_PASSWORDS.value
 _FILE_TOKENS = File.FILE_TOKENS.value
 
-def _load_test_tokens(file_path):
-  test_tokens = file_reader(file_path)
+def _load_test_tokens():
+  test_tokens = file_reader(_FILE_TOKENS)
   return [line.strip() for line in test_tokens if line.strip()]
 
 def _load_passwords():
