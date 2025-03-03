@@ -11,7 +11,9 @@ from helpers.file_reader import file_reader
 from utils.validate_url import validate_url
 
 proxies = parse_config()[Config.CONFIG_5.value]
+
 _FILE_PASSWORDS = File.FILE_PASSWORDS.value
+_FILE_TOKENS = File.FILE_TOKENS.value
 
 def _load_test_tokens(file_path):
   test_tokens = file_reader(file_path)
