@@ -31,10 +31,11 @@ menu = [
 
 def handle_choice(respond):
   choice = respond["choice"]
-  if choice == Option.OPTION_1.value:
+  if choice == Option.OPTION_01.value:
     banner = f"You selected: {Option.OPTION_1.value}"
     handle_endpoint(banner)
 
+  #fix this tomorrow
   elif choice == Option.OPTION_2.value:
     print(f"You selected: {Option.OPTION_2.value}")
 
