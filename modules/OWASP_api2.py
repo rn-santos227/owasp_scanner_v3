@@ -31,6 +31,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
+  if not parsed_url:
+    pass
 
   passwords = _load_passwords()
   test_tokens = _load_test_tokens()
