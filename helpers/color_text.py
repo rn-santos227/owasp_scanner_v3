@@ -50,8 +50,8 @@ def warning(text: str, print_console: bool = True) -> str:
     print(colored_text)
   return colored_text
 
-def info(txt: str, print_console: bool = True) -> str:
-  pass
+def info(text: str, print_console: bool = True) -> str:
+  colored_text = formatter(f'[*] {text}', Color.LIGHT_CYAN, [TextStyle.BOLD])
 
 def verbose(text: str, print_console: bool = True) -> str:
   verbose_text = (f"[VERBOSE] {text}")
