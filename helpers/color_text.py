@@ -52,6 +52,8 @@ def warning(text: str, print_console: bool = True) -> str:
 
 def info(text: str, print_console: bool = True) -> str:
   colored_text = formatter(f'[*] {text}', Color.LIGHT_CYAN, [TextStyle.BOLD])
+  if print_console:
+    pass
 
 def verbose(text: str, print_console: bool = True) -> str:
   verbose_text = (f"[VERBOSE] {text}")
