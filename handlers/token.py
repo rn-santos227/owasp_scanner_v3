@@ -67,6 +67,7 @@ def _delete_token():
   color.light_green(f"\n Token '{token_to_delete}' successfully deleted.\n")
 
   input("Press Enter to Continue...")
+  handle_token()
 
 def handle_token(banner = ""):
   clear_screen()
