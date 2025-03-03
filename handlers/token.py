@@ -66,6 +66,8 @@ def _delete_token():
   overwrite_file(_FILE_TOKENS, "\n".join(updated_tokens))
   color.light_green(f"\n Token '{token_to_delete}' successfully deleted.\n")
 
+  input("Press Enter to Continue...")
+
 def handle_token(banner = ""):
   clear_screen()
 
