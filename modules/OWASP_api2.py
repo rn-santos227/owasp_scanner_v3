@@ -32,7 +32,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   parsed_url = validate_url(endpoint)
   if not parsed_url:
-    pass
+    color.warning("Invalid URL. Skipping test.")
 
   passwords = _load_passwords()
   test_tokens = _load_test_tokens()
