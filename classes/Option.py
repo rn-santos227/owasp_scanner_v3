@@ -31,4 +31,5 @@ class Option(Enum):
   TOKEN_2 = "Save Auth Token"
   TOKEN_3 = "Remove Auth Token"
   USERNAME_1 = "Show Username Count"
+  USERNAME_2 = "Search Username Text"
   EXIT = "Exit Program"
