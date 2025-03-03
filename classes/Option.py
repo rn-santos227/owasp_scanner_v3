@@ -33,4 +33,5 @@ class Option(Enum):
   USERNAME_1 = "Show Username Count"
   USERNAME_2 = "Search Username Text"
   USERNAME_3 = "Add Username in List"
+  USERNAME_4 = "Remove Username in List"
   EXIT = "Exit Program"
