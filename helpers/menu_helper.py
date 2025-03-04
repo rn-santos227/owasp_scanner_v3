@@ -57,7 +57,7 @@ def handle_choice(respond):
     handle_token(banner)
 
   elif choice == Option.OPTION_08.value:
-    pass
+    banner = f"You selected: {Option.OPTION_08.value}"
 
   elif choice == Option.OPTION_09.value:
     banner = f"You selected: {Option.OPTION_09.value}"
