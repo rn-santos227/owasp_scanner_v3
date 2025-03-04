@@ -16,5 +16,6 @@ _user_menu = [
     choices=[
         
     ],
+    carousel=True
   )
 ]
