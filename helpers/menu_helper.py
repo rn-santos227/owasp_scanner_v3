@@ -48,8 +48,8 @@ def handle_choice(respond):
     banner = f"You selected: {Option.OPTION_05.value}"
     handle_dictionary(banner)
 
-  elif choice == Option.OPTION_6.value:
-    banner = f"You selected: {Option.OPTION_6.value}"
+  elif choice == Option.OPTION_06.value:
+    banner = f"You selected: {Option.OPTION_06.value}"
     handle_sensitive_data(banner)
     
   elif choice == Option.OPTION_7.value:
