@@ -44,8 +44,8 @@ def handle_choice(respond):
   elif choice == Option.OPTION_04.value:
     print(f"You selected: {Option.OPTION_04.value}")
 
-  elif choice == Option.OPTION_5.value:
-    banner = f"You selected: {Option.OPTION_5.value}"
+  elif choice == Option.OPTION_05.value:
+    banner = f"You selected: {Option.OPTION_05.value}"
     handle_dictionary(banner)
 
   elif choice == Option.OPTION_6.value:
