@@ -13,5 +13,8 @@ _FILE_USERNAME = File.FILE_USERNAMES.value
 _user_menu = [
   inquirer.List("choice",
     message = "Choose your Username Activity",  
+    choices=[
+        
+    ],
   )
 ]
