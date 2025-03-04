@@ -28,3 +28,5 @@ def _count_usernames():
   content = file_reader(_FILE_USERNAME)
   message = f"There are total of {len(content)} words available for usernames.\n"
   color.light_green(message)
+
+  input("Press Enter to Continue...")
