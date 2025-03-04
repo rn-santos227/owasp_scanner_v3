@@ -64,7 +64,7 @@ def handle_choice(respond):
     handle_config(banner)
 
   elif choice == Option.OPTION_10.value:
-    print(f"You selected: {Option.OPTION_9.value}")
+    print(f"You selected: {Option.OPTION_10.value}")
 
   elif choice == Option.EXIT.value:
     print("Exiting Program...")
