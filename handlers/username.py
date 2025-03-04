@@ -11,5 +11,7 @@ from utils.clear_screen import clear_screen
 _FILE_USERNAME = File.FILE_USERNAMES.value
 
 _user_menu = [
-  
+  inquirer.List("choice",
+                
+  )
 ]
