@@ -32,13 +32,13 @@ menu = [
 def handle_choice(respond):
   choice = respond["choice"]
   if choice == Option.OPTION_01.value:
-    banner = f"You selected: {Option.OPTION_1.value}"
+    banner = f"You selected: {Option.OPTION_01.value}"
     handle_endpoint(banner)
 
   elif choice == Option.OPTION_02.value:
     print(f"You selected: {Option.OPTION_2.value}")
 
-  elif choice == Option.OPTION_3.value:
+  elif choice == Option.OPTION_03.value:
     print(f"You selected: {Option.OPTION_3.value}")
 
   elif choice == Option.OPTION_4.value:
