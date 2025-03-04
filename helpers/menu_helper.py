@@ -35,8 +35,7 @@ def handle_choice(respond):
     banner = f"You selected: {Option.OPTION_1.value}"
     handle_endpoint(banner)
 
-  #fix this tomorrow
-  elif choice == Option.OPTION_2.value:
+  elif choice == Option.OPTION_02.value:
     print(f"You selected: {Option.OPTION_2.value}")
 
   elif choice == Option.OPTION_3.value:
