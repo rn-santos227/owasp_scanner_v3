@@ -16,6 +16,7 @@ _user_menu = [
     choices=[
       Option.USERNAME_1.value,
       Option.USERNAME_2.value,
+      Option.USERNAME_3.value,
       Option.EXIT.value
     ],
     carousel=True
