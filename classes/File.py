@@ -11,4 +11,4 @@ class File(Enum):
   FILE_PAYLOADS = "dictionaries/ssf_payloads.txt"
   FILE_QUERIES = "dictionaries/queries.txt"
   FILE_TOKENS = "files/auth_tokens.txt"
-  FILE_USERS = "files/usernames.txt"
+  FILE_USERNAMES = "files/usernames.txt"
