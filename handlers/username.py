@@ -14,6 +14,7 @@ _user_menu = [
   inquirer.List("choice",
     message = "Choose your Username Activity",  
     choices=[
+      Option.USERNAME_1.value,
       Option.EXIT.value
     ],
     carousel=True
