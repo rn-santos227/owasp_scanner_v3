@@ -15,6 +15,7 @@ _user_menu = [
     message = "Choose your Username Activity",  
     choices=[
       Option.USERNAME_1.value,
+      Option.USERNAME_2.value,
       Option.EXIT.value
     ],
     carousel=True
