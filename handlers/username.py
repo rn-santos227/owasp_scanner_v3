@@ -25,4 +25,4 @@ _user_menu = [
 ]
 
 def _count_usernames():
-  pass
+  content = file_reader(_FILE_USERNAME)
