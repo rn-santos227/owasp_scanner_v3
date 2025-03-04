@@ -23,3 +23,6 @@ _user_menu = [
     carousel=True
   )
 ]
+
+def _count_usernames():
+  pass
