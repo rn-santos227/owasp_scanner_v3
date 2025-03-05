@@ -30,3 +30,6 @@ def _count_usernames():
   color.light_green(message)
 
   input("Press Enter to Continue...")
+
+def _searh_username():
+  pass
