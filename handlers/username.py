@@ -51,4 +51,7 @@ def _add_username():
   input("Press Enter to Continue...")
 
 def _delete_username():
-  endpoints = file_reader(_FILE_USERNAMES)
+  usernames = file_reader(_FILE_USERNAMES)
+
+  if not usernames:
+    color.warning("No usernames found.")
