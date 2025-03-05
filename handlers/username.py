@@ -49,3 +49,6 @@ def _add_username():
     color.light_green(f"✓ Password '{new_username}' has been added.\n")
 
   input("Press Enter to Continue...")
+
+def _delete_username():
+  pass
