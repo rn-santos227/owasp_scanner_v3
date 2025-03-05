@@ -36,4 +36,4 @@ def _searh_username():
   content = file_reader(_FILE_USERNAME)
 
   if query in content:
-    pass
+    color.light_green(f"Username '{query}' found in list.\n")
