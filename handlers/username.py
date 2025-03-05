@@ -43,4 +43,4 @@ def _searh_username():
   input("Press Enter to Continue...")
 
 def _add_username():
-  pass
+  new_username = input("Enter new username to add: ").strip()
