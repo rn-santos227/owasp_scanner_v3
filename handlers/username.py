@@ -59,3 +59,4 @@ def _delete_username():
     return
   
   choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(usernames)}
+  question = [inquirer.List("selected", message="Select a username to delete", choices=list(choices.keys()))]
