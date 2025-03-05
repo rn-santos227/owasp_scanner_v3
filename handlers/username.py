@@ -37,3 +37,5 @@ def _searh_username():
 
   if query in content:
     color.light_green(f"Username '{query}' found in list.\n")
+  else:
+    color.warning(f"Username '{query}' not found.\n")
