@@ -56,3 +56,4 @@ def _delete_username():
 
   if username_to_delete in content:
     content.remove(username_to_delete + "\n")
+    overwrite_file(_FILE_USERNAME, content)
