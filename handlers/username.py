@@ -8,7 +8,7 @@ from helpers.file_reader import file_reader
 from helpers.file_writer import file_writer, overwrite_file
 from utils.clear_screen import clear_screen
 
-_FILE_USERNAME = File.FILE_USERNAMES.value
+_FILE_USERNAMES = File.FILE_USERNAMES.value
 
 _user_menu = [
   inquirer.List("choice",
@@ -25,7 +25,7 @@ _user_menu = [
 ]
 
 def _count_usernames():
-  content = file_reader(_FILE_USERNAME)
+  content = file_reader(_FILE_USERNAMES)
   message = f"There are total of {len(content)} words available for usernames.\n"
   color.light_green(message)
 
@@ -33,7 +33,7 @@ def _count_usernames():
 
 def _searh_username():
   query = input("Enter password to search: ").strip()
-  content = file_reader(_FILE_USERNAME)
+  content = file_reader(_FILE_USERNAMES)
 
   if query in content:
     color.light_green(f"Username '{query}' found in list.\n")
@@ -45,15 +45,10 @@ def _searh_username():
 def _add_username():
   new_username = input("Enter new username to add: ").strip()
   if new_username:
-    file_writer(_FILE_USERNAME, new_username)
+    file_writer(_FILE_USERNAMES, new_username)
     color.light_green(f"✓ Password '{new_username}' has been added.\n")
 
   input("Press Enter to Continue...")
 
 def _delete_username():
-  username_to_delete = input("Enter username to delete: ").strip()
-  content = file_reader(_FILE_USERNAME)
-
-  if username_to_delete in content:
-    content.remove(username_to_delete + "\n")
-    overwrite_file(_FILE_USERNAME, content)
+  endpoints = file_reader(_FILE_USERNAMES)
