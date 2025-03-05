@@ -53,3 +53,6 @@ def _add_username():
 def _delete_username():
   username_to_delete = input("Enter username to delete: ").strip()
   content = file_reader(_FILE_USERNAME)
+
+  if username_to_delete in content:
+    pass
