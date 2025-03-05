@@ -57,3 +57,5 @@ def _delete_username():
     color.warning("No usernames found.")
     input("\nPress Enter to Continue...")
     return
+  
+  choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(usernames)}
