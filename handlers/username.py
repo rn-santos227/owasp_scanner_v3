@@ -55,4 +55,4 @@ def _delete_username():
   content = file_reader(_FILE_USERNAME)
 
   if username_to_delete in content:
-    pass
+    content.remove(username_to_delete + "\n")
