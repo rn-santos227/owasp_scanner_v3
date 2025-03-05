@@ -51,4 +51,4 @@ def _add_username():
   input("Press Enter to Continue...")
 
 def _delete_username():
-  pass
+  username_to_delete = input("Enter username to delete: ").strip()
