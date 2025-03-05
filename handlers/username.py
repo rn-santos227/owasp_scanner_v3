@@ -32,4 +32,4 @@ def _count_usernames():
   input("Press Enter to Continue...")
 
 def _searh_username():
-  pass
+  query = input("Enter password to search: ").strip()
