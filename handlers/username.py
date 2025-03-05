@@ -46,3 +46,4 @@ def _add_username():
   new_username = input("Enter new username to add: ").strip()
   if new_username:
     file_writer(_FILE_USERNAME, new_username)
+    color.light_green(f"✓ Password '{new_username}' has been added.\n")
