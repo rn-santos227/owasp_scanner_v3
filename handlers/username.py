@@ -55,3 +55,4 @@ def _delete_username():
 
   if not usernames:
     color.warning("No usernames found.")
+    input("\nPress Enter to Continue...")
