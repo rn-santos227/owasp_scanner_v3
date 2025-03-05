@@ -34,3 +34,6 @@ def _count_usernames():
 def _searh_username():
   query = input("Enter password to search: ").strip()
   content = file_reader(_FILE_USERNAME)
+
+  if query in content:
+    pass
