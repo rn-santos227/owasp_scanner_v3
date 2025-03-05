@@ -39,3 +39,5 @@ def _searh_username():
     color.light_green(f"Username '{query}' found in list.\n")
   else:
     color.warning(f"Username '{query}' not found.\n")
+
+  input("Press Enter to Continue...")
