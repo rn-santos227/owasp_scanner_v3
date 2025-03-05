@@ -45,4 +45,4 @@ def _searh_username():
 def _add_username():
   new_username = input("Enter new username to add: ").strip()
   if new_username:
-    pass
+    file_writer(_FILE_USERNAME, new_username)
