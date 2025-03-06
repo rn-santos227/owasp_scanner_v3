@@ -85,3 +85,6 @@ def handle_username(banner = ""):
 
   elif choice == Option.USERNAME_2.value:
     _searh_username()
+
+  elif choice == Option.USERNAME_3.value:
+    pass
