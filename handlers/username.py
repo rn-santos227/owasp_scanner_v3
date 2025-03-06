@@ -84,4 +84,4 @@ def handle_username(banner = ""):
     _count_usernames()
 
   elif choice == Option.USERNAME_2.value:
-    pass
+    _searh_username()
