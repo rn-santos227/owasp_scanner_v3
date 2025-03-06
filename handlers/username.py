@@ -66,3 +66,5 @@ def _delete_username():
     selected_endpoint = choices[answer["selected"]]
     usernames = [un for un in usernames if un.strip() != selected_endpoint]
     overwrite_file(_FILE_USERNAMES, usernames)
+
+    color.light_red(f"✗ Username '{selected_endpoint}' has been deleted.\n")
