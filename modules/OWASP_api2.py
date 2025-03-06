@@ -14,6 +14,7 @@ proxies = parse_config()[Config.CONFIG_5.value]
 
 _FILE_PASSWORDS = File.FILE_PASSWORDS.value
 _FILE_TOKENS = File.FILE_TOKENS.value
+_FILE_USERNAMES = File.FILE_USERNAMES.value
 
 def _load_test_tokens():
   test_tokens = file_reader(_FILE_TOKENS)
