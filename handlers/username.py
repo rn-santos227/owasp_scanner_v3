@@ -65,3 +65,4 @@ def _delete_username():
   if answer:
     selected_endpoint = choices[answer["selected"]]
     usernames = [un for un in usernames if un.strip() != selected_endpoint]
+    overwrite_file(_FILE_USERNAMES, usernames)
