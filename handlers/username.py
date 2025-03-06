@@ -90,4 +90,4 @@ def handle_username(banner = ""):
     _add_username()
 
   elif choice == Option.USERNAME_4.value:
-    pass
+    _delete_username()
