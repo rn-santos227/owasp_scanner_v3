@@ -82,3 +82,6 @@ def handle_username(banner = ""):
 
   if choice == Option.USERNAME_1.value:
     _count_usernames()
+
+  elif choice == Option.USERNAME_2.value:
+    pass
