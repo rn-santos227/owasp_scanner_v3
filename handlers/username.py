@@ -87,4 +87,4 @@ def handle_username(banner = ""):
     _searh_username()
 
   elif choice == Option.USERNAME_3.value:
-    pass
+    _add_username()
