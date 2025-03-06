@@ -26,6 +26,7 @@ def _load_passwords():
 
 def _load_usernames():
   usernames = file_reader(_FILE_USERNAMES)
+  return [line.strip() for line in usernames if line.strip()]
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
