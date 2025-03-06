@@ -72,6 +72,7 @@ def _delete_username():
 
     color.light_red(f"✗ Username '{selected_endpoint}' has been deleted.\n")
 
+  handle_username()
   input("Press Enter to Continue...")
 
 def handle_username(banner = ""):
