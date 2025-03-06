@@ -79,3 +79,6 @@ def handle_username(banner = ""):
 
   user_respond = inquirer.prompt(_user_menu)
   choice = user_respond["choice"]
+
+  if choice == Option.USERNAME_1.value:
+    pass
