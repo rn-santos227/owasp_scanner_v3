@@ -72,4 +72,4 @@ def _delete_username():
   input("Press Enter to Continue...")
 
 def handle_username(banner = ""):
-  pass
+  clear_screen()
