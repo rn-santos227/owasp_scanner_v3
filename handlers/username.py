@@ -78,3 +78,4 @@ def handle_username(banner = ""):
     color.banner(banner)
 
   user_respond = inquirer.prompt(_user_menu)
+  choice = user_respond["choice"]
