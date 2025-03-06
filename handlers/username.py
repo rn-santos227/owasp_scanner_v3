@@ -68,3 +68,5 @@ def _delete_username():
     overwrite_file(_FILE_USERNAMES, usernames)
 
     color.light_red(f"✗ Username '{selected_endpoint}' has been deleted.\n")
+
+  input("Press Enter to Continue...")
