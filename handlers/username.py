@@ -76,3 +76,5 @@ def handle_username(banner = ""):
 
   if banner:
     color.banner(banner)
+
+  user_respond = inquirer.prompt(_user_menu)
