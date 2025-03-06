@@ -58,9 +58,10 @@ def _delete_username():
     input("\nPress Enter to Continue...")
     return
   
-  choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(usernames)}
+  choices = {f"{i+1}. {un.strip()}": un.strip() for i, un in enumerate(usernames)}
   question = [inquirer.List("selected", message="Select a username to delete", choices=list(choices.keys()))]
   answer = inquirer.prompt(question)
 
   if answer:
     selected_endpoint = choices[answer["selected"]]
+    usernames = [un for un in usernames if un.strip() != selected_endpoint]
