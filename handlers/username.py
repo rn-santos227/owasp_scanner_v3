@@ -29,6 +29,7 @@ def _count_usernames():
   message = f"There are total of {len(content)} words available for usernames.\n"
   color.light_green(message)
 
+  handle_username()
   input("Press Enter to Continue...")
 
 def _searh_username():
