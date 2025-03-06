@@ -88,3 +88,6 @@ def handle_username(banner = ""):
 
   elif choice == Option.USERNAME_3.value:
     _add_username()
+
+  elif choice == Option.USERNAME_4.value:
+    pass
