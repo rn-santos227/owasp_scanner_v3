@@ -93,4 +93,4 @@ def handle_username(banner = ""):
     _delete_username()
 
   elif choice == Option.EXIT.value:
-    pass
+    clear_screen()
