@@ -24,6 +24,9 @@ def _load_passwords():
   passwords = file_reader(_FILE_PASSWORDS)
   return [line.strip() for line in passwords if line.strip()]
 
+def _load_usernames():
+  pass
+
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_2.value.id} - {OWASP.OWASP_2.value.name}"
