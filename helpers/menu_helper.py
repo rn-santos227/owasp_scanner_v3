@@ -59,6 +59,7 @@ def handle_choice(respond):
 
   elif choice == Option.OPTION_08.value:
     banner = f"You selected: {Option.OPTION_08.value}"
+    handle_username(banner)
 
   elif choice == Option.OPTION_09.value:
     banner = f"You selected: {Option.OPTION_09.value}"
