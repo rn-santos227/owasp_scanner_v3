@@ -81,4 +81,4 @@ def handle_username(banner = ""):
   choice = user_respond["choice"]
 
   if choice == Option.USERNAME_1.value:
-    pass
+    _count_usernames()
