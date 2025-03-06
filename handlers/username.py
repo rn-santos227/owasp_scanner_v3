@@ -73,3 +73,6 @@ def _delete_username():
 
 def handle_username(banner = ""):
   clear_screen()
+
+  if banner:
+    color.banner(banner)
