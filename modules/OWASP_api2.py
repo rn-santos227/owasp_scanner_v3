@@ -80,6 +80,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       if successful_attempts > 3:
         color.red("Endpoint does not enforce login attempt limits (Rate Limiting missing).")
         
+      color.info("\nTesting authentication tokens...")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
