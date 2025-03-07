@@ -49,6 +49,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   color.info("\nTesting for brute force vulnerability...")
 
+  for username in usernames:
+    pass
+
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
