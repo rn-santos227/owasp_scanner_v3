@@ -86,7 +86,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         headers["Authorization"] = f"Bearer {token}"
 
         try:
-          pass
+          response = requests.request(
+
+          )
 
         except requests.RequestException as e:
           color.info(f"Token {token[:10]}... failed authentication.")
