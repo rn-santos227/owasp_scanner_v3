@@ -54,7 +54,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       auth_data = {"username": username, "password": password}
 
       try:
-        pass
+        response = requests.request(
+
+        )
 
       except requests.RequestException as e:
         color.warning(f"Error during brute force test: {e}")
