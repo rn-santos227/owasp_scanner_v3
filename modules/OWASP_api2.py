@@ -50,7 +50,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info("\nTesting for brute force vulnerability...")
 
   for username in usernames:
-    pass
+    for password in passwords:
+      pass
 
 
   if len(vulnerabilities) == 0:
