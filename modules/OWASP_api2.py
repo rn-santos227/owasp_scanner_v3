@@ -51,7 +51,13 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   for username in usernames:
     for password in passwords:
-      auth_data = {"username": username, "password": password} 
+      auth_data = {"username": username, "password": password}
+
+      try:
+        pass
+
+      except requests.RequestException as e:
+        pass
 
 
   if len(vulnerabilities) == 0:
