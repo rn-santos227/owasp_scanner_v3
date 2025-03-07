@@ -57,7 +57,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         pass
 
       except requests.RequestException as e:
-        pass
+        color.warning(f"Error during brute force test: {e}")
 
 
   if len(vulnerabilities) == 0:
