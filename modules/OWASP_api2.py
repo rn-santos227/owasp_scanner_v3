@@ -40,6 +40,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.warning("Invalid URL. Skipping BA Test.")
     return vulnerabilities, logs
 
+  usernames = _load_usernames()
   passwords = _load_passwords()
   test_tokens = _load_test_tokens()
 
