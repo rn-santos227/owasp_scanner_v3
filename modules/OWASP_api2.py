@@ -71,6 +71,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
         else:
           failed_attempts += 1
+          if verbose:
+            color.info(f"Attempt {username}:{password} failed ({response.status_code})")
 
       except requests.RequestException as e:
         color.warning(f"Error during brute force test: {e}")
