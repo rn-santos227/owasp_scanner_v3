@@ -66,7 +66,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
         if response.status_code == 200:
           successful_attempts += 1
-          color.warning(f"Weak credential detected: {username}:{password}")
+          color.light_red(f"Weak credential detected: {username}:{password}")
           vulnerabilities.append(f"Weak credential: {username}:{password}")
 
         else:
@@ -78,7 +78,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.warning(f"Error during brute force test: {e}")
 
       if successful_attempts > 3:
-        pass
+        color.red("Endpoint does not enforce login attempt limits (Rate Limiting missing).")
         
 
   if len(vulnerabilities) == 0:
