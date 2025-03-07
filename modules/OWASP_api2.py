@@ -64,6 +64,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
           verify = False
         )
 
+        if response.status_code == 200:
+          pass
+
       except requests.RequestException as e:
         color.warning(f"Error during brute force test: {e}")
 
