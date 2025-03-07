@@ -65,7 +65,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         )
 
         if response.status_code == 200:
-          pass
+          successful_attempts += 1
+          color.warning(f"Weak credential detected: {username}:{password}")
 
       except requests.RequestException as e:
         color.warning(f"Error during brute force test: {e}")
