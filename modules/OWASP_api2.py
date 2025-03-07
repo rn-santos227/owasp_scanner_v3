@@ -85,6 +85,12 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       for token in test_tokens:
         headers["Authorization"] = f"Bearer {token}"
 
+        try:
+          pass
+
+        except requests.RequestException as e:
+          pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
