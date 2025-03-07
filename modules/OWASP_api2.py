@@ -77,6 +77,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       except requests.RequestException as e:
         color.warning(f"Error during brute force test: {e}")
 
+      if successful_attempts > 3:
+        pass
+        
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
