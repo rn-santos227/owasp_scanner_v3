@@ -125,4 +125,10 @@ email_api_key
 mailgun_api_key  
 sendgrid_key  
 email_secret  
-
+device_token  
+android_key  
+ios_key  
+push_notification_token  
+imei  
+mac_address  
+sim_serial  
