@@ -28,3 +28,15 @@ mysql_password
 postgres_password  
 mongodb_uri  
 sql_connection_string  
+aws_access_key_id  
+aws_secret_access_key  
+azure_client_id  
+azure_client_secret  
+gcp_project_id  
+gcp_private_key  
+google_api_key  
+s3_bucket  
+s3_key  
+firebase_api_key  
+cloudfront_key  
+digitalocean_token  
