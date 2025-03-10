@@ -62,3 +62,13 @@ jwt_secret
 hmac_secret  
 otp_secret  
 api_secret  
+app_secret  
+app_key  
+config_key  
+private_config  
+internal_key  
+session_secret  
+encryption_salt  
+pepper  
+salt  
+master_key  
