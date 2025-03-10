@@ -101,3 +101,12 @@ file_upload_token
 media_token  
 upload_key  
 storage_secret  
+app_config  
+api_url  
+webhook_url  
+callback_url  
+proxy_url  
+proxy_username  
+proxy_password  
+endpoint_url  
+default_password  
