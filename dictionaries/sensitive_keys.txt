@@ -51,3 +51,14 @@ login_password
 user_token  
 security_question  
 security_answer  
+csrf_token  
+xsrf_token  
+captcha_key  
+encryption_key  
+decryption_key  
+ssl_cert  
+ssl_key  
+jwt_secret  
+hmac_secret  
+otp_secret  
+api_secret  
