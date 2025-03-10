@@ -18,7 +18,7 @@ _FILE_USERNAMES = File.FILE_USERNAMES.value
 
 def _load_test_tokens():
   test_tokens = file_reader(_FILE_TOKENS)
-  return [line.strip() for line in test_tokens if line.strip()]
+  return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
 
 def _load_passwords():
   passwords = file_reader(_FILE_PASSWORDS)
