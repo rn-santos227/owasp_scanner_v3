@@ -97,6 +97,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
           if response.status_code == 200:
             color.light_red(f"Valid token found: {token}")
+            vulnerabilities.append(f"Exposed valid token: {token}")
 
         except requests.RequestException as e:
           color.info(f"Token {token[:10]}... failed authentication.")
