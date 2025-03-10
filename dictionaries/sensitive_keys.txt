@@ -72,3 +72,15 @@ encryption_salt
 pepper  
 salt  
 master_key  
+slack_token  
+discord_token  
+github_token  
+gitlab_token  
+twilio_auth_token  
+sendgrid_api_key  
+stripe_secret_key  
+paypal_client_id  
+paypal_secret_key  
+google_oauth_token  
+facebook_app_secret  
+linkedin_client_secret  
