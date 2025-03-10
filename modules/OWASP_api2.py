@@ -22,7 +22,7 @@ def _load_test_tokens():
 
 def _load_passwords():
   passwords = file_reader(_FILE_PASSWORDS)
-  return [line.strip() for line in passwords if line.strip()]
+  return [' '.join(word.strip() for word in line.split()) for line in passwords if line.strip()]
 
 def _load_usernames():
   usernames = file_reader(_FILE_USERNAMES)
