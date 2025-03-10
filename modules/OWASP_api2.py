@@ -100,7 +100,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
             vulnerabilities.append(f"Exposed valid token: {token}")
 
           elif verbose:
-            pass
+            color.info(f"Token {token[:10]}... failed authentication.")
 
         except requests.RequestException as e:
           color.info(f"Token {token[:10]}... failed authentication.")
