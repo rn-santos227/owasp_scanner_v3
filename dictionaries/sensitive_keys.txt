@@ -84,3 +84,12 @@ paypal_secret_key
 google_oauth_token  
 facebook_app_secret  
 linkedin_client_secret  
+device_id  
+account_id  
+customer_id  
+transaction_id  
+session_id  
+trace_id  
+uuid  
+guid  
+user_reference  
