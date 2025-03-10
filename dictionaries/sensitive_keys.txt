@@ -16,3 +16,15 @@ session_token
 token  
 user_token  
 jwt_token  
+db_host  
+db_name  
+db_password  
+db_port  
+db_user  
+database_url  
+database_password  
+database_username  
+mysql_password  
+postgres_password  
+mongodb_uri  
+sql_connection_string  
