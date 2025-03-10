@@ -119,4 +119,10 @@ billing_address
 transaction_token  
 payment_id  
 billing_id  
+smtp_password  
+smtp_username  
+email_api_key  
+mailgun_api_key  
+sendgrid_key  
+email_secret  
 
