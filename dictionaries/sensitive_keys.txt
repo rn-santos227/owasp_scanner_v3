@@ -93,3 +93,11 @@ trace_id
 uuid  
 guid  
 user_reference  
+file_path  
+storage_key  
+bucket_name  
+resource_path  
+file_upload_token  
+media_token  
+upload_key  
+storage_secret  
