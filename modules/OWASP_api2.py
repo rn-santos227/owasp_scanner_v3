@@ -103,7 +103,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
             color.info(f"Token {token[:10]}... failed authentication.")
 
         except requests.RequestException as e:
-          color.info(f"Token {token[:10]}... failed authentication.")
+          color.warning(f"Error testing tokens: {e}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
