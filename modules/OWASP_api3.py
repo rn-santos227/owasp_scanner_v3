@@ -27,8 +27,8 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   parsed_url = validate_url(endpoint)
   if not parsed_url:
-    pass
-  
+    color.warning("Invalid URL. Skipping BA Test.")
+
   sensitive_keys = _load_sensitive_keys()
 
   try:
