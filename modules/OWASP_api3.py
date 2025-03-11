@@ -43,6 +43,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   if original_response.status_code != 200:
     color.warning("Original request failed. Cannot perform authorization tests.")
+    return vulnerabilities, logs
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
