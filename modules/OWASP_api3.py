@@ -51,6 +51,9 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
     return vulnerabilities, logs
   
   color.info("\nTesting unauthorized property access...")
+  
+  for prop in sensitive_keys:
+    pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
