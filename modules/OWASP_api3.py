@@ -26,6 +26,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
+  sensitive_keys = _load_sensitive_keys()
 
   try:
     original_response = requests.request(
