@@ -56,6 +56,12 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
     test_payload = json.copy() if json else {}
     test_payload[prop] = "unauthorized_value"
 
+    try:
+      pass
+
+    except requests.RequestException as e:
+      color.warning(f"Error testing property '{prop}': {e}")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
