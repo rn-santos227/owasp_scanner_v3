@@ -15,7 +15,7 @@ proxies = parse_config()[Config.CONFIG_5.value]
 _FILE_KEYS = File.FILE_KEYS.value
 
 def _load_sensitive_keys():
-  pass
+  sensitive_keys = file_reader(_FILE_KEYS)
 
 #API3:2023 - Broken Object Property Level Authorization
 def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
