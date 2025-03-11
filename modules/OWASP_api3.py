@@ -31,6 +31,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
     original_response = requests.request(
       method,
       parsed_url,
+      headers = headers,
     )
 
   except requests.RequestException as e:
