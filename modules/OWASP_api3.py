@@ -58,7 +58,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     try:
       response = requests.request(
-
+        method,
       )
 
     except requests.RequestException as e:
