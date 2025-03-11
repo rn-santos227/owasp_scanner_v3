@@ -28,7 +28,9 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   parsed_url = validate_url(endpoint)
 
   try:
-    pass
+    original_response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Error fetching original data: {e}")

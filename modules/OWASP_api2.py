@@ -56,7 +56,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       try:
         response = requests.request(
           method,
-          endpoint,
+          parsed_url,
           headers = headers,
           json = auth_data,
           timeout = timeout,
@@ -88,7 +88,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         try:
           response = requests.request(
             method,
-            endpoint,
+            parsed_url,
             headers = headers,
             timeout = timeout,
             proxies = proxies,
