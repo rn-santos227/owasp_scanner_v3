@@ -30,6 +30,9 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
   for index in range(_requests_count):
     try:
       start_time = time.time()
+      response = requests.request(
+
+      )
 
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
