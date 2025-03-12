@@ -31,7 +31,7 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
     try:
       start_time = time.time()
       response = requests.request(
-
+        method,
       )
 
     except requests.RequestException as e:
