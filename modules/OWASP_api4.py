@@ -27,7 +27,7 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
   total_size = 0
   total_time = 0
 
-  for index in range(requests_count):
+  for index in range(_requests_count):
     try:
       start_time = time.time()
 
