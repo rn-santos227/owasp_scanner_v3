@@ -9,6 +9,7 @@ from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 config = parse_config()
+requests_count = int(config[Config.CONFIG_1.value]) 
 
 
 #API4:2023 - Unrestricted Resource Consumption
