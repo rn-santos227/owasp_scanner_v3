@@ -68,7 +68,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
       )
 
       if response.status_code == 200 and prop in response.text:
-        pass
+        color.warning(f"Unauthorized access to property: '{prop}'")
 
     except requests.RequestException as e:
       color.warning(f"Error testing property '{prop}': {e}")
