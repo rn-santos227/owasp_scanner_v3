@@ -64,6 +64,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
         json = test_payload,
         timeout = timeout,
         proxies = proxies,
+        verify = False
       )
 
     except requests.RequestException as e:
