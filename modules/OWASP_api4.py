@@ -1,4 +1,5 @@
 import requests
+import time
 
 import helpers.color_text as color
 
@@ -8,11 +9,11 @@ from classes.Scanner import OWASP
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
-config = parse_config()
-requests_count = int(config[Config.CONFIG_1.value])
-size_threshold = int(config[Config.CONFIG_2.value])
-time_threshold = float(config[Config.CONFIG_3.value])
-proxies = config[Config.CONFIG_5.value]
+_config = parse_config()
+requests_count = int(_config[Config.CONFIG_1.value])
+size_threshold = int(_config[Config.CONFIG_2.value])
+time_threshold = float(_config[Config.CONFIG_3.value])
+proxies = _config[Config.CONFIG_5.value]
 
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
@@ -28,10 +29,11 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   for index in range(requests_count):
     try:
-      pass
+      start_time = time.time()
 
     except requests.RequestException as e:
-      color.warning(f"Error during request {i+1}: {e}")
+      color.warning(f"Error during request {index + 1}: {e}")
+      break
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
