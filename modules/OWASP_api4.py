@@ -8,7 +8,9 @@ from classes.Scanner import OWASP
 from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
-proxies = parse_config()[Config.CONFIG_5.value]
+config = parse_config()
+
+
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_4.value.id} - {OWASP.OWASP_4.value.name}"
