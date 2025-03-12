@@ -76,8 +76,8 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"Unauthorized modification of property: {prop}")
 
       elif verbose:
-        pass
-      
+        color.info(f"Property '{prop}' is properly secured.")
+
     except requests.RequestException as e:
       color.warning(f"Error testing property '{prop}': {e}")
 
