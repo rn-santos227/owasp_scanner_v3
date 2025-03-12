@@ -27,7 +27,11 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
   total_time = 0
 
   for index in range(requests_count):
-    pass
+    try:
+      pass
+
+    except requests.RequestException as e:
+      color.warning(f"Error during request {i+1}: {e}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
