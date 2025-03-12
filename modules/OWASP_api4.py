@@ -10,9 +10,9 @@ from handlers.settings import parse_config
 from utils.validate_url import validate_url
 
 _config = parse_config()
-requests_count = int(_config[Config.CONFIG_1.value])
-size_threshold = int(_config[Config.CONFIG_2.value])
-time_threshold = float(_config[Config.CONFIG_3.value])
+_requests_count = int(_config[Config.CONFIG_1.value])
+_size_threshold = int(_config[Config.CONFIG_2.value])
+_time_threshold = float(_config[Config.CONFIG_3.value])
 proxies = _config[Config.CONFIG_5.value]
 
 #API4:2023 - Unrestricted Resource Consumption
