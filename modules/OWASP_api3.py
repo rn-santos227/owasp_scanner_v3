@@ -71,6 +71,9 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.warning(f"Unauthorized access to property: '{prop}'")
         vulnerabilities.append(f"Unauthorized access to property: {prop}")
 
+      elif response.status_code == 200 and response.json().get(prop) == "unauthorized_value":
+        pass
+
     except requests.RequestException as e:
       color.warning(f"Error testing property '{prop}': {e}")
 
