@@ -33,6 +33,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   parsed_url = validate_url(endpoint)
 
   tokens = _load_test_tokens()
+  public_endpoints = _load_whitelist()
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
