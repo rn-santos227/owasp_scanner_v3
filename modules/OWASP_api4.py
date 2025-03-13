@@ -56,7 +56,7 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"Slow response time at {endpoint}")
 
       if verbose:
-        pass
+         color.info(f"Request { index + 1 }: Size = {response_size} bytes, Time = {elapsed_time:.2f} seconds")
 
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
