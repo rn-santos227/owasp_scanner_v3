@@ -24,7 +24,7 @@ def _load_whitelist():
   return [' '.join(word.strip() for word in line.split()) for line in whitelist if line.strip()]
 
 def _is_public_endpoint(endpoint, public_endpoints):
-  pass
+  return any(public in endpoint for public in public_endpoints)
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
