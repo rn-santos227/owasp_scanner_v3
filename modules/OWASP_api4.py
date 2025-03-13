@@ -47,6 +47,9 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
       total_time += elapsed_time
       total_size += response_size
 
+      if response_size > _size_threshold:
+        pass
+
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
       break
