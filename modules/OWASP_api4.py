@@ -48,7 +48,7 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
       total_size += response_size
 
       if response_size > _size_threshold:
-        pass
+        color.red(f"Large response size detected at request { index +1 }: {response_size} bytes")
 
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
