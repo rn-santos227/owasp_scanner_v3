@@ -12,3 +12,4 @@ class File(Enum):
   FILE_QUERIES = "dictionaries/queries.txt"
   FILE_TOKENS = "files/auth_tokens.txt"
   FILE_USERNAMES = "files/usernames.txt"
+  FILE_WHITELIST = "dictionaries/whitelist_endpoints.txt"
