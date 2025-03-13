@@ -55,6 +55,9 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.red(f"Slow response time detected at request { index + 1 }: {elapsed_time:.2f} seconds")
         vulnerabilities.append(f"Slow response time at {endpoint}")
 
+      if verbose:
+        pass
+
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
       break
