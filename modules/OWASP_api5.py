@@ -15,6 +15,9 @@ proxies = parse_config()[Config.CONFIG_5.value]
 _FILE_TOKENS = File.FILE_TOKENS.value
 _FILE_PUBLIC_ENDPOINTS = File.FILE_WHITELIST.value
 
+def _load_test_tokens():
+  pass
+
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_5.value.id} - {OWASP.OWASP_5.value.name}"
