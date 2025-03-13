@@ -16,7 +16,8 @@ _FILE_TOKENS = File.FILE_TOKENS.value
 _FILE_PUBLIC_ENDPOINTS = File.FILE_WHITELIST.value
 
 def _load_test_tokens():
-  tokens = file_reader(_FILE_TOKENS)
+  test_tokens = file_reader(_FILE_TOKENS)
+  return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
