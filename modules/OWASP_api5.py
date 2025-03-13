@@ -23,6 +23,9 @@ def _load_whitelist():
   whitelist = file_reader(_FILE_PUBLIC_ENDPOINTS)
   return [' '.join(word.strip() for word in line.split()) for line in whitelist if line.strip()]
 
+def _is_public_endpoint(endpoint, public_endpoints):
+  pass
+
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_5.value.id} - {OWASP.OWASP_5.value.name}"
@@ -34,6 +37,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   tokens = _load_test_tokens()
   public_endpoints = _load_whitelist()
+  
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
