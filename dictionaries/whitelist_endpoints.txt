@@ -1,0 +1,9 @@
+/about
+/about-us
+/contacts
+/login
+/register
+/forgot-password
+/public-info
+/status
+/api/docs
