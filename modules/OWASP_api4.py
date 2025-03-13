@@ -44,6 +44,8 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
       elapsed_time = time.time() - start_time
       response_size = len(response.content)
 
+      total_time += elapsed_time
+
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
       break
