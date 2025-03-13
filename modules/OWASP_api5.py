@@ -21,6 +21,7 @@ def _load_test_tokens():
 
 def _load_whitelist():
   whitelist = file_reader(_FILE_PUBLIC_ENDPOINTS)
+  return [' '.join(word.strip() for word in line.split()) for line in whitelist if line.strip()]
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
