@@ -51,6 +51,9 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.red(f"Large response size detected at request { index +1 }: {response_size} bytes")
         vulnerabilities.append(f"Large response size at {endpoint}")
 
+      if elapsed_time > _time_threshold:
+        pass
+
     except requests.RequestException as e:
       color.warning(f"Error during request {index + 1}: {e}")
       break
