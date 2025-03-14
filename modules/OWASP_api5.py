@@ -72,9 +72,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
       low_response = requests.request(
-
+        method,
       )
-      
+
     else:
       color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
 
