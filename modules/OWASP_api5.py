@@ -45,6 +45,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   try:
     response_no_token = requests.request(
       method,
+      parsed_url
     )
 
   except requests.RequestException as e:
