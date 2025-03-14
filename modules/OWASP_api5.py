@@ -66,6 +66,12 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     low_privilege_token = tokens[0]
     high_privilege_token = tokens[1]
 
+    try:
+      pass
+
+    except requests.RequestException as e:
+      color.warning(f"Error during token-based request: {e}")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
