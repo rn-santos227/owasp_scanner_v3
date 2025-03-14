@@ -55,7 +55,10 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     if response_no_token.status_code == 200:
       color.red(f"Unauthorized access detected without token at {endpoint}")
       vulnerabilities.append(f"Access without authentication possible at {endpoint}")
-      
+    
+    elif verbose:
+      color.info(f"No-token access correctly restricted at {endpoint} (Status: {response_no_token.status_code})")
+
   except requests.RequestException as e:
     color.warning(f"Error during no-token request: {e}")
 
