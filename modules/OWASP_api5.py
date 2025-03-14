@@ -76,6 +76,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         parsed_url,
         headers = low_headers,
         timeout = timeout,
+        proxies = proxies,
       )
 
     else:
