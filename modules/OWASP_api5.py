@@ -42,6 +42,11 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.info(f"Skipping public endpoint {endpoint} (whitelisted).")
     return vulnerabilities, logs
   
+  try:
+    pass
+
+  except requests.RequestException as e:
+    color.warning(f"Error during no-token request: {e}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
