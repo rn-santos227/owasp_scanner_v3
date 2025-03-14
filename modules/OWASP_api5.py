@@ -67,7 +67,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     high_privilege_token = tokens[1]
 
     try:
-      pass
+      low_headers = {**headers, "Authorization": f"Bearer {low_privilege_token}"}
 
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
