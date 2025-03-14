@@ -74,6 +74,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       low_response = requests.request(
         method,
         parsed_url,
+        headers = low_headers,
       )
 
     else:
