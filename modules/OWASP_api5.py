@@ -37,6 +37,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   tokens = _load_test_tokens()
   public_endpoints = _load_whitelist()
+
+  if _is_public_endpoint(endpoint, public_endpoints):
+    pass
   
 
   if len(vulnerabilities) == 0:
