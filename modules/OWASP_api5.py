@@ -77,6 +77,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         headers = low_headers,
         timeout = timeout,
         proxies = proxies,
+        verify = False
       )
 
     else:
