@@ -73,6 +73,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       color.warning(f"Error during token-based request: {e}")
       low_response = requests.request(
         method,
+        parsed_url,
       )
 
     else:
