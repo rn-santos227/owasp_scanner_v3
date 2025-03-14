@@ -68,9 +68,6 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     try:
       low_headers = {**headers, "Authorization": f"Bearer {low_privilege_token}"}
-
-    except requests.RequestException as e:
-      color.warning(f"Error during token-based request: {e}")
       low_response = requests.request(
         method,
         parsed_url,
@@ -81,6 +78,12 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       )
 
       high_headers = {**headers, "Authorization": f"Bearer {high_privilege_token}"}
+      high_response = requests.request(
+
+      )
+
+    except requests.RequestException as e:
+      color.warning(f"Error during token-based request: {e}")
 
     else:
       color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
