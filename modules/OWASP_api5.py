@@ -43,7 +43,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     return vulnerabilities, logs
   
   try:
-    pass
+    response_no_token = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Error during no-token request: {e}")
