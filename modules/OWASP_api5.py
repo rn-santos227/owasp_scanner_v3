@@ -80,6 +80,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         verify = False
       )
 
+      high_headers = {**headers, "Authorization": f"Bearer {high_privilege_token}"}
+
     else:
       color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
 
