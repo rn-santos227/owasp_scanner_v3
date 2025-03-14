@@ -62,6 +62,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   except requests.RequestException as e:
     color.warning(f"Error during no-token request: {e}")
 
+  if len(tokens) >= 2:
+    pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
