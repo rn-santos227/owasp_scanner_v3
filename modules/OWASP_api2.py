@@ -18,6 +18,8 @@ _FILE_PASSWORDS = File.FILE_PASSWORDS.value
 _FILE_TOKENS = File.FILE_TOKENS.value
 _FILE_USERNAMES = File.FILE_USERNAMES.value
 
+lock = threading.Lock()
+
 def _load_test_tokens():
   test_tokens = file_reader(_FILE_TOKENS)
   return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
