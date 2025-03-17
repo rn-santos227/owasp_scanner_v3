@@ -39,7 +39,8 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
       method,
       endpoint,
       headers = headers,
-      json = auth_data, 
+      json = auth_data,
+      timeout = timeout,
     )
 
   except requests.RequestException as e:
