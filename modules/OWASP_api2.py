@@ -46,7 +46,8 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
     )
 
     if response.status_code == 200:
-      pass
+      with lock:
+        color.light_red(f"Weak credential detected: {username}:{password}")
 
   except requests.RequestException as e:
     with lock:
