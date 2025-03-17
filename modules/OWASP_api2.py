@@ -35,7 +35,9 @@ def _load_usernames():
 def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose):
   auth_data = {"username": username, "password": password}
   try:
-    pass
+    response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     with lock:
