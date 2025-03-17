@@ -1,6 +1,8 @@
 import requests
-
+import threading
 import helpers.color_text as color
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from classes.Config import Config
 from classes.File import File
