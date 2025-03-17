@@ -33,7 +33,7 @@ def _load_usernames():
   return [' '.join(word.strip() for word in line.split()) for line in usernames if line.strip()]
 
 def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose):
-  pass
+  auth_data = {"username": username, "password": password}
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
