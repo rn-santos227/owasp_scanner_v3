@@ -82,6 +82,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         method,
         parsed_url,
         headers = high_headers,
+        timeout = timeout,
       )
 
     except requests.RequestException as e:
