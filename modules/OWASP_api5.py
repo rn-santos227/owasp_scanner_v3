@@ -87,6 +87,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         verify = False
       )
 
+      if low_response.status_code == 200 and high_response.status_code == 200:
+        pass
+
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
 
