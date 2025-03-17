@@ -93,8 +93,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
       elif low_response.status_code in [401, 403]:
         if verbose:
-          pass
-        
+          color.info(f"Low-privilege access correctly restricted at {endpoint} (Status: {low_response.status_code})")
+
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
 
