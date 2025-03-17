@@ -45,6 +45,9 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
       verify=False
     )
 
+    if response.status_code == 200:
+      pass
+
   except requests.RequestException as e:
     with lock:
       color.warning(f"Error during brute force test for {username}:{password} - {e}")
