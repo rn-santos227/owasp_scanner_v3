@@ -38,7 +38,8 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
     pass
 
   except requests.RequestException as e:
-    pass
+    with lock:
+      color.warning(f"Error during brute force test for {username}:{password} - {e}")
 
 
 #API2:2023 - Broken Authentication
