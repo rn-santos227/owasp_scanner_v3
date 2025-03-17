@@ -36,7 +36,9 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
   auth_data = {"username": username, "password": password}
   try:
     response = requests.request(
-
+      method,
+      endpoint,
+      headers = headers,
     )
 
   except requests.RequestException as e:
