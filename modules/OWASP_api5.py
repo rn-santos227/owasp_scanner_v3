@@ -79,7 +79,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
       high_headers = {**headers, "Authorization": f"Bearer {high_privilege_token}"}
       high_response = requests.request(
-
+        method,
       )
 
     except requests.RequestException as e:
