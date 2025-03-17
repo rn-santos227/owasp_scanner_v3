@@ -34,6 +34,12 @@ def _load_usernames():
 
 def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose):
   auth_data = {"username": username, "password": password}
+  try:
+    pass
+
+  except requests.RequestException as e:
+    pass
+
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
