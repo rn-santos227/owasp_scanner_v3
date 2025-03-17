@@ -95,6 +95,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         if verbose:
           color.info(f"Low-privilege access correctly restricted at {endpoint} (Status: {low_response.status_code})")
 
+      else:
+        color.light_red(f"[!] Unexpected low-privilege response: Status {low_response.status_code} at {endpoint}")
+
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
 
