@@ -90,6 +90,10 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       if low_response.status_code == 200 and high_response.status_code == 200:
         color.light_red(f"Low-privilege access granted at {endpoint}")
         vulnerabilities.append(f"Low-privilege access incorrectly granted at {endpoint}")
+
+      elif low_response.status_code in [401, 403]:
+        if verbose:
+          pass
         
     except requests.RequestException as e:
       color.warning(f"Error during token-based request: {e}")
