@@ -111,7 +111,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info("\nTesting for brute force vulnerability...")
 
   with ThreadPoolExecutor(max_workers=10) as executor:
-    pass
+    future_tasks = {
+
+    }
 
 
   if len(vulnerabilities) == 0:
