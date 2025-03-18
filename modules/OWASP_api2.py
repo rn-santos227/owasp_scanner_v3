@@ -80,7 +80,8 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
       return f"Exposed valid token: {token[:10]}..."
 
     elif verbose:
-      pass
+      with lock:
+        color.info(f"Token {token[:10]}... failed authentication ({response.status_code})")
 
   except requests.RequestException as e:
     with lock:
