@@ -79,6 +79,9 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
         color.light_red(f"Valid token found: {token[:10]}...")
       return f"Exposed valid token: {token[:10]}..."
 
+    elif verbose:
+      pass
+
   except requests.RequestException as e:
     with lock:
       color.warning(f"Error testing token {token[:10]}... - {e}")
