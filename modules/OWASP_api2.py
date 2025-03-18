@@ -76,7 +76,8 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
 
     if response.status_code == 200:
       with lock:
-        color.light_red(f"Valid token found: {token}")
+        color.light_red(f"Valid token found: {token[:10]}...")
+      return f"Exposed valid token: {token[:10]}..."
 
   except requests.RequestException as e:
     with lock:
