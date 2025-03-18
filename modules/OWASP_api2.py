@@ -66,7 +66,7 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
 
   try:
     response = requests.request(
-
+      method,
     )
 
   except requests.RequestException as e:
