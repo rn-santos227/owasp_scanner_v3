@@ -32,7 +32,7 @@ def _load_usernames():
   usernames = file_reader(_FILE_USERNAMES)
   return [' '.join(word.strip() for word in line.split()) for line in usernames if line.strip()]
 
-def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose) -> str:
+def _check_credential(endpoint, method, headers, username, password, timeout, verbose) -> str:
   auth_data = {"username": username, "password": password}
   try:
     response = requests.request(
@@ -58,6 +58,8 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
     with lock:
       color.warning(f"Error during brute force test for {username}:{password} - {e}")
 
+def _check_token(endpoint, method, headers, token, timeout, verbose):
+  pass
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
