@@ -64,6 +64,14 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
   headers = headers.copy()
   headers["Authorization"] = f"Bearer {token}"
 
+  try:
+    pass
+
+  except requests.RequestException as e:
+    with lock:
+      color.warning(f"Error testing token {token[:10]}... - {e}")
+
+
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_2.value.id} - {OWASP.OWASP_2.value.name}"
