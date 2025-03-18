@@ -32,7 +32,7 @@ def _load_usernames():
   usernames = file_reader(_FILE_USERNAMES)
   return [' '.join(word.strip() for word in line.split()) for line in usernames if line.strip()]
 
-def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose):
+def _check_credential(endpoint, method, headers, username, password, timeout, vulnerabilities, verbose) -> str:
   auth_data = {"username": username, "password": password}
   try:
     response = requests.request(
@@ -48,7 +48,7 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
     if response.status_code == 200:
       with lock:
         color.light_red(f"Weak credential detected: {username}:{password}")
-        vulnerabilities.append(f"Weak credential: {username}:{password}")
+        return f"Weak credential: {username}:{password}"
         
   except requests.RequestException as e:
     with lock:
