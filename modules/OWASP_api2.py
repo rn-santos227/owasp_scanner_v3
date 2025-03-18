@@ -65,7 +65,9 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
   headers["Authorization"] = f"Bearer {token}"
 
   try:
-    pass
+    response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     with lock:
