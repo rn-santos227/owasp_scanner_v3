@@ -71,6 +71,7 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
     with lock:
       color.warning(f"Error testing token {token[:10]}... - {e}")
 
+  return None
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
