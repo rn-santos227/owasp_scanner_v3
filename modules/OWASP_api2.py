@@ -32,7 +32,7 @@ def _load_usernames():
   usernames = file_reader(_FILE_USERNAMES)
   return [' '.join(word.strip() for word in line.split()) for line in usernames if line.strip()]
 
-def _check_credential(endpoint, method, headers, username, password, timeout, verbose) -> str:
+def _check_credential(endpoint : str, method : str, headers : dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
   try:
     response = requests.request(
@@ -41,14 +41,14 @@ def _check_credential(endpoint, method, headers, username, password, timeout, ve
       headers = headers,
       json = auth_data,
       timeout = timeout,
-      proxies=proxies, 
+      proxies = proxies, 
       verify=False
     )
 
     if response.status_code == 200:
       with lock:
         color.light_red(f"Weak credential detected: {username}:{password}")
-        return f"Weak credential: {username}:{password}"
+      return f"Weak credential: {username}:{password}"
       
     elif verbose:
       with lock:
@@ -58,8 +58,9 @@ def _check_credential(endpoint, method, headers, username, password, timeout, ve
     with lock:
       color.warning(f"Error during brute force test for {username}:{password} - {e}")
 
-def _check_token(endpoint, method, headers, token, timeout, verbose):
+def _check_token(endpoint, method, headers : list, token, timeout, verbose):
   headers = headers.copy()
+  headers["Authorization"] = f"Bearer {token}"
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
