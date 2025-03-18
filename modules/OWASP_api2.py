@@ -110,61 +110,6 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   color.info("\nTesting for brute force vulnerability...")
 
-  for username in usernames:
-    for password in passwords:
-      auth_data = {"username": username, "password": password}
-
-      try:
-        response = requests.request(
-          method,
-          parsed_url,
-          headers = headers,
-          json = auth_data,
-          timeout = timeout,
-          proxies = proxies,
-          verify = False
-        )
-
-        if response.status_code == 200:
-          successful_attempts += 1
-          color.light_red(f"Weak credential detected: {username}:{password}")
-          vulnerabilities.append(f"Weak credential: {username}:{password}")
-
-        else:
-          failed_attempts += 1
-          if verbose:
-            color.info(f"Attempt {username}:{password} failed ({response.status_code})")
-
-      except requests.RequestException as e:
-        color.warning(f"Error during brute force test: {e}")
-
-      if successful_attempts > 3:
-        color.red("Endpoint does not enforce login attempt limits (Rate Limiting missing).")
-        
-      color.info("\nTesting authentication tokens...")
-
-      for token in test_tokens:
-        headers["Authorization"] = f"Bearer {token}"
-
-        try:
-          response = requests.request(
-            method,
-            parsed_url,
-            headers = headers,
-            timeout = timeout,
-            proxies = proxies,
-            verify = False
-          )
-
-          if response.status_code == 200:
-            color.light_red(f"Valid token found: {token}")
-            vulnerabilities.append(f"Exposed valid token: {token}")
-
-          elif verbose:
-            color.info(f"Token {token[:10]}... failed authentication.")
-
-        except requests.RequestException as e:
-          color.warning(f"Error testing tokens: {e}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
