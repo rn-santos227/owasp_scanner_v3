@@ -49,6 +49,9 @@ def _check_credential(endpoint, method, headers, username, password, timeout, vu
       with lock:
         color.light_red(f"Weak credential detected: {username}:{password}")
         return f"Weak credential: {username}:{password}"
+      
+    elif verbose:
+      pass
         
   except requests.RequestException as e:
     with lock:
