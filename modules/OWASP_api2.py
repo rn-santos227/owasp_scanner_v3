@@ -42,7 +42,7 @@ def _check_credential(endpoint : str, method : str, headers : dict, username: st
       json = auth_data,
       timeout = timeout,
       proxies = proxies, 
-      verify=False
+      verify = False
     )
 
     if response.status_code == 200:
@@ -57,6 +57,8 @@ def _check_credential(endpoint : str, method : str, headers : dict, username: st
   except requests.RequestException as e:
     with lock:
       color.warning(f"Error during brute force test for {username}:{password} - {e}")
+  
+  return None
 
 def _check_token(endpoint, method, headers : list, token, timeout, verbose):
   headers = headers.copy()
