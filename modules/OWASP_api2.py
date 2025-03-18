@@ -74,6 +74,9 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
       verify = False
     )
 
+    if response.status_code == 200:
+      pass
+
   except requests.RequestException as e:
     with lock:
       color.warning(f"Error testing token {token[:10]}... - {e}")
