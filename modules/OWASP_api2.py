@@ -59,7 +59,7 @@ def _check_credential(endpoint, method, headers, username, password, timeout, ve
       color.warning(f"Error during brute force test for {username}:{password} - {e}")
 
 def _check_token(endpoint, method, headers, token, timeout, verbose):
-  pass
+  headers = headers.copy()
 
 #API2:2023 - Broken Authentication
 def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
