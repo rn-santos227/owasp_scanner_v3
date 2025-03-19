@@ -116,7 +116,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       executor.submit(_check_credential, parsed_url, method, headers, username, password, timeout, verbose, proxies): (username, password) 
       for username in usernames for password in passwords
     }
-    vulnerabilities += show_progress_bar(future_tasks, len(future_tasks), desc="Testing Credentials", unit=" attempt")
+    
+    for future in show_progress_bar(future_tasks, len(future_tasks), desc="Testing Credentials", unit=" attempt"):
+      pass
 
   color.info("\nTesting authentication tokens...")
   with ThreadPoolExecutor(max_workers=10) as executor:
