@@ -109,6 +109,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   failed_attempts = 0
   successful_attempts = 0
+  consecutive_successful_attempts = 0
 
   color.info("\nTesting for brute force vulnerability...")
   with ThreadPoolExecutor(max_workers=10) as executor:
