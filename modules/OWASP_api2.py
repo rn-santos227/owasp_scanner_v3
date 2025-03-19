@@ -124,6 +124,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       executor.submit(_check_token, parsed_url, method, headers, token, timeout, verbose, proxies): token
       for token in test_tokens
     }
+    vulnerabilities += show_progress_bar(future_tokens, len(future_tokens), desc="Testing Tokens", unit=" token")
 
 
   if len(vulnerabilities) == 0:
