@@ -53,7 +53,8 @@ def _check_credential(endpoint : str, method : str, headers : dict, username: st
       return f"Weak credential: {username}:{password}"
     
     elif response.status_code == 429:
-      pass
+      with lock:
+        color.green(f"Rate limit enforced. API returned 429 Too Many Requests.")
     
       
     elif verbose:
