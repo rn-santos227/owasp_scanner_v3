@@ -120,7 +120,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info("\nTesting authentication tokens...")
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_tokens = {
-
+      executor.submit(_check_token, parsed_url, method, headers, token, timeout, verbose, proxies): token
+      for token in test_tokens
     }
 
 
