@@ -9,3 +9,5 @@ def show_progress_bar(future_tasks, total, desc="Processing", unit="item"):
     if result:
       results.append(result)
 
+  return results
+
