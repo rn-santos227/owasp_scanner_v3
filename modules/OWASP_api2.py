@@ -131,7 +131,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
         consecutive_successful_attempts = 0
 
       if consecutive_successful_attempts >= 3:
-        pass
+        color.red("WARNING: Brute force protection missing! Multiple successful logins detected.")
 
   color.info(f"\nTotal Successful Attempts: {color.light_red(successful_attempts)}")
   color.info("\nTesting authentication tokens...")
