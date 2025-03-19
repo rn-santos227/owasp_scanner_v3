@@ -118,6 +118,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     vulnerabilities += show_progress_bar(future_tasks, len(future_tasks), desc="Testing Credentials", unit=" attempt")
 
   color.info("\nTesting authentication tokens...")
+  with ThreadPoolExecutor(max_workers=10) as executor:
+    pass
 
 
   if len(vulnerabilities) == 0:
