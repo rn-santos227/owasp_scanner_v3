@@ -120,7 +120,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     for future in show_progress_bar(future_tasks, len(future_tasks), desc="Testing Credentials", unit=" attempt"):
       result = future.result()
       if result:
-        pass
+        successful_attempts += 1
+        vulnerabilities.append(result)
 
   color.info("\nTesting authentication tokens...")
   with ThreadPoolExecutor(max_workers=10) as executor:
