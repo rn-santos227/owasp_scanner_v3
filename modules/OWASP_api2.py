@@ -119,7 +119,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   color.info("\nTesting authentication tokens...")
   with ThreadPoolExecutor(max_workers=10) as executor:
-    pass
+    future_tokens = {
+
+    }
 
 
   if len(vulnerabilities) == 0:
