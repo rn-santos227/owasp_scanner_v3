@@ -58,7 +58,8 @@ def _check_credential(endpoint : str, method : str, headers : dict, username: st
       return None
     
     elif response.status_code in [403, 401]:
-      pass
+      with lock:
+        color.green(f"Account lockout detected for {username}. API returned {response.status_code}.")
       
     elif verbose:
       with lock:
