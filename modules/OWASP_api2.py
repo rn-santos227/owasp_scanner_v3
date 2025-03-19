@@ -127,6 +127,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       else:
         failed_attempts += 1
 
+  color.info(f"\nTotal Successful Attempts: {color.light_red(successful_attempts)}")
   color.info("\nTesting authentication tokens...")
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_tokens = {
