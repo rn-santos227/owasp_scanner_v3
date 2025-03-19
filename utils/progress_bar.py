@@ -6,6 +6,6 @@ def show_progress_bar(future_tasks, total, desc="Processing", unit="item"):
 
   for future in tqdm(as_completed(future_tasks), total=total, desc=desc, unit=unit):
     result = future.result()
+    if result:
+      results.append(result)
 
-    for future in tqdm(as_completed(future_tasks), total=total, desc=desc, unit=unit):
-      result = future.result()
