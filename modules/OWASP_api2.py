@@ -123,10 +123,12 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       
       if result:
         successful_attempts += 1
+        consecutive_successful_attempts += 1
         vulnerabilities.append(result)
 
       else:
         failed_attempts += 1
+        consecutive_successful_attempts = 0
 
   color.info(f"\nTotal Successful Attempts: {color.light_red(successful_attempts)}")
   color.info("\nTesting authentication tokens...")
