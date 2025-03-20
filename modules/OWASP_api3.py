@@ -40,7 +40,7 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
     )
 
     if response.status_code == 200:
-      pass
+      response_json = response.json()
 
   except requests.RequestException as e:
     color.warning(f"Error testing properties batch {batch}: {e}")
