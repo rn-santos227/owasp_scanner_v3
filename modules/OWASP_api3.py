@@ -8,6 +8,8 @@ from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
 from helpers.file_reader import file_reader
+
+from utils.progress_bar import show_progress_bar 
 from utils.validate_url import validate_url
 
 proxies = parse_config()[Config.CONFIG_5.value]
