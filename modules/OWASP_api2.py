@@ -153,7 +153,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     }
     
     for future in show_progress_bar(future_tokens, len(future_tokens), desc="Testing Tokens", unit=" token"):
-      pass
+      result = future.result()
 
 
   if len(vulnerabilities) == 0:
