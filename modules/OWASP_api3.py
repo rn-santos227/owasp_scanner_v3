@@ -24,7 +24,7 @@ def _load_sensitive_keys():
   return [' '.join(word.strip() for word in line.split()) for line in sensitive_keys if line.strip()]
 
 def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, json):
-  pass
+  test_payload = json.copy() if json else {}
 
 #API3:2023 - Broken Object Property Level Authorization
 def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
