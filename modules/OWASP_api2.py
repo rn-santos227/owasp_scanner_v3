@@ -155,6 +155,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     for future in show_progress_bar(future_tokens, len(future_tokens), desc="Testing Tokens", unit=" token"):
       result = future.result()
 
+      if result:
+        vulnerabilities.append(result)
+
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
