@@ -31,6 +31,7 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
   try:
     response = requests.request(
       method,
+      endpoint,
     )
 
   except requests.RequestException as e:
