@@ -54,7 +54,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   color.info("\nTesting unauthorized property access...")
   
-  for prop in sensitive_keys:
+  for prop in show_progress_bar(sensitive_keys, len(sensitive_keys), desc="Testing Properties", unit=" key"):
     test_payload = json.copy() if json else {}
     test_payload[prop] = "unauthorized_value"
 
