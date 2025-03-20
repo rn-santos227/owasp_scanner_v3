@@ -35,6 +35,7 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
       headers = headers,
       json = test_payload,
       timeout = timeout,
+      proxies = proxies,
     )
 
   except requests.RequestException as e:
