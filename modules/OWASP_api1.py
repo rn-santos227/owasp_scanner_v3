@@ -33,7 +33,7 @@ def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.warning("No test IDs found. Skipping BOLA check.")
     return vulnerabilities, logs
   
-  for test_id in test_ids:
+  for test_id in show_progress_bar(test_ids, len(test_ids), desc="Testing BOLA", unit=" ID"):
     test_endpoint = f"{parsed_url}/{test_id}"
 
     try:
