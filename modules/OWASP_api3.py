@@ -16,6 +16,7 @@ from utils.validate_url import validate_url
 proxies = parse_config()[Config.CONFIG_5.value]
 
 _FILE_KEYS = File.FILE_KEYS.value
+BATCH_SIZE = 10
 
 def _load_sensitive_keys():
   sensitive_keys = file_reader(_FILE_KEYS)
