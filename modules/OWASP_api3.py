@@ -104,6 +104,9 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
       batch for batch in batches
     }
 
+    for future in show_progress_bar(as_completed(future_tasks), total_batches, desc="Testing Property Batches", unit=" batch"):
+      pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No broken property-level authorization found at {flag_title}")
     logs.append(endpoint_clean)
