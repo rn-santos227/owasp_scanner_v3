@@ -44,7 +44,8 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
       vulnerabilities = []
 
       for prop in batch:
-        pass
+        if prop in response.text:
+          pass
       
       return vulnerabilities
 
