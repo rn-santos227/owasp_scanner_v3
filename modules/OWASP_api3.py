@@ -73,6 +73,12 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   sensitive_keys = _load_sensitive_keys()
 
+  try:
+    pass
+
+  except requests.RequestException as e:
+    pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No broken property-level authorization found at {flag_title}")
     logs.append(endpoint_clean)
