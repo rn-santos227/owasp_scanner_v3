@@ -1,6 +1,8 @@
 import requests
 import math
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 import helpers.color_text as color
 
 from classes.Config import Config
