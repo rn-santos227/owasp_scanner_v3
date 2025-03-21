@@ -93,6 +93,8 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   color.info("\nTesting unauthorized property access...")
 
+  total_batches = math.ceil(len(sensitive_keys) / _BATCH_SIZE)
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No broken property-level authorization found at {flag_title}")
     logs.append(endpoint_clean)
