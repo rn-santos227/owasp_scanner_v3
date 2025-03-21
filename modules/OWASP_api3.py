@@ -74,7 +74,9 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   sensitive_keys = _load_sensitive_keys()
 
   try:
-    pass
+    original_response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Error fetching original data: {e}")
