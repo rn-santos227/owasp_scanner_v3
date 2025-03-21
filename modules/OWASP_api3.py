@@ -78,6 +78,7 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   except requests.RequestException as e:
     color.warning(f"Error fetching original data: {e}")
+    return vulnerabilities, logs
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No broken property-level authorization found at {flag_title}")
