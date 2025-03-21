@@ -99,7 +99,10 @@ def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose 
   batches = [sensitive_keys[i:i + _BATCH_SIZE] for i in range(0, len(sensitive_keys), _BATCH_SIZE)]
 
   with ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:
-    future_tasks = {executor.submit(_test_property_batch, parsed_url, method, headers, timeout, proxies, batch, json): batch for batch in batches}
+    future_tasks = {
+      executor.submit(_test_property_batch, parsed_url, method, headers, timeout, proxies, batch, json): 
+      batch for batch in batches
+    }
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No broken property-level authorization found at {flag_title}")
