@@ -47,8 +47,9 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
         if prop in response.text:
           vulnerabilities.append(f"Unauthorized access to property: {prop}")
           color.red(f"Unauthorized access to property: '{prop}'")
+          
         elif response_json.get(prop) == "unauthorized_value":
-          pass
+          vulnerabilities.append(f"Unauthorized modification of property: {prop}")
       
       return vulnerabilities
 
