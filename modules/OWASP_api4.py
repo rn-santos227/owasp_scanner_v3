@@ -9,6 +9,8 @@ from classes.Config import Config
 from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
+
+from utils.progress_bar import show_progress_bar
 from utils.validate_url import validate_url
 
 _config = parse_config()
