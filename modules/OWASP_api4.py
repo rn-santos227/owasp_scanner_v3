@@ -1,6 +1,8 @@
 import requests
 import time
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 import helpers.color_text as color
 
 from classes.Config import Config
@@ -26,41 +28,6 @@ def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   total_size = 0
   total_time = 0
-
-  for index in range(_requests_count):
-    try:
-      start_time = time.time()
-      response = requests.request(
-        method,
-        endpoint,
-        headers = headers,
-        data = data,
-        json = json,
-        timeout = timeout,
-        proxies = proxies,
-        verify = False
-      )
-
-      elapsed_time = time.time() - start_time
-      response_size = len(response.content)
-
-      total_time += elapsed_time
-      total_size += response_size
-
-      if response_size > _size_threshold:
-        color.red(f"Large response size detected at request { index + 1 }: {response_size} bytes")
-        vulnerabilities.append(f"Large response size at {endpoint}")
-
-      if elapsed_time > _time_threshold:
-        color.red(f"Slow response time detected at request { index + 1 }: {elapsed_time:.2f} seconds")
-        vulnerabilities.append(f"Slow response time at {endpoint}")
-
-      if verbose:
-         color.info(f"Request { index + 1 }: Size = {response_size} bytes, Time = {elapsed_time:.2f} seconds")
-
-    except requests.RequestException as e:
-      color.warning(f"Error during request {index + 1}: {e}")
-      break
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
