@@ -21,7 +21,11 @@ proxies = _config[Config.CONFIG_5.value]
 _MAX_WORKERS = 5 
 
 def _send_request(endpoint, method, headers, timeout, data, json):
-  pass
+  try:
+    pass
+
+  except requests.RequestException as e:
+    pass
 
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
