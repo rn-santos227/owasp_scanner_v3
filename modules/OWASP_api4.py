@@ -71,6 +71,7 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
         continue
 
       total_size += response_size
+      total_time += elapsed_time
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
