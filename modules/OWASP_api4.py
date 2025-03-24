@@ -26,6 +26,7 @@ def _send_request(endpoint, method, headers, timeout, data, json):
 
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
+    return None, None
 
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
