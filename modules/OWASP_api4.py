@@ -58,7 +58,10 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
   color.info("\nTesting API resource consumption...")
 
   with ThreadPoolExecutor(max_workers=_MAX_WORKERS) as executor:
-    pass
+    future_tasks = {
+      executor.submit(_send_request, parsed_url, method, headers, timeout, data, json): 
+      i + 1 for i in range(_requests_count)
+    }
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
