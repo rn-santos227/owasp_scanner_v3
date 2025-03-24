@@ -20,6 +20,9 @@ _time_threshold = float(_config[Config.CONFIG_3.value])
 proxies = _config[Config.CONFIG_5.value]
 _MAX_WORKERS = 5 
 
+def _send_request(endpoint, method, headers, timeout, data, json):
+  pass
+
 #API4:2023 - Unrestricted Resource Consumption
 def check_api_4(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_4.value.id} - {OWASP.OWASP_4.value.name}"
