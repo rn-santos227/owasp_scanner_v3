@@ -22,7 +22,7 @@ _MAX_WORKERS = 5
 
 def _send_request(endpoint, method, headers, timeout, data, json):
   try:
-    pass
+    start_time = time.time()
 
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
