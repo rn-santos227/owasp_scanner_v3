@@ -64,7 +64,7 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
     }
 
     for future in show_progress_bar(as_completed(future_tasks), _requests_count, desc="Testing Requests", unit=" request"):
-      pass
+      index = future_tasks[future]
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
