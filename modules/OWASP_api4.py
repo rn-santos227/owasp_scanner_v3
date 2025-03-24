@@ -70,6 +70,8 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
       if response_size is None:
         continue
 
+      total_size += response_size
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
