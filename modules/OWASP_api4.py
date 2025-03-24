@@ -25,6 +25,7 @@ def _send_request(endpoint, method, headers, timeout, data, json):
     start_time = time.time()
     response = requests.request(
       method,
+      endpoint,
     )
 
   except requests.RequestException as e:
