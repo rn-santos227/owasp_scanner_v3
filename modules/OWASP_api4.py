@@ -34,6 +34,8 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, dat
       verify = False
     )
 
+    elapsed_time = time.time() - start_time
+
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
     return None, None
