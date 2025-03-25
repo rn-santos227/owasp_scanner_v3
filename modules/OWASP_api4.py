@@ -73,6 +73,9 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
       total_size += response_size
       total_time += elapsed_time
 
+      if response_size > _size_threshold:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
