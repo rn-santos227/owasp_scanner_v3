@@ -33,7 +33,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
 
   try:
     response = requests.request(
-
+      method,
     )
 
   except requests.RequestException as e:
