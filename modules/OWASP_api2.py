@@ -32,7 +32,9 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
     payload = None
 
   try:
-    pass
+    response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
