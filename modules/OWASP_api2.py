@@ -36,6 +36,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
 
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
+    return None
 
 def _check_credential(endpoint: str, method: str, headers: dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
