@@ -22,6 +22,9 @@ _FILE_USERNAMES = File.FILE_USERNAMES.value
 
 lock = threading.Lock()
 
+def _load_file_data(file_path):
+  pass
+
 def _check_credential(endpoint : str, method : str, headers : dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
   try:
