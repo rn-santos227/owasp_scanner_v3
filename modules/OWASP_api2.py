@@ -110,6 +110,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   test_tokens = _load_file_data(_FILE_TOKENS)
 
   failed_attempts = 0
+  successful_attempts = 0
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
