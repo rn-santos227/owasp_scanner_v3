@@ -24,6 +24,7 @@ lock = threading.Lock()
 
 def _load_file_data(file_path):
   data = file_reader(file_path)
+  return [' '.join(word.strip() for word in line.split()) for line in data if line.strip()]
 
 def _check_credential(endpoint : str, method : str, headers : dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
