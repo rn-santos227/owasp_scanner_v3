@@ -115,6 +115,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   if len(usernames) > 20 and len(passwords) > 20:
     usernames = usernames[:20]
+    passwords = passwords[:20]
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
