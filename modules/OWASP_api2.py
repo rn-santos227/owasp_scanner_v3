@@ -27,8 +27,10 @@ def _load_file_data(file_path):
   return [' '.join(word.strip() for word in line.split()) for line in data if line.strip()]
 
 def _send_request(endpoint: str, method: str, headers: dict, timeout: int, payload: dict | None = None, token: str | None = None)  -> int | None:
-  pass
+  if token:
+    headers = {**headers, "Authorization": f"Bearer {token}"}
 
+    
 def _check_credential(endpoint: str, method: str, headers: dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
   try:
