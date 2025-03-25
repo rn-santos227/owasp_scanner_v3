@@ -82,7 +82,7 @@ def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: b
         vulnerabilities.append(f"Slow response time at {endpoint}")
 
       if verbose:
-        pas
+        color.info(f"Request {index}: Size = {response_size} bytes, Time = {elapsed_time:.2f} seconds")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
