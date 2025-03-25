@@ -29,8 +29,8 @@ def _load_file_data(file_path):
 def _send_request(endpoint: str, method: str, headers: dict, timeout: int, payload: dict | None = None, token: str | None = None)  -> int | None:
   if token:
     headers = {**headers, "Authorization": f"Bearer {token}"}
+    payload = None
 
-    
 def _check_credential(endpoint: str, method: str, headers: dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
   try:
