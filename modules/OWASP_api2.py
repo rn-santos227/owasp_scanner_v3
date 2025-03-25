@@ -22,18 +22,6 @@ _FILE_USERNAMES = File.FILE_USERNAMES.value
 
 lock = threading.Lock()
 
-def _load_test_tokens():
-  test_tokens = file_reader(_FILE_TOKENS)
-  return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
-
-def _load_passwords():
-  passwords = file_reader(_FILE_PASSWORDS)
-  return [' '.join(word.strip() for word in line.split()) for line in passwords if line.strip()]
-
-def _load_usernames():
-  usernames = file_reader(_FILE_USERNAMES)
-  return [' '.join(word.strip() for word in line.split()) for line in usernames if line.strip()]
-
 def _check_credential(endpoint : str, method : str, headers : dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
   try:
@@ -112,52 +100,6 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   if not parsed_url:
     color.warning("Invalid URL. Skipping BA Test.")
     return vulnerabilities, logs
-
-  usernames = _load_usernames()
-  passwords = _load_passwords()
-  test_tokens = _load_test_tokens()
-
-  failed_attempts = 0
-  successful_attempts = 0
-  consecutive_successful_attempts = 0
-
-  color.info("\nTesting for brute force vulnerability...")
-  with ThreadPoolExecutor(max_workers=10) as executor:
-    future_tasks = {
-      executor.submit(_check_credential, parsed_url, method, headers, username, password, timeout, verbose, proxies): (username, password) 
-      for username in usernames for password in passwords
-    }
-    
-    for future in show_progress_bar(future_tasks, len(future_tasks), desc="Testing Credentials", unit=" attempt"):
-      result = future.result()
-      
-      if result:
-        successful_attempts += 1
-        consecutive_successful_attempts += 1
-        vulnerabilities.append(result)
-
-      else:
-        failed_attempts += 1
-        consecutive_successful_attempts = 0
-
-      if consecutive_successful_attempts >= 3:
-        color.red("WARNING: Brute force protection missing! Multiple successful logins detected.")
-        vulnerabilities.append("Brute-force protection missing: API allows repeated successful logins.")
-
-  color.info(f"\nTotal Successful Attempts: {color.light_red(successful_attempts)}")
-  color.info("\nTesting authentication tokens...")
-  with ThreadPoolExecutor(max_workers=10) as executor:
-    future_tokens = {
-      executor.submit(_check_token, parsed_url, method, headers, token, timeout, verbose, proxies): token
-      for token in test_tokens
-    }
-    
-    for future in show_progress_bar(future_tokens, len(future_tokens), desc="Testing Tokens", unit=" token"):
-      result = future.result()
-
-      if result:
-        vulnerabilities.append(result)
-
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
