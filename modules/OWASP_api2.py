@@ -58,6 +58,7 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
   elif status_code == 429:
     with lock:
       color.green("Rate limit enforced. API returned 429 Too Many Requests.")
+    return None
 
   return None
 
