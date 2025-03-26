@@ -51,8 +51,9 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
   status_code = _send_request(endpoint, method, headers, timeout, payload = {"username": username, "password": password})
   
   if status_code == 200:
-    pass
-  
+     with lock:
+      pass
+
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
