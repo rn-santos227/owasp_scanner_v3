@@ -65,6 +65,9 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
       color.green(f"Account lockout detected for {username}. API returned {status_code}.")
     return None
 
+  with lock:
+    pass
+
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
