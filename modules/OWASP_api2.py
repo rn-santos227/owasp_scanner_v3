@@ -49,40 +49,6 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
 
 def _check_credential(endpoint: str, method: str, headers: dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   auth_data = {"username": username, "password": password}
-  try:
-    response = requests.request(
-      method,
-      endpoint,
-      headers = headers,
-      json = auth_data,
-      timeout = timeout,
-      proxies = proxies, 
-      verify = False
-    )
-
-    if response.status_code == 200:
-      with lock:
-        color.light_red(f"Weak credential detected: {username}:{password}")
-      return f"Weak credential: {username}:{password}"
-    
-    elif response.status_code == 429:
-      with lock:
-        color.green(f"Rate limit enforced. API returned 429 Too Many Requests.")
-      return None
-    
-    elif response.status_code in [403, 401]:
-      with lock:
-        color.green(f"Account lockout detected for {username}. API returned {response.status_code}.")
-      return None
-      
-    elif verbose and response.status_code != 429:
-      with lock:
-        color.yellow(f"Attempt {username}:{password} failed ({response.status_code})")
-        
-  except requests.RequestException as e:
-    with lock:
-      color.warning(f"Error during brute force test for {username}:{password} - {e}")
-  
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
