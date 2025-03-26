@@ -60,6 +60,9 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
       color.green("Rate limit enforced. API returned 429 Too Many Requests.")
     return None
 
+  elif status_code in [403, 401]:
+    pass
+
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
