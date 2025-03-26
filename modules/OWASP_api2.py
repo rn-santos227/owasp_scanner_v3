@@ -51,8 +51,9 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
   status_code = _send_request(endpoint, method, headers, timeout, payload = {"username": username, "password": password})
   
   if status_code == 200:
-     with lock:
+    with lock:
       color.light_red(f"Weak credential detected: {username}:{password}")
+    return f"Weak credential: {username}:{password}"
 
   return None
 
