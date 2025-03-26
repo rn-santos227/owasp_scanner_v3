@@ -74,7 +74,8 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
   status_code = _send_request(endpoint, method, headers, timeout, token=token)
 
   if status_code == 200:
-    pass
+    with lock:
+      pass
 
   return None
 
