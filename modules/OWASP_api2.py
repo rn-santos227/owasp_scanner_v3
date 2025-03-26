@@ -71,8 +71,7 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
-  headers = headers.copy()
-  headers["Authorization"] = f"Bearer {token}"
+  status_code = _send_request(endpoint, method, headers, timeout, token=token)
 
   return None
 
