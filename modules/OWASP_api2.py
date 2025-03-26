@@ -66,7 +66,7 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
     return None
 
   with lock:
-    pass
+    color.yellow(f"Attempt {username}:{password} failed (Status: {status_code})")
 
   return None
 
