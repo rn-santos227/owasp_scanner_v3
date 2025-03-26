@@ -105,6 +105,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
     usernames = usernames[:20]
     passwords = passwords[:20]
 
+  color.info("\nTesting for brute force vulnerability...")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
     logs.append(endpoint_clean)
