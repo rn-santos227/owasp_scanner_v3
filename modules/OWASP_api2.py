@@ -73,6 +73,9 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
   status_code = _send_request(endpoint, method, headers, timeout, token=token)
 
+  if status_code == 200:
+    pass
+
   return None
 
 #API2:2023 - Broken Authentication
