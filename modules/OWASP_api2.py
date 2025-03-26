@@ -56,7 +56,8 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
     return f"Weak credential: {username}:{password}"
   
   elif status_code == 429:
-    pass
+    with lock:
+      pass
 
   return None
 
