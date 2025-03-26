@@ -74,29 +74,6 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
   headers = headers.copy()
   headers["Authorization"] = f"Bearer {token}"
 
-  try:
-    response = requests.request(
-      method,
-      endpoint,
-      headers = headers,
-      timeout = timeout,
-      proxies = proxies,
-      verify = False
-    )
-
-    if response.status_code == 200:
-      with lock:
-        color.light_red(f"Valid token found: {token[:10]}...")
-      return f"Exposed valid token: {token[:10]}..."
-
-    elif verbose:
-      with lock:
-        color.info(f"Token {token[:10]}... failed authentication ({response.status_code})")
-
-  except requests.RequestException as e:
-    with lock:
-      color.warning(f"Error testing token {token[:10]}... - {e}")
-
   return None
 
 #API2:2023 - Broken Authentication
