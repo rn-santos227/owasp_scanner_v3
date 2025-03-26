@@ -52,7 +52,7 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
   
   if status_code == 200:
      with lock:
-      pass
+      color.light_red(f"Weak credential detected: {username}:{password}")
 
   return None
 
