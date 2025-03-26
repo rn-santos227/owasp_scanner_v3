@@ -37,6 +37,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
       endpoint,
       headers = headers,
       json = payload,
+      timeout = timeout,
     )
 
   except requests.RequestException as e:
