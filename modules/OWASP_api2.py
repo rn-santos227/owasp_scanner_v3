@@ -48,7 +48,8 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: int, paylo
     return None
 
 def _check_credential(endpoint: str, method: str, headers: dict, username: str, password: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
-  auth_data = {"username": username, "password": password}
+  status_code = _send_request(endpoint, method, headers, timeout, payload = {"username": username, "password": password})
+  
   return None
 
 def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout: int, verbose: bool, proxies: dict = None) -> str | None:
