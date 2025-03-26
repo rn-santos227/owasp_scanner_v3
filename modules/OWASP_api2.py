@@ -77,6 +77,8 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
     with lock:
       pass
 
+    return f"Exposed valid token: {token[:10]}..."
+
   return None
 
 #API2:2023 - Broken Authentication
