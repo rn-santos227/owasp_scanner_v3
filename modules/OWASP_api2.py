@@ -61,7 +61,7 @@ def _check_credential(endpoint: str, method: str, headers: dict, username: str, 
     return None
 
   elif status_code in [403, 401]:
-    pass
+    return None
 
   return None
 
