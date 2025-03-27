@@ -15,6 +15,9 @@ proxies = parse_config()[Config.CONFIG_5.value]
 _FILE_TOKENS = File.FILE_TOKENS.value
 _FILE_PUBLIC_ENDPOINTS = File.FILE_WHITELIST.value
 
+def _load_file(file_path: str) -> list[str]:
+  pass
+
 def _load_test_tokens():
   test_tokens = file_reader(_FILE_TOKENS)
   return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
