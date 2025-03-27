@@ -131,6 +131,9 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info(f"\nTotal Successful Attempts: {color.light_red(successful_attempts)}")
   color.info("\nTesting authentication tokens...")
 
+  with ThreadPoolExecutor(max_workers=10) as executor:
+    pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
     logs.append(endpoint_clean)
