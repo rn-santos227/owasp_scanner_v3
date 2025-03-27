@@ -133,7 +133,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_tokens = {
-
+      executor.submit(_check_token, parsed_url, method, headers, token, timeout): token
     }
 
   if len(vulnerabilities) == 0:
