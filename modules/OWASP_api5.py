@@ -23,6 +23,11 @@ def _is_public_endpoint(endpoint, public_endpoints):
 
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, token: str | None = None) -> int | None:
   headers = {**headers, "Authorization": f"Bearer {token}"} if token else headers
+  try:
+    pass
+
+  except requests.RequestException as e:
+    color.warning(f"Request error: {e}")
 
 #API5:2023 - Broken Function Level Authorization
 def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
