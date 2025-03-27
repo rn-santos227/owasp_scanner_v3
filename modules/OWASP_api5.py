@@ -18,14 +18,6 @@ _FILE_PUBLIC_ENDPOINTS = File.FILE_WHITELIST.value
 def _load_file(file_path: str) -> list[str]:
   return [' '.join(line.strip().split()) for line in file_reader(file_path) if line.strip()]
 
-def _load_test_tokens():
-  test_tokens = file_reader(_FILE_TOKENS)
-  return [' '.join(word.strip() for word in line.split()) for line in test_tokens if line.strip()]
-
-def _load_whitelist():
-  whitelist = file_reader(_FILE_PUBLIC_ENDPOINTS)
-  return [' '.join(word.strip() for word in line.split()) for line in whitelist if line.strip()]
-
 def _is_public_endpoint(endpoint, public_endpoints):
   return any(public in endpoint for public in public_endpoints)
 
