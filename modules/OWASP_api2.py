@@ -116,7 +116,7 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
       result = future.result()
 
       if result:
-        pass
+        successful_attempts += 1
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
