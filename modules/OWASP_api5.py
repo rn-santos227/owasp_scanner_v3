@@ -16,7 +16,7 @@ _FILE_TOKENS = File.FILE_TOKENS.value
 _FILE_PUBLIC_ENDPOINTS = File.FILE_WHITELIST.value
 
 def _load_file(file_path: str) -> list[str]:
-  pass
+  return [' '.join(line.strip().split()) for line in file_reader(file_path) if line.strip()]
 
 def _load_test_tokens():
   test_tokens = file_reader(_FILE_TOKENS)
