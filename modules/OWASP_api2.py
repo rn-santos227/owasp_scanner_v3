@@ -108,7 +108,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info("\nTesting for brute force vulnerability...")
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_tasks = {
-
+      executor.submit(_check_credential, parsed_url, method, headers, username, password, timeout): (username, password)
+      for username in usernames for password in passwords
     }
 
   if len(vulnerabilities) == 0:
