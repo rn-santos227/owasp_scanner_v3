@@ -126,7 +126,8 @@ def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose 
 
       if consecutive_successful_attempts >= 3:
         color.red("WARNING: Brute force protection missing! Multiple successful logins detected.")
-
+        vulnerabilities.append("Brute-force protection missing: API allows repeated successful logins.")
+                               
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(f"No authentication vulnerabilities found at {flag_title}")
     logs.append(endpoint_clean)
