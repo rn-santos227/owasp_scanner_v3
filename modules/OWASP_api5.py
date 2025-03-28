@@ -58,6 +58,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   if status_no_token == 200:
     color.red(f"Unauthorized access detected without token at {endpoint}")
+    vulnerabilities.append(f"Access without authentication possible at {endpoint}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
