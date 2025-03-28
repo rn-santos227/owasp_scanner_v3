@@ -53,6 +53,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   if _is_public_endpoint(endpoint, public_endpoints):
     color.info(f"Skipping public endpoint {endpoint} (whitelisted).")
     return vulnerabilities, logs
+  
+  status_no_token = _send_request(parsed_url, method, headers, timeout)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
