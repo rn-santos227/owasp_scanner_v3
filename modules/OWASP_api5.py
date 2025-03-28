@@ -26,6 +26,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, tok
   try:
     response = requests.request(
       method,
+      endpoint,
     )
 
   except requests.RequestException as e:
