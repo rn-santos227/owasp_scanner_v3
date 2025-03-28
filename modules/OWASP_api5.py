@@ -66,6 +66,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   if len(test_tokens) >= 2:
     low_token, high_token = test_tokens[:2]
 
+    status_low = _send_request(parsed_url, method, headers, timeout, low_token)
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
