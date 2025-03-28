@@ -61,7 +61,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     vulnerabilities.append(f"Access without authentication possible at {endpoint}")
 
   elif verbose and status_no_token:
-    pass
+    color.info(f"No-token access correctly restricted at {endpoint} (Status: {status_no_token})")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
