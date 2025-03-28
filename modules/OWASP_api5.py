@@ -25,7 +25,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, tok
   headers = {**headers, "Authorization": f"Bearer {token}"} if token else headers
   try:
     response = requests.request(
-
+      method,
     )
 
   except requests.RequestException as e:
