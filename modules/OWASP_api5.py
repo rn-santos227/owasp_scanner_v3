@@ -24,7 +24,9 @@ def _is_public_endpoint(endpoint, public_endpoints):
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, token: str | None = None) -> int | None:
   headers = {**headers, "Authorization": f"Bearer {token}"} if token else headers
   try:
-    pass
+    response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Request error: {e}")
