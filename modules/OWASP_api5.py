@@ -64,7 +64,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.info(f"No-token access correctly restricted at {endpoint} (Status: {status_no_token})")
 
   if len(test_tokens) >= 2:
-    pass
+    low_token, high_token = test_tokens[:2]
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
