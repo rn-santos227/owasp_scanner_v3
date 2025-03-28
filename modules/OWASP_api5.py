@@ -51,7 +51,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   public_endpoints = _load_file(_FILE_PUBLIC_ENDPOINTS)
 
   if _is_public_endpoint(endpoint, public_endpoints):
-    pass
+    color.info(f"Skipping public endpoint {endpoint} (whitelisted).")
 
 
   if len(vulnerabilities) == 0:
