@@ -50,6 +50,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
   test_tokens = _load_file(_FILE_TOKENS)
   public_endpoints = _load_file(_FILE_PUBLIC_ENDPOINTS)
 
+  if _is_public_endpoint(endpoint, public_endpoints):
+    pass
+
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
