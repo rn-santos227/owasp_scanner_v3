@@ -91,6 +91,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         role = future_tasks[future]
         results[role] = future.result()
 
+      status_low = results.get("Low Privilege")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
