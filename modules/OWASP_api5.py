@@ -83,7 +83,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     with ThreadPoolExecutor(max_workers=2) as executor:
       future_tasks = {
-
+        executor.submit(_send_request, parsed_url, method, headers, timeout, token): role
+        for token, role in token_tests
       }
 
   if len(vulnerabilities) == 0:
