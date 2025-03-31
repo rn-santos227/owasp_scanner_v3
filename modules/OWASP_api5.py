@@ -94,6 +94,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       status_low = results.get("Low Privilege")
       status_high = results.get("High Privilege")
 
+      if status_low == 200 and status_high == 200:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
