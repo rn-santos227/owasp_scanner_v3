@@ -83,6 +83,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     if verbose and status_high:
       color.info(f"High-privilege access response status: {status_high}")
 
+  else:
+    color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
+    
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
