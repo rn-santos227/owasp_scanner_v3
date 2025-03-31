@@ -66,8 +66,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.info(f"No-token access correctly restricted at {endpoint} (Status: {status_no_token})")
 
   if len(test_tokens) >= 2:
-    pass
-  
+    color.info("Testing privilege escalation (low vs high privilege)...")
+
   else:
     color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
     
