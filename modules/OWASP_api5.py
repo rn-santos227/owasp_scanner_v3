@@ -73,7 +73,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     
     low_token, high_token = test_tokens[:2]
     token_tests = [
-
+      (low_token, "Low Privilege"),
     ]
 
   if len(vulnerabilities) == 0:
