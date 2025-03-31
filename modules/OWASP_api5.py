@@ -66,25 +66,8 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.info(f"No-token access correctly restricted at {endpoint} (Status: {status_no_token})")
 
   if len(test_tokens) >= 2:
-    low_token, high_token = test_tokens[:2]
-
-    status_low = _send_request(parsed_url, method, headers, timeout, low_token)
-    status_high = _send_request(parsed_url, method, headers, timeout, high_token)
-
-    if status_low == 200 and status_high == 200:
-      color.light_red(f"Low-privilege access granted at {endpoint}")
-      vulnerabilities.append(f"Low-privilege access incorrectly granted at {endpoint}")
-
-    elif status_low in [401, 403] and verbose:
-      color.info(f"Low-privilege access correctly restricted at {endpoint} (Status: {status_low})")
-
-    elif status_low:
-      color.light_red(f"Unexpected low-privilege response: Status {status_low} at {endpoint}")
-      vulnerabilities.append(f"Unexpected low-privilege response at {endpoint}")
-
-    if verbose and status_high:
-      color.info(f"High-privilege access response status: {status_high}")
-
+    pass
+  
   else:
     color.warning("Insufficient tokens for privilege level testing. Provide at least two tokens (low and high privilege).")
     
