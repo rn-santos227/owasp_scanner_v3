@@ -101,6 +101,9 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
       elif status_low in [401, 403] and verbose:
         color.info(f"Low-privilege access correctly restricted (Status: {status_low})")
 
+      elif status_low:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
