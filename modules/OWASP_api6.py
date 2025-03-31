@@ -1,4 +1,7 @@
 import requests
+import time
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import helpers.color_text as color
 
@@ -6,7 +9,9 @@ from classes.Config import Config
 from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
+
 from utils.validate_url import validate_url
+from utils.progress_bar import show_progress_bar
 
 proxies = parse_config()[Config.CONFIG_5.value]
 
