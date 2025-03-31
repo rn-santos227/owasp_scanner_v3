@@ -99,7 +99,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"Low-privilege access incorrectly granted at {endpoint}")
 
       elif status_low in [401, 403] and verbose:
-        pass
+        color.info(f"Low-privilege access correctly restricted (Status: {status_low})")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
