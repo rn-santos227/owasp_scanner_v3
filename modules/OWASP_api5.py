@@ -106,7 +106,7 @@ def check_api_5(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"Unexpected low-privilege response at {endpoint}")
 
       if verbose and status_high:
-        pass 
+        color.info(f"High-privilege access response status: {status_high}") 
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
