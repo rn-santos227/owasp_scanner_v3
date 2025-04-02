@@ -70,6 +70,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.light_red("Rate limiting not enforced! API allows unrestricted access.")
         vulnerabilities.append(f"Rate limiting missing at {endpoint}")
 
+    color.info("Checking for missing Multi-Factor Authentication (MFA)...")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
