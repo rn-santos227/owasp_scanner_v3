@@ -56,6 +56,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
     for future in show_progress_bar(future_tasks, _send_request, desc="Testing Rate Limits", unit=" request"):
       status_code, _ = future.result()
 
+      if status_code == 200:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
