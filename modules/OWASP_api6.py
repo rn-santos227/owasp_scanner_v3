@@ -66,6 +66,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
       elif verbose:
         color.warning(f"Request returned status: {status_code}")
 
+      if success_count == _requests_count:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
