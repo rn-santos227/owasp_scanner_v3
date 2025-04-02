@@ -47,7 +47,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   with ThreadPoolExecutor(max_workers=5) as executor:
     future_tasks = {
-
+      executor.submit(_send_request, parsed_url, method, headers, timeout, data, json): i
+      for i in range(_requests_count)
     }
 
   if len(vulnerabilities) == 0:
