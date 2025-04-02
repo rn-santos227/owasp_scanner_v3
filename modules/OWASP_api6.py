@@ -51,6 +51,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
       for i in range(_requests_count)
     }
 
+    success_count = 0
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
