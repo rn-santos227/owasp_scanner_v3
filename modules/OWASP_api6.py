@@ -60,7 +60,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
         success_count += 1
 
       elif status_code == 429:
-        pass
+        color.green("Rate limiting detected. API returned 429 Too Many Requests.")
 
 
   if len(vulnerabilities) == 0:
