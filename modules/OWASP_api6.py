@@ -46,7 +46,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info("Testing for rate limits, missing MFA, and lack of approval steps...")
   
   with ThreadPoolExecutor(max_workers=5) as executor:
-    pass
+    future_tasks = {
+
+    }
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
