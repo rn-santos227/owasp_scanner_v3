@@ -18,7 +18,7 @@ proxies = parse_config()[Config.CONFIG_5.value]
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, data: str = None, json: dict = None) -> tuple:
   try:
     response = requests.request(
-
+      method,
     )
 
   except requests.RequestException as e:
