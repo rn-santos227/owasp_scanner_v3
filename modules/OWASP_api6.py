@@ -63,6 +63,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
         color.green("Rate limiting detected. API returned 429 Too Many Requests.")
         break
 
+      elif verbose:
+        color.warning(f"Request returned status: {status_code}")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
