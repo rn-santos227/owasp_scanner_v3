@@ -36,10 +36,11 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, dat
 def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_6.value.id} - {OWASP.OWASP_6.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
-  vulnerabilities = []
-  logs = []
+  vulnerabilities, logs = [], []
 
   parsed_url = validate_url(endpoint)
+
+  color.info("Testing for rate limits, missing MFA, and lack of approval steps...")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
