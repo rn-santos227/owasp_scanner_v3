@@ -68,6 +68,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
 
       if success_count == _requests_count:
         color.light_red("Rate limiting not enforced! API allows unrestricted access.")
+        vulnerabilities.append(f"Rate limiting missing at {endpoint}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
