@@ -14,6 +14,8 @@ from utils.validate_url import validate_url
 from utils.progress_bar import show_progress_bar
 
 _config = parse_config()
+_requests_count = int(_config[Config.CONFIG_1.value])
+
 proxies = _config[Config.CONFIG_5.value]
 
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, data: str = None, json: dict = None) -> tuple:
@@ -42,6 +44,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
   parsed_url = validate_url(endpoint)
 
   color.info("Testing for rate limits, missing MFA, and lack of approval steps...")
+  
+  with ThreadPoolExecutor(max_workers=5) as executor:
+    pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
