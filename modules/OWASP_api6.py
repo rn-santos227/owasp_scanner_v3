@@ -59,6 +59,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
       if status_code == 200:
         success_count += 1
 
+      elif status_code == 429:
+        pass
+
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
