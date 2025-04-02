@@ -25,6 +25,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, dat
       proxies = proxies,
       verify = False,
       data = data,
+      json = json
     )
 
   except requests.RequestException as e:
