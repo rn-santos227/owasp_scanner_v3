@@ -27,7 +27,8 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, dat
       data = data,
       json = json
     )
-
+    return response.status_code, response.text
+  
   except requests.RequestException as e:
     return None, str(e)
 
