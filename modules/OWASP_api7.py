@@ -24,6 +24,7 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
     data = {"url": test_url}
     response = requests.request(
       method,
+      endpoint,
     )
 
   except requests.RequestException as e:
