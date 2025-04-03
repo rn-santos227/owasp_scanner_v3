@@ -77,6 +77,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
       color.light_red("MFA not required for sensitive action!")
       vulnerabilities.append(f"MFA missing at {endpoint}")
 
+    color.info("Checking for missing approval steps in transactions...")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
