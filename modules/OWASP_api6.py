@@ -74,7 +74,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
     status_code, _ = _send_request(parsed_url, method, headers, timeout, data, json)
 
     if status_code == 200 and "X-MFA" not in headers:
-      pass
+      color.light_red("MFA not required for sensitive action!")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
