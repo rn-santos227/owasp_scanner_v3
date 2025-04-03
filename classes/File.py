@@ -8,7 +8,7 @@ class File(Enum):
   FILE_KEYS = "dictionaries/sensitive_keys.txt"
   FILE_KEYWORDS = "dictionaries/user_keywords.txt"
   FILE_PASSWORDS = "dictionaries/passwords.txt"
-  FILE_PAYLOADS = "dictionaries/ssf_payloads.txt"
+  FILE_PAYLOADS = "dictionaries/ssrf_payloads.txt"
   FILE_QUERIES = "dictionaries/queries.txt"
   FILE_TOKENS = "files/auth_tokens.txt"
   FILE_USERNAMES = "files/usernames.txt"
