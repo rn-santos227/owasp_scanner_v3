@@ -80,7 +80,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
     color.info("Checking for missing approval steps in transactions...")
     with ThreadPoolExecutor(max_workers=2) as executor:
       future_approval = {
-
+        executor.submit(_send_request, parsed_url, method, headers, timeout, data, json): i
+        for i in range(2)
       }
 
   if len(vulnerabilities) == 0:
