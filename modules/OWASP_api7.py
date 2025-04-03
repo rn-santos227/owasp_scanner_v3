@@ -19,6 +19,8 @@ _SSRF_TEST_URLS = File.FILE_URLS.value
 def _load_file(file_path: str) -> list[str]:
   return [' '.join(line.strip().split()) for line in file_reader(file_path) if line.strip()]
 
+def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float, test_url: str) -> tuple[str, int | None]:
+  pass
 
 #API7:2023 - Server Side Request Forgery
 def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
