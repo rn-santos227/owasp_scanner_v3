@@ -22,6 +22,9 @@ def _load_file(file_path: str) -> list[str]:
 def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float, test_url: str) -> tuple[str, int | None]:
   try:
     data = {"url": test_url}
+    response = requests.request(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"SSRF Test Error ({test_url}): {e}")
