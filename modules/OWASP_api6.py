@@ -71,6 +71,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"Rate limiting missing at {endpoint}")
 
     color.info("Checking for missing Multi-Factor Authentication (MFA)...")
+    status_code, _ = _send_request(parsed_url, method, headers, timeout, data, json)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
