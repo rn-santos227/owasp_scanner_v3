@@ -25,6 +25,7 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
 
   except requests.RequestException as e:
     color.warning(f"SSRF Test Error ({test_url}): {e}")
+    return test_url, None
 
 #API7:2023 - Server Side Request Forgery
 def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
