@@ -91,6 +91,7 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     if all(status == 200 for status in approval_responses):
       color.light_red("Approval step missing! API allows immediate execution without verification.")
+      vulnerabilities.append(f"Approval step missing at {endpoint}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
