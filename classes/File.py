@@ -11,5 +11,6 @@ class File(Enum):
   FILE_PAYLOADS = "dictionaries/ssrf_payloads.txt"
   FILE_QUERIES = "dictionaries/queries.txt"
   FILE_TOKENS = "files/auth_tokens.txt"
-  FILE_USERNAMES = "files/usernames.txt"
+  FILE_URLS = "files/usernames.txt"
+  FILE_USERNAMES = "dictionaries/ssrf_test_urls.txt"
   FILE_WHITELIST = "dictionaries/whitelist_endpoints.txt"
