@@ -78,6 +78,8 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
       vulnerabilities.append(f"MFA missing at {endpoint}")
 
     color.info("Checking for missing approval steps in transactions...")
+    with ThreadPoolExecutor(max_workers=2) as executor:
+      pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
