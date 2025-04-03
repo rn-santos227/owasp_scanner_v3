@@ -79,7 +79,9 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     color.info("Checking for missing approval steps in transactions...")
     with ThreadPoolExecutor(max_workers=2) as executor:
-      pass
+      future_approval = {
+
+      }
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
