@@ -3,6 +3,7 @@ import requests
 import helpers.color_text as color
 
 from classes.Config import Config
+from classes.File import File
 from classes.Scanner import OWASP
 
 from handlers.settings import parse_config
@@ -11,6 +12,8 @@ from utils.validate_url import validate_url
 from utils.progress_bar import show_progress_bar
 
 proxies = parse_config()[Config.CONFIG_5.value]
+
+_SSRF_TEST_URLS = File.FILE_URLS.value
 
 #API7:2023 - Server Side Request Forgery
 def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
