@@ -83,8 +83,10 @@ def check_api_6(endpoint, method : str, headers: dict, timeout : float, verbose 
         executor.submit(_send_request, parsed_url, method, headers, timeout, data, json): i
         for i in range(2)
       }
-      
+
       approval_responses = []
+      for future in show_progress_bar(future_approval, 2, desc="Testing Approval Steps", unit=" request"):
+        pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
