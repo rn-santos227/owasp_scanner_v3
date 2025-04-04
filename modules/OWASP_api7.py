@@ -51,7 +51,7 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   test_urls = _load_file(_SSRF_TEST_URLS)
   if not test_urls:
-    pass
+    color.warning("No SSRF test URLs found. Skipping API7 test.")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
