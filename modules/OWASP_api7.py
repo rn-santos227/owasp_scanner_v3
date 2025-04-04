@@ -60,7 +60,9 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   results = {}
   with ThreadPoolExecutor(max_workers=5) as executor:
-    pass
+    future_tasks = {
+
+    }
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
