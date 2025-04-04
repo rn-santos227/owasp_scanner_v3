@@ -45,10 +45,11 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
-
   if not parsed_url:
     color.warning("Invalid URL. Skipping API7 test.")
     return vulnerabilities, logs
+  
+  test_urls = _load_file(_SSRF_TEST_URLS)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
