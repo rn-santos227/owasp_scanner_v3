@@ -31,8 +31,8 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
       verify = False,
       json = data
     )
-
     return test_url, response.status_code
+  
   except requests.RequestException as e:
     color.warning(f"SSRF Test Error ({test_url}): {e}")
     return test_url, None
@@ -45,6 +45,9 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
+
+  if not parsed_url:
+    pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
