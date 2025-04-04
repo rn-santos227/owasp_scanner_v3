@@ -71,7 +71,7 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     for test_url, status in results.items():
       if status and status in [200, 201, 202]:
-        pass
+        color.red(f"SSRF Vulnerability Found! API allowed request to: {test_url}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
