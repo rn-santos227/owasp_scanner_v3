@@ -56,6 +56,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   
   color.info(f"Testing SSRF vulnerabilities at {endpoint}...")
 
+  results = {}
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
