@@ -65,6 +65,9 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
       for test_url in test_urls
     }
 
+    for future in show_progress_bar(as_completed(future_tasks), len(test_urls), desc="Testing SSRF URLs", unit=" test"):
+      pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
