@@ -32,6 +32,7 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
       json = data
     )
 
+    return test_url, response.status_code
   except requests.RequestException as e:
     color.warning(f"SSRF Test Error ({test_url}): {e}")
     return test_url, None
