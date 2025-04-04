@@ -14,6 +14,8 @@ from utils.validate_url import validate_url
 
 proxies = parse_config()[Config.CONFIG_5.value]
 
+_FILE_INSECURE_HEADERS = File.FILE_HEADERS.value
+
 #API8:2023 - Security Misconfiguration
 def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_8.value.id} - {OWASP.OWASP_8.value.name}"
