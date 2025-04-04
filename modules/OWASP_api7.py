@@ -29,6 +29,7 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
       timeout = timeout,
       proxies = proxies,
       verify = False,
+      json = data
     )
 
   except requests.RequestException as e:
