@@ -53,6 +53,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   if not test_urls:
     color.warning("No SSRF test URLs found. Skipping API7 test.")
     return vulnerabilities, logs
+  
+  color.info(f"Testing SSRF vulnerabilities at {endpoint}...")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
