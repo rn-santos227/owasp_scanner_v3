@@ -70,7 +70,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
       results[test_url] = future.result()
 
     for test_url, status in results.items():
-      pass
+      if status and status in [200, 201, 202]:
+        pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
