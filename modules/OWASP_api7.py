@@ -75,9 +75,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
         vulnerabilities.append(f"SSRF detected: {test_url} accessible from {endpoint}")
 
       elif verbose and status:
-        pass
+        color.info(f"SSRF test blocked for {test_url} (Status: {status})")
       
-
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
