@@ -61,7 +61,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   results = {}
   with ThreadPoolExecutor(max_workers=5) as executor:
     future_tasks = {
-
+      executor.submit(_send_ssrf_request, parsed_url, method, headers, timeout, test_url): test_url
+      for test_url in test_urls
     }
 
   if len(vulnerabilities) == 0:
