@@ -48,6 +48,7 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   if not parsed_url:
     color.warning("Invalid URL. Skipping API7 test.")
+    return vulnerabilities, logs
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
