@@ -1,5 +1,7 @@
 import requests
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 import helpers.color_text as color
 
 from classes.Config import Config
@@ -57,6 +59,8 @@ def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose 
   color.info(f"Testing SSRF vulnerabilities at {endpoint}...")
 
   results = {}
+  with ThreadPoolExecutor(max_workers=5) as executor:
+    pass
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
