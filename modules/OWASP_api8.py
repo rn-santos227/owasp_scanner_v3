@@ -27,6 +27,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
+  nsecure_headers = _load_insecure_headers(_FILE_INSECURE_HEADERS)
   
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
