@@ -34,7 +34,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
-  nsecure_headers = _load_insecure_headers(_FILE_INSECURE_HEADERS)
+  insecure_headers = _load_insecure_headers(_FILE_INSECURE_HEADERS)
   
   try:
     response = requests.request(
@@ -50,7 +50,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
     results = []
 
     with ThreadPoolExecutor() as executor:
-      pass
+      futures = {executor.submit(_check_header, h, v, insecure_headers): h for h, v in header_items}
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
