@@ -57,7 +57,8 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
           results.append(result)
 
     if results:
-      pass
+      for name, value in results:
+        pass
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
