@@ -16,6 +16,9 @@ proxies = parse_config()[Config.CONFIG_5.value]
 
 _FILE_INSECURE_HEADERS = File.FILE_HEADERS.value
 
+def _load_insecure_headers(file_path: str) -> list[str]:
+  pass
+
 #API8:2023 - Security Misconfiguration
 def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_8.value.id} - {OWASP.OWASP_8.value.name}"
