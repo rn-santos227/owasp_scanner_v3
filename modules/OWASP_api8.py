@@ -51,6 +51,8 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
 
     with ThreadPoolExecutor() as executor:
       futures = {executor.submit(_check_header, h, v, insecure_headers): h for h, v in header_items}
+      for f in show_progress_bar(futures, "Scanning headers"):
+        pass
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
