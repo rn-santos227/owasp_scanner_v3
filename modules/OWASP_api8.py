@@ -23,7 +23,7 @@ def _load_insecure_headers(file_path: str) -> list[str]:
 
 def _check_header(header_name: str, header_value: str, insecure_list: list[str]) -> tuple[str, str] | None:
   if header_name.lower() in insecure_list:
-    pass
+    return header_name, header_value
 
 #API8:2023 - Security Misconfiguration
 def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
