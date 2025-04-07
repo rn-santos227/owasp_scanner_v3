@@ -53,6 +53,8 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
       futures = {executor.submit(_check_header, h, v, insecure_headers): h for h, v in header_items}
       for f in show_progress_bar(futures, "Scanning headers"):
         result = f.result()
+        if result:
+          results.append(result)
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
