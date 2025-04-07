@@ -45,8 +45,9 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
       proxies = proxies,
       verify = False
     )
-    
+
     header_items = list(response.headers.items())
+    results = []
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
