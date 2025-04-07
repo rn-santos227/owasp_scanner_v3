@@ -62,7 +62,7 @@ def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose 
       vulnerabilities.append(f"Insecure headers at {endpoint}: {', '.join(h for h, _ in results)}")
 
     elif verbose:
-      pass
+      color.info(f"No insecure headers found at {endpoint}.")
 
   except requests.RequestException as e:
     color.warning(f"Error during request: {e}")
