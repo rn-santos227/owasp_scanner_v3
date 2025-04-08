@@ -50,6 +50,7 @@ def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose 
 
   sensitive_paths = _load_file(_FILE_SENSITIVE_PATHS)
   backup_suffixes = _load_file(_FILE_BACKUP_SUFFIXES)
+  uncommon_methods = _load_file(_FILE_UNCOMMON_METHODS)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
