@@ -27,7 +27,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, pat
   try:
     url = f"{endpoint}/{path}" if path else endpoint
     response = requests.request(
-
+      method,
     )
 
   except requests.RequestException as e:
