@@ -16,6 +16,8 @@ from utils.validate_url import validate_url
 
 proxies = parse_config()[Config.CONFIG_5.value]
 
+_FILE_SENSITIVE_PATHS = File.FILE_PATHS.value
+
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_9.value.id} - {OWASP.OWASP_9.value.name}"
