@@ -25,7 +25,7 @@ def _load_file(file_path: str) -> list[str]:
 
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, path: str = "") -> int:
   try:
-    pass
+    url = f"{endpoint}/{path}" if path else endpoint
 
   except requests.RequestException as e:
     color.warning(f"Request error for {url}: {e}")
