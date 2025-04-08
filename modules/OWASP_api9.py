@@ -24,7 +24,11 @@ def _load_file(file_path: str) -> list[str]:
   return [line.strip() for line in file_reader(file_path) if line.strip()]
 
 def _send_request(endpoint: str, method: str, headers: dict, timeout: float, path: str = "") -> int:
-  pass
+  try:
+    pass
+
+  except requests.RequestException as e:
+    color.warning(f"Request error for {url}: {e}")
 
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
