@@ -23,6 +23,9 @@ _FILE_UNCOMMON_METHODS = File.FILE_METHODS.value
 def _load_file(file_path: str) -> list[str]:
   return [line.strip() for line in file_reader(file_path) if line.strip()]
 
+def _send_request(endpoint: str, method: str, headers: dict, timeout: float, path: str = "") -> int:
+  pass
+
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_9.value.id} - {OWASP.OWASP_9.value.name}"
