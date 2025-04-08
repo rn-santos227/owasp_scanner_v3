@@ -21,7 +21,7 @@ _FILE_BACKUP_SUFFIXES = File.FILE_SUFFIXES.value
 _FILE_UNCOMMON_METHODS = File.FILE_METHODS.value
 
 def _load_file(file_path: str) -> list[str]:
-  pass
+  return [line.strip() for line in file_reader(file_path) if line.strip()]
 
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
