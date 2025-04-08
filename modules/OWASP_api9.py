@@ -1,6 +1,6 @@
 import requests
 
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import helpers.color_text as color
 
@@ -47,6 +47,8 @@ def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose 
   logs = []
 
   parsed_url = validate_url(endpoint)
+
+  sensitive_paths = _load_file(_FILE_SENSITIVE_PATHS)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
