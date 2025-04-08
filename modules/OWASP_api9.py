@@ -34,6 +34,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, pat
       proxies = proxies,
       verify = False
     )
+    return response.status_code
 
   except requests.RequestException as e:
     color.warning(f"Request error for {url}: {e}")
