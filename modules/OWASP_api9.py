@@ -18,6 +18,7 @@ proxies = parse_config()[Config.CONFIG_5.value]
 
 _FILE_SENSITIVE_PATHS = File.FILE_PATHS.value
 _FILE_BACKUP_SUFFIXES = File.FILE_SUFFIXES.value
+_FILE_UNCOMMON_METHODS = File.FILE_METHODS.value
 
 #API9:2023 - Improper Inventory Management
 def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
