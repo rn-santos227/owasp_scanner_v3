@@ -30,6 +30,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, pat
       method,
       url,
       headers = headers,
+      timeout = timeout,
     )
 
   except requests.RequestException as e:
