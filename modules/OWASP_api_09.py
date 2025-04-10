@@ -61,6 +61,9 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
     for path in sensitive_paths:
       future = executor.submit(_send_request, parsed_url, method, headers, timeout, path)
       future_to_path[future] = f"Sensitive Path: {path}"
+
+    for suffix in backup_suffixes:
+      pass
       
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
