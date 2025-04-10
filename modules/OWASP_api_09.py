@@ -67,7 +67,7 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       future_to_path[future] = f"Backup Suffix: {suffix}"
 
     for method_name in uncommon_methods:
-      pass
+      future = executor.submit(_send_request, parsed_url, method, headers, timeout, method_name)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
