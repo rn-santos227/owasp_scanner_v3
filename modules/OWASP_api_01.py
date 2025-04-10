@@ -20,7 +20,7 @@ def _load_test_ids(file_path):
   return [line.strip() for line in test_ids if line.strip()]
 
 #API1:2023 - Broken Object Level Authorization
-def check_api_1(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_01(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_1.value.id} - {OWASP.OWASP_1.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
