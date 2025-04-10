@@ -71,10 +71,6 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       future_to_path[future] = f"Uncommon Method: {method_name}"
 
     for future in as_completed(future_to_path):
-      pastatus_code = future.result()
-      path_type = future_to_path[future]
-
-    for future in as_completed(future_to_path):
       status_code = future.result()
       path_type = future_to_path[future]
 
@@ -82,7 +78,7 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       show_progress_bar(completed_tasks, total_tasks)
 
       if status_code == 200:
-        pass
+        vulnerabilities.append(f"{path_type} accessible (Status: {status_code})")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
