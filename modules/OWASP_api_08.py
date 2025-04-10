@@ -27,7 +27,7 @@ def _check_header(header_name: str, header_value: str, insecure_list: list[str])
   return None
 
 #API8:2023 - Security Misconfiguration
-def check_api_8(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_08(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_8.value.id} - {OWASP.OWASP_8.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
