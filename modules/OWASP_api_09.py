@@ -79,6 +79,7 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       path_type = future_to_path[future]
 
       completed_tasks += 1
+      show_progress_bar(completed_tasks, total_tasks)
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
