@@ -74,6 +74,9 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       pastatus_code = future.result()
       path_type = future_to_path[future]
 
+    for future in as_completed(future_to_path):
+      pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
