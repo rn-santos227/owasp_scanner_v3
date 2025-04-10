@@ -68,6 +68,7 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
 
     for method_name in uncommon_methods:
       future = executor.submit(_send_request, parsed_url, method, headers, timeout, method_name)
+      future_to_path[future] = f"Uncommon Method: {method_name}"
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
