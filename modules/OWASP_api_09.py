@@ -71,7 +71,7 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       future_to_path[future] = f"Uncommon Method: {method_name}"
 
     for future in as_completed(future_to_path):
-      pass
+      pastatus_code = future.result()
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
