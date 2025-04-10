@@ -62,7 +62,7 @@ def _test_property_batch(endpoint, method, headers, timeout, proxies, batch, jso
   return []
 
 #API3:2023 - Broken Object Property Level Authorization
-def check_api_3(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_03(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_3.value.id} - {OWASP.OWASP_3.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
