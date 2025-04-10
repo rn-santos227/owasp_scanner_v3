@@ -81,6 +81,9 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
         vulnerabilities.append(f"{path_type} accessible (Status: {status_code})")
         color.red(f"Vulnerable: {path_type} is accessible!")
 
+      elif status_code == 404:
+        color.info(f"{path_type} not found (Status: {status_code})")
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
