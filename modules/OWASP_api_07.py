@@ -40,7 +40,7 @@ def _send_ssrf_request(endpoint: str, method: str, headers: dict, timeout: float
     return test_url, None
 
 #API7:2023 - Server Side Request Forgery
-def check_api_7(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_07(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_7.value.id} - {OWASP.OWASP_7.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
