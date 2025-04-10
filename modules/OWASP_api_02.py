@@ -82,7 +82,7 @@ def _check_token(endpoint: str, method: str, headers: dict, token: str, timeout:
   return None
 
 #API2:2023 - Broken Authentication
-def check_api_2(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_02(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_2.value.id} - {OWASP.OWASP_2.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
