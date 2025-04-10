@@ -44,7 +44,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, dat
     return None, None
 
 #API4:2023 - Unrestricted Resource Consumption
-def check_api_4(endpoint, method: str, headers: dict, timeout: float, verbose: bool, data: str = None, json: dict = None, response = None):
+def check_api_04(endpoint, method: str, headers: dict, timeout: float, verbose: bool, data: str = None, json: dict = None, response = None):
   flag_title = f"{OWASP.OWASP_4.value.id} - {OWASP.OWASP_4.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
