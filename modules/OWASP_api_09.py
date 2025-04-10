@@ -40,7 +40,7 @@ def _send_request(endpoint: str, method: str, headers: dict, timeout: float, pat
     color.warning(f"Request error for {url}: {e}")
 
 #API9:2023 - Improper Inventory Management
-def check_api_9(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
+def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_9.value.id} - {OWASP.OWASP_9.value.name}"
   color.banner(f"------------------------ {flag_title} ------------------------")
   vulnerabilities = []
