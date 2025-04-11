@@ -58,6 +58,9 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
       completed_tasks += 1
       show_progress_bar(completed_tasks, total_tasks)
 
+      if status_code == 200:
+        pass
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
