@@ -21,7 +21,9 @@ _FILE_MALICIOUS = File.FILE_MALICIOUS.value
 
 def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: dict) -> tuple[str, int | None]:
   try:
-    pass
+    response = requests.post(
+
+    )
 
   except requests.RequestException as e:
     color.warning(f"Request error for payload {payload}: {e}")
