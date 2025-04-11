@@ -1,4 +1,5 @@
 import requests
+import json as json_lib
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -24,6 +25,7 @@ def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: di
 
   except requests.RequestException as e:
     color.warning(f"Request error for payload {payload}: {e}")
+    return json_lib.dumps(payload), None
 
 #API10:2023 - Unsafe Consumption of APIs
 def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
