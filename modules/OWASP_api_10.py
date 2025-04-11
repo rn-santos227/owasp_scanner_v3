@@ -29,6 +29,7 @@ def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: di
       proxies = proxies,
       verify = False
     )
+    return json_lib.dumps(payload), response.status_code
 
   except requests.RequestException as e:
     color.warning(f"Request error for payload {payload}: {e}")
