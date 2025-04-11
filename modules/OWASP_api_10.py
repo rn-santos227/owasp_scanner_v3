@@ -27,6 +27,7 @@ def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: di
       headers = headers,
       timeout = timeout,
       proxies = proxies,
+      verify = False
     )
 
   except requests.RequestException as e:
