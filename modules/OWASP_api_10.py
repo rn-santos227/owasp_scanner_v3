@@ -45,6 +45,7 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
   parsed_url = validate_url(endpoint)
 
   total_tasks = len(_FILE_MALICIOUS)
+  completed_tasks = 0
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
