@@ -55,6 +55,7 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
 
     for future in as_completed(future_to_payload):
       payload_str, status_code = future.result()
+      completed_tasks += 1
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
