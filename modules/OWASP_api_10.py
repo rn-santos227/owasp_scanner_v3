@@ -22,7 +22,7 @@ _FILE_MALICIOUS = File.FILE_MALICIOUS.value
 def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: dict) -> tuple[str, int | None]:
   try:
     response = requests.post(
-
+      endpoint,
     )
 
   except requests.RequestException as e:
