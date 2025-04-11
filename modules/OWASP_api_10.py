@@ -60,6 +60,7 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
 
       if status_code == 200:
         color.red(f"Potential unsafe behavior for payload: {payload_str}")
+        vulnerabilities.append(f"API accepted potentially dangerous input: {payload_str}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
