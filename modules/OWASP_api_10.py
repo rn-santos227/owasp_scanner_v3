@@ -49,7 +49,8 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
 
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_to_payload = {
-
+      executor.submit(_send_test_payload, parsed_url, headers, timeout, payload): payload
+      for payload in _FILE_MALICIOUS
     }
 
   if len(vulnerabilities) == 0:
