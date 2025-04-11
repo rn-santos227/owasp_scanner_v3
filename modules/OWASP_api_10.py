@@ -66,7 +66,8 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
         color.info(f"Payload rejected (Status: {status_code}): {payload_str}")
 
       elif status_code is None:
-        pass
+        vulnerabilities.append(f"No response or error for payload: {payload_str}")
+        color.warning(f"No response for payload: {payload_str}")
 
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
