@@ -8,6 +8,7 @@ class File(Enum):
   FILE_IDS = "dictionaries/test_ids.txt"
   FILE_KEYS = "dictionaries/sensitive_keys.txt"
   FILE_KEYWORDS = "dictionaries/user_keywords.txt"
+  FILE_MALICIOUS = "dictionaries/malicious_payloard.txt"
   FILE_METHODS = "dictionaries/uncommon_methods.txt"
   FILE_PATHS = "dictionaries/sensitive_paths.txt"
   FILE_PASSWORDS = "dictionaries/passwords.txt"
