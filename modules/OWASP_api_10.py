@@ -62,6 +62,10 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
         color.red(f"Potential unsafe behavior for payload: {payload_str}")
         vulnerabilities.append(f"API accepted potentially dangerous input: {payload_str}")
 
+      elif status_code and status_code >= 400 and verbose:
+        color.info(f"Payload rejected (Status: {status_code}): {payload_str}")
+
+
   if len(vulnerabilities) == 0:
     endpoint_clean = color.green(flag_title)
     logs.append(endpoint_clean)
