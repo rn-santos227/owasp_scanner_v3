@@ -18,6 +18,9 @@ proxies = parse_config()[Config.CONFIG_5.value]
 
 _FILE_MALICIOUS = File.FILE_MALICIOUS.value
 
+def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: dict) -> tuple[str, int | None]:
+  pass
+
 #API10:2023 - Unsafe Consumption of APIs
 def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_10.value.id} - {OWASP.OWASP_10.value.name}"
