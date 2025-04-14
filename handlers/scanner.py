@@ -21,3 +21,4 @@ def _choose_endpoint() -> str | None:
   question = [
     inquirer.List("endpoint", message="Select an endpoint to scan", choices=choices)
   ]
+  answer = inquirer.prompt(question)
