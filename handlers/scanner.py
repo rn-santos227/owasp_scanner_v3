@@ -31,3 +31,6 @@ def _choose_scanner() -> OWASP:
   ]
   answer = inquirer.prompt(question)
   return choices[answer["scanner"]] if answer else None
+
+def handle_individual_scan():
+  pass
