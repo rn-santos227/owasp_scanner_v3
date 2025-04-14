@@ -16,3 +16,5 @@ def _choose_endpoint() -> str | None:
     color.warning("No endpoints available to scan.")
     input("Press Enter to Continue...")
     return None
+  
+  choices = [ep.strip() for ep in endpoints if ep.strip()]
