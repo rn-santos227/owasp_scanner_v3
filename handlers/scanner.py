@@ -25,4 +25,4 @@ def _choose_endpoint() -> str | None:
   return answer["endpoint"] if answer else None
 
 def _choose_scanner() -> OWASP:
-  pass
+  choices = {f"{scanner.value.id} - {scanner.value.name}": scanner for scanner in OWASP}
