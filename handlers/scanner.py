@@ -33,7 +33,8 @@ def _choose_scanner() -> OWASP:
   return choices[answer["scanner"]] if answer else None
 
 def _manual_endpoint() -> str:
-  pass
+  while True:
+    new_endpoint = input("Enter the new endpoint (e.g. https://api.example.com/v1): ").strip()
 
 def handle_individual_scan():
   clear_screen()
