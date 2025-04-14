@@ -11,4 +11,4 @@ from utils.validate_url import validate_url
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
 def _choose_endpoint() -> str:
-  pass
+  endpoints = file_reader(_FILE_ENDPOINTS)
