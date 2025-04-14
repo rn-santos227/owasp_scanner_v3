@@ -27,5 +27,5 @@ def _choose_endpoint() -> str | None:
 def _choose_scanner() -> OWASP:
   choices = {f"{scanner.value.id} - {scanner.value.name}": scanner for scanner in OWASP}
   question = [
-
+    inquirer.List("scanner", message="Choose a specific OWASP scanner to run", choices=list(choices.keys()))
   ]
