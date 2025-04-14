@@ -30,3 +30,4 @@ def _choose_scanner() -> OWASP:
     inquirer.List("scanner", message="Choose a specific OWASP scanner to run", choices=list(choices.keys()))
   ]
   answer = inquirer.prompt(question)
+  return choices[answer["scanner"]] if answer else None
