@@ -40,3 +40,6 @@ def handle_individual_scan():
   if not scanner:
     color.warning("No scanner selected.")
     input("Press Enter to Continue...")
+    return
+  
+  endpoint = _choose_endpoint()
