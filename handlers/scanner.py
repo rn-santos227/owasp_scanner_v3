@@ -43,3 +43,5 @@ def handle_individual_scan():
     return
   
   endpoint = _choose_endpoint()
+  if not endpoint or not validate_url(endpoint):
+    pass
