@@ -38,4 +38,4 @@ def handle_individual_scan():
 
   scanner = _choose_scanner()
   if not scanner:
-    pass
+    color.warning("No scanner selected.")
