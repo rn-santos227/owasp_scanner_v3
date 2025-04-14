@@ -10,14 +10,14 @@ from utils.validate_url import validate_url
 
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
-def _choose_endpoint() -> str | None:
+def _choose_or_add_endpoint() -> str | None:
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
     color.warning("No endpoints available to scan.")
     input("Press Enter to Continue...")
     return None
   
-  choices = [ep.strip() for ep in endpoints if ep.strip()]
+  choices = [ep.strip() for ep in endpoints if ep.strip()] + ["[Enter a new endpoint]"]
   question = [
     inquirer.List("endpoint", message="Select an endpoint to scan", choices=choices)
   ]
@@ -42,6 +42,6 @@ def handle_individual_scan():
     input("Press Enter to Continue...")
     return
   
-  endpoint = _choose_endpoint()
+  endpoint = _choose_or_add_endpoint()
   if not endpoint or not validate_url(endpoint):
     pass
