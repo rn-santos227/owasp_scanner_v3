@@ -13,4 +13,4 @@ _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 def _choose_endpoint() -> str:
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
-    pass
+    color.warning("No endpoints available to scan.")
