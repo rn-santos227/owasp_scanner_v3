@@ -23,3 +23,6 @@ def _choose_endpoint() -> str | None:
   ]
   answer = inquirer.prompt(question)
   return answer["endpoint"] if answer else None
+
+def _choose_scanner() -> OWASP:
+  pass
