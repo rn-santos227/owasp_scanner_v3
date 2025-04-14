@@ -33,4 +33,4 @@ def _choose_scanner() -> OWASP:
   return choices[answer["scanner"]] if answer else None
 
 def handle_individual_scan():
-  pass
+  clear_screen()
