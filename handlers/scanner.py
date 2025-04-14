@@ -32,6 +32,9 @@ def _choose_scanner() -> OWASP:
   answer = inquirer.prompt(question)
   return choices[answer["scanner"]] if answer else None
 
+def _manual_endpoint() -> str:
+  pass
+
 def handle_individual_scan():
   clear_screen()
   color.banner("Individual OWASP Scanner")
