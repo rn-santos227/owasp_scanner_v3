@@ -18,3 +18,6 @@ def _choose_endpoint() -> str | None:
     return None
   
   choices = [ep.strip() for ep in endpoints if ep.strip()]
+  question = [
+
+  ]
