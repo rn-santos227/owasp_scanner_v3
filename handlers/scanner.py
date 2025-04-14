@@ -26,3 +26,6 @@ def _choose_endpoint() -> str | None:
 
 def _choose_scanner() -> OWASP:
   choices = {f"{scanner.value.id} - {scanner.value.name}": scanner for scanner in OWASP}
+  question = [
+
+  ]
