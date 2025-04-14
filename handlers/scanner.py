@@ -34,3 +34,4 @@ def _choose_scanner() -> OWASP:
 
 def handle_individual_scan():
   clear_screen()
+  color.banner("Individual OWASP Scanner")
