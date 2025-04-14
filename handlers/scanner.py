@@ -9,3 +9,6 @@ from utils.clear_screen import clear_screen
 from utils.validate_url import validate_url
 
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
+
+def _choose_endpoint() -> str:
+  pass
