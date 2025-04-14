@@ -11,13 +11,13 @@ from utils.validate_url import validate_url
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
 def _choose_or_add_endpoint() -> str | None:
-  endpoints = file_reader(_FILE_ENDPOINTS)
+  endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
   if not endpoints:
     color.warning("No endpoints available to scan.")
     input("Press Enter to Continue...")
     return None
   
-  choices = [ep.strip() for ep in endpoints if ep.strip()] + ["[Enter a new endpoint]"]
+  choices = endpoints + ["[Enter a new endpoint]"]
   question = [
     inquirer.List("endpoint", message="Select an endpoint to scan", choices=choices)
   ]
