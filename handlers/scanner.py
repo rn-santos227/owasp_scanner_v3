@@ -19,5 +19,5 @@ def _choose_endpoint() -> str | None:
   
   choices = [ep.strip() for ep in endpoints if ep.strip()]
   question = [
-
+    inquirer.List("endpoint", message="Select an endpoint to scan", choices=choices)
   ]
