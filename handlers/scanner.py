@@ -19,6 +19,7 @@ def _choose_or_add_endpoint() -> str | None:
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
+    return _manual_endpoint()
 
 def _choose_scanner() -> OWASP:
   choices = {f"{scanner.value.id} - {scanner.value.name}": scanner for scanner in OWASP}
