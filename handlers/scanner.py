@@ -41,6 +41,7 @@ def _manual_endpoint() -> str:
       endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
       if new_endpoint not in endpoints:
         file_writer(_FILE_ENDPOINTS, new_endpoint)
+        color.light_green("[✓] Endpoint saved.\n")
     
 def handle_individual_scan():
   clear_screen()
