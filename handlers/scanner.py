@@ -18,7 +18,7 @@ def _choose_or_add_endpoint() -> str | None:
   if endpoints:
     choices = endpoints + ["[Enter a new endpoint]"]
     question = [
-
+      inquirer.List("endpoint", message="Select an endpoint", choices=choices)
     ]
 
   else:
