@@ -65,5 +65,5 @@ def handle_individual_scan():
     return
   
   endpoint = _choose_or_add_endpoint()
-  if not endpoint or not validate_url(endpoint):
-    pass
+  if not endpoint:
+    color.warning("No valid endpoint provided.")
