@@ -14,8 +14,9 @@ _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
 def _choose_or_add_endpoint() -> str | None:
   endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
+  
   if endpoints:
-    pass
+    choices = endpoints + ["[Enter a new endpoint]"]
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
