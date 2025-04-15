@@ -36,9 +36,9 @@ def _manual_endpoint() -> str:
   while True:
     new_endpoint = input("Enter the new endpoint (e.g. https://api.example.com/v1): ").strip()
     if validate_url(new_endpoint):
-      pass
+      file_writer(_FILE_ENDPOINTS, new_endpoint)
 
-    
+
 def handle_individual_scan():
   clear_screen()
   color.banner("Individual OWASP Scanner")
