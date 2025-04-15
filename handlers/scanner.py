@@ -24,6 +24,8 @@ def _choose_or_add_endpoint() -> str | None:
 
     if answer["endpoint"] == "[Enter a new endpoint]":
       return _manual_endpoint()
+    else:
+      return answer["endpoint"]
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
