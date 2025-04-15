@@ -20,6 +20,7 @@ def _choose_or_add_endpoint() -> str | None:
     question = [
       inquirer.List("endpoint", message="Select an endpoint", choices=choices)
     ]
+    answer = inquirer.prompt(question)
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
