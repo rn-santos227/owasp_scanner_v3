@@ -40,7 +40,7 @@ def _manual_endpoint() -> str:
     if validate_url(new_endpoint):
       endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
       if new_endpoint not in endpoints:
-        pass
+        file_writer(_FILE_ENDPOINTS, new_endpoint)
     
 def handle_individual_scan():
   clear_screen()
