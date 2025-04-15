@@ -17,6 +17,9 @@ def _choose_or_add_endpoint() -> str | None:
   
   if endpoints:
     choices = endpoints + ["[Enter a new endpoint]"]
+    question = [
+
+    ]
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
