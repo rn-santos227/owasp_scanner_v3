@@ -5,6 +5,8 @@ from classes.Scanner import OWASP
 from classes.File import File
 
 from helpers.file_reader import file_reader
+from helpers.file_writer import file_writer
+
 from utils.clear_screen import clear_screen
 from utils.validate_url import validate_url
 
@@ -36,9 +38,9 @@ def _manual_endpoint() -> str:
   while True:
     new_endpoint = input("Enter the new endpoint (e.g. https://api.example.com/v1): ").strip()
     if validate_url(new_endpoint):
-      file_writer(_FILE_ENDPOINTS, new_endpoint)
+      endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
 
-
+    
 def handle_individual_scan():
   clear_screen()
   color.banner("Individual OWASP Scanner")
