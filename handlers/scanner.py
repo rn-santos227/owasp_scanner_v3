@@ -23,7 +23,7 @@ def _choose_or_add_endpoint() -> str | None:
     answer = inquirer.prompt(question)
 
     if answer["endpoint"] == "[Enter a new endpoint]":
-      pass
+      return _manual_endpoint()
 
   else:
     color.warning("No endpoints found. Please enter one manually.")
