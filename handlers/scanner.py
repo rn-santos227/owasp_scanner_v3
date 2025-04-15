@@ -39,7 +39,8 @@ def _manual_endpoint() -> str:
     new_endpoint = input("Enter the new endpoint (e.g. https://api.example.com/v1): ").strip()
     if validate_url(new_endpoint):
       endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
-
+      if new_endpoint not in endpoints:
+        pass
     
 def handle_individual_scan():
   clear_screen()
