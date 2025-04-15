@@ -14,7 +14,11 @@ _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
 def _choose_or_add_endpoint() -> str | None:
   endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
+  if endpoints:
+    pass
 
+  else:
+    color.warning("No endpoints found. Please enter one manually.")
 
 def _choose_scanner() -> OWASP:
   choices = {f"{scanner.value.id} - {scanner.value.name}": scanner for scanner in OWASP}
