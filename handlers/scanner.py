@@ -69,3 +69,5 @@ def handle_individual_scan():
     color.warning("No valid endpoint provided.")
     input("Press Enter to Continue...")
     return
+  
+  color.info(f"\nRunning {scanner.value.id} - {scanner.value.name} on {endpoint}...\n")
