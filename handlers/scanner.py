@@ -43,8 +43,11 @@ def _manual_endpoint() -> str:
       
       if new_endpoint not in endpoints:
         file_writer(_FILE_ENDPOINTS, new_endpoint)
-        color.light_green("[✓] Endpoint saved.\n")
+        color.light_green("Endpoint saved.\n")
       return new_endpoint
+    
+    else:
+      color.warning("Invalid URL format. Please try again.")
     
 def handle_individual_scan():
   clear_screen()
