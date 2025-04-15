@@ -37,11 +37,14 @@ def _choose_scanner() -> OWASP:
 def _manual_endpoint() -> str:
   while True:
     new_endpoint = input("Enter the new endpoint (e.g. https://api.example.com/v1): ").strip()
+    
     if validate_url(new_endpoint):
       endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
+      
       if new_endpoint not in endpoints:
         file_writer(_FILE_ENDPOINTS, new_endpoint)
         color.light_green("[✓] Endpoint saved.\n")
+      return new_endpoint
     
 def handle_individual_scan():
   clear_screen()
