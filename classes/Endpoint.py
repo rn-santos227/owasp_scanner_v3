@@ -6,7 +6,8 @@ class Endpoint:
     headers: dict = None,
     timeout: float = 10.0,
     verbose: bool = False,
-    data: str = None,      
+    data: str = None,
+    json: dict = None,    
   ):
     self.url = url
     self.method = method.upper()
@@ -14,3 +15,4 @@ class Endpoint:
     self.timeout = timeout
     self.verbose = verbose
     self.data = data
+    self.json = json
