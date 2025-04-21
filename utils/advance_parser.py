@@ -19,3 +19,7 @@ def tokenize_input(user_input: str) -> Endpoint:
 
     if token.startswith("http"):
       url = token
+
+    elif token == "-m" and i + 1 < len(tokens):
+      method = tokens[i + 1].upper()
+      i += 1
