@@ -8,3 +8,4 @@ def tokenize_input(user_input: str) -> Endpoint:
   method = "GET"
   headers = {}
   timeout = 10.0
+  verbose = False
