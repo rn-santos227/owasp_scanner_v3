@@ -1,5 +1,7 @@
-import shlex
-import json as json_lib
+from classes.Endpoint import Endpoint
+import shlex, json as json_lib
 
-def tokenize_input(user_input: str) -> dict:
+def tokenize_input(user_input: str) -> Endpoint:
   tokens = shlex.split(user_input.strip())
+
+  url = ""
