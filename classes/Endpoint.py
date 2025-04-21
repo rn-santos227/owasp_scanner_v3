@@ -25,3 +25,6 @@ class Endpoint:
       f"timeout={self.timeout}, verbose={self.verbose}, data={self.data}, "
       f"json={self.json}, response={self.response})"
     )
+  
+  def to_dict(self) -> dict:
+    pass
