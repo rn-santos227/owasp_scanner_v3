@@ -18,3 +18,6 @@ class Endpoint:
     self.data = data
     self.json = json
     self.response = response
+
+  def __repr__(self):
+    pass
