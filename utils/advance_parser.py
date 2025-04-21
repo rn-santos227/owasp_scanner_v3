@@ -12,3 +12,7 @@ def tokenize_input(user_input: str) -> Endpoint:
   data = None
   json_data = None
   response = None
+
+  i = 0
+  while i < len(tokens):
+    pass
