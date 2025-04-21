@@ -35,4 +35,5 @@ class Endpoint:
       "verbose": self.verbose,
       "data": self.data,
       "json": self.json,
+      "response": self.response
     }
