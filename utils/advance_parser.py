@@ -5,3 +5,4 @@ def tokenize_input(user_input: str) -> Endpoint:
   tokens = shlex.split(user_input.strip())
 
   url = ""
+  method = "GET"
