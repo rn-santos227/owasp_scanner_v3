@@ -20,4 +20,6 @@ class Endpoint:
     self.response = response
 
   def __repr__(self):
-    pass
+    return (
+      f"Endpoint(url={self.url}, method={self.method}, headers={self.headers}, "
+    )
