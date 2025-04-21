@@ -42,4 +42,8 @@ class Endpoint:
     }
   
   def is_valid(self) -> bool:
-    pass
+    try:
+      validate_method(self.method)
+
+    except Exception:
+      return False
