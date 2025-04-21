@@ -7,7 +7,8 @@ class Endpoint:
     timeout: float = 10.0,
     verbose: bool = False,
     data: str = None,
-    json: dict = None,    
+    json: dict = None,
+    response = None 
   ):
     self.url = url
     self.method = method.upper()
