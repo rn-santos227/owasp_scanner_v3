@@ -34,4 +34,5 @@ class Endpoint:
       "timeout": self.timeout,
       "verbose": self.verbose,
       "data": self.data,
+      "json": self.json,
     }
