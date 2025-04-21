@@ -16,3 +16,6 @@ def tokenize_input(user_input: str) -> Endpoint:
   i = 0
   while i < len(tokens):
     token = tokens[i]
+
+    if token.startswith("http"):
+      url = token
