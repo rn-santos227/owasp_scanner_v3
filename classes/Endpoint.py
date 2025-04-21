@@ -22,4 +22,5 @@ class Endpoint:
   def __repr__(self):
     return (
       f"Endpoint(url={self.url}, method={self.method}, headers={self.headers}, "
+      f"timeout={self.timeout}, verbose={self.verbose}, data={self.data}, "
     )
