@@ -17,3 +17,4 @@ class Endpoint:
     self.verbose = verbose
     self.data = data
     self.json = json
+    self.response = response
