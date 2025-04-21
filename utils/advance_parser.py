@@ -15,4 +15,4 @@ def tokenize_input(user_input: str) -> Endpoint:
 
   i = 0
   while i < len(tokens):
-    pass
+    token = tokens[i]
