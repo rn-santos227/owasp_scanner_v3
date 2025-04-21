@@ -11,3 +11,4 @@ def tokenize_input(user_input: str) -> Endpoint:
   verbose = False
   data = None
   json_data = None
+  response = None
