@@ -5,10 +5,12 @@ class Endpoint:
     method: str = "GET",
     headers: dict = None,
     timeout: float = 10.0,
-    verbose: bool = False,        
+    verbose: bool = False,
+    data: str = None,      
   ):
     self.url = url
     self.method = method.upper()
     self.headers = headers if headers else {}
     self.timeout = timeout
     self.verbose = verbose
+    self.data = data
