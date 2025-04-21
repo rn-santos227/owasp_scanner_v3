@@ -1,3 +1,6 @@
+from utils.validate_method import validate_method
+from utils.validate_url import validate_url
+
 class Endpoint:
   def __init__(
     self,
@@ -37,3 +40,6 @@ class Endpoint:
       "json": self.json,
       "response": self.response
     }
+  
+  def is_valid(self) -> bool:
+    pass
