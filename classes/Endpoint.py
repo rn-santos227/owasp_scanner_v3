@@ -31,4 +31,5 @@ class Endpoint:
       "endpoint": self.url,
       "method": self.method,
       "headers": self.headers,
+      "timeout": self.timeout,
     }
