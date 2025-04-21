@@ -23,4 +23,5 @@ class Endpoint:
     return (
       f"Endpoint(url={self.url}, method={self.method}, headers={self.headers}, "
       f"timeout={self.timeout}, verbose={self.verbose}, data={self.data}, "
+      f"json={self.json}, response={self.response})"
     )
