@@ -27,4 +27,6 @@ class Endpoint:
     )
   
   def to_dict(self) -> dict:
-    pass
+    return {
+      "endpoint": self.url,
+    }
