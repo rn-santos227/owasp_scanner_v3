@@ -10,3 +10,4 @@ def tokenize_input(user_input: str) -> Endpoint:
   timeout = 10.0
   verbose = False
   data = None
+  json_data = None
