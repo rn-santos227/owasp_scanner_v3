@@ -30,4 +30,5 @@ class Endpoint:
     return {
       "endpoint": self.url,
       "method": self.method,
+      "headers": self.headers,
     }
