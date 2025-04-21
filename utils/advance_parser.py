@@ -7,3 +7,4 @@ def tokenize_input(user_input: str) -> Endpoint:
   url = ""
   method = "GET"
   headers = {}
+  timeout = 10.0
