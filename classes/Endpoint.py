@@ -29,4 +29,5 @@ class Endpoint:
   def to_dict(self) -> dict:
     return {
       "endpoint": self.url,
+      "method": self.method,
     }
