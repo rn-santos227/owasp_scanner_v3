@@ -32,4 +32,5 @@ class Endpoint:
       "method": self.method,
       "headers": self.headers,
       "timeout": self.timeout,
+      "verbose": self.verbose,
     }
