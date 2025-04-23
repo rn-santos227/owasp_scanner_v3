@@ -15,3 +15,4 @@ def get_parsed_args(raw_input: str):
   parser.add_argument('--data', type=str, action='append', help='Form or query data')
   parser.add_argument('--payload', type=str, action='append', help='JSON payload')
   parser.add_argument('-t', '--timeout', type=float, default=10.0, help='Request timeout')
+  parser.add_argument('-v', '--verbose', action='store_true', help='Verbose output')
