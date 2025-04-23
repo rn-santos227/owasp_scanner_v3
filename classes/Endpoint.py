@@ -1,6 +1,8 @@
 from utils.validate_method import validate_method
 from utils.validate_url import validate_url
 
+import helpers.color_text as color
+
 class Endpoint:
   def __init__(
     self,
@@ -51,4 +53,9 @@ class Endpoint:
     return validate_url(self.url)
   
   def _normalize_method(self, method):
-    pass
+    try:
+      return validate_method(method).upper()
+    
+    except Exception as e:
+      color.warning(f"METHOD ERROR {e}")
+      return "INVALID"
