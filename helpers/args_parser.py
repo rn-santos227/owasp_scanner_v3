@@ -23,4 +23,5 @@ def get_parsed_args(raw_input: str):
     "endpoint": parsed.endpoint,
     "method": parsed.method.upper(),
     "headers": parse_headers(parsed.header),
+    "timeout": parsed.timeout,
   }
