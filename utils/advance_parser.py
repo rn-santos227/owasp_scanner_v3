@@ -16,3 +16,6 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
 
   for key, value in endpoint.headers.items():
     parts.extend(["-h", f"{key}:{value}"])
+
+  if endpoint.data:
+    parts.extend(["-d", endpoint.data])
