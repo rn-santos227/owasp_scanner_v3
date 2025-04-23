@@ -32,7 +32,7 @@ class Endpoint:
     )
   
   def __str__(self) -> str:
-    parts = [self.url]
+    pass
   
   def to_dict(self) -> dict:
     return {
