@@ -26,4 +26,5 @@ def get_parsed_args(raw_input: str):
     "timeout": parsed.timeout,
     "verbose": parsed.verbose,
     "data": parsed.data[0] if parsed.data else None,
+    "json": parse_payload(parsed.payload)
   }
