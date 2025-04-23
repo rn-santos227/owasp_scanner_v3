@@ -9,3 +9,4 @@ def get_parsed_args(raw_input: str):
   tokens = shlex.split(raw_input.strip())
 
   parser = argparse.ArgumentParser(description='Parse structured endpoint input')
+  parser.add_argument('endpoint', type=str, help='Endpoint URL')
