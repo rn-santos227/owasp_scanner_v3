@@ -20,5 +20,5 @@ def get_parsed_args(raw_input: str):
   parsed = parser.parse_args(tokens)
 
   return {
-
+    "endpoint": parsed.endpoint,
   }
