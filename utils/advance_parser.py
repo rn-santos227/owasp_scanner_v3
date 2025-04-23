@@ -13,3 +13,6 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
 
   if endpoint.method:
     parts.extend(["-m", endpoint.method])
+
+  for key, value in endpoint.headers.items():
+    parts.extend(["-h", f"{key}:{value}"])
