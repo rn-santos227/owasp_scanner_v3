@@ -44,13 +44,8 @@ class Endpoint:
     }
   
   def is_valid(self) -> bool:
-    try:
-      validate_method(self.method)
+    return validate_url(self.url) and validate_method(self.method)
 
-    except Exception:
-      return False
-    
-    return validate_url(self.url)
   
   def _normalize_method(self, method):
     try:
