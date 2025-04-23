@@ -47,3 +47,5 @@ class Endpoint:
 
     except Exception:
       return False
+    
+    return validate_url(self.url)
