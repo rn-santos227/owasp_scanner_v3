@@ -49,3 +49,6 @@ class Endpoint:
       return False
     
     return validate_url(self.url)
+  
+  def _normalize_method(self, method):
+    pass
