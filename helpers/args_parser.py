@@ -24,4 +24,5 @@ def get_parsed_args(raw_input: str):
     "method": parsed.method.upper(),
     "headers": parse_headers(parsed.header),
     "timeout": parsed.timeout,
+    "verbose": parsed.verbose,
   }
