@@ -18,3 +18,7 @@ def get_parsed_args(raw_input: str):
   parser.add_argument('-v', '--verbose', action='store_true', help='Verbose output')
 
   parsed = parser.parse_args(tokens)
+
+  return {
+
+  }
