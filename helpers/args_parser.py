@@ -12,3 +12,4 @@ def get_parsed_args(raw_input: str):
   parser.add_argument('endpoint', type=str, help='Endpoint URL')
   parser.add_argument('-m', '--method', type=validate_method, required=True, help='HTTP method')
   parser.add_argument('-h', '--header', type=str, action='append', help='Header(s) (key:value)')
+  parser.add_argument('--data', type=str, action='append', help='Form or query data')
