@@ -10,3 +10,6 @@ def tokenize_input(user_input: str) -> Endpoint:
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
+
+  if endpoint.method:
+    parts.extend(["-m", endpoint.method])
