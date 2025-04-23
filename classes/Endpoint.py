@@ -31,6 +31,9 @@ class Endpoint:
       f"json={self.json}, response={self.response})"
     )
   
+  def __str__(self) -> str:
+    pass
+  
   def to_dict(self) -> dict:
     return {
       "endpoint": self.url,
