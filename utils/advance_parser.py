@@ -26,3 +26,6 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
   if endpoint.json:
     json_str = json_lib.dumps(endpoint.json)
     parts.extend(["-j", json_str])
+
+  if endpoint.timeout:
+    pass
