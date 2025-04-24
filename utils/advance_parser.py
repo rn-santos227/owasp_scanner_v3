@@ -19,8 +19,9 @@ def tokenize_input(user_input: str) -> Endpoint:
   data = None
   json_data = None
 
-  while i < len(tokens):
-    pass
+  index = 0
+  while index < len(tokens):
+    token = tokens[index]
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
