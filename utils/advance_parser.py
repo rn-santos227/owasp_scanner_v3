@@ -34,6 +34,7 @@ def tokenize_input(user_input: str) -> Endpoint:
       header = tokens[index + 1]
       if ":" in header:
         key, value = header.split(":", 1)
+        headers[key.strip()] = value.strip()
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
