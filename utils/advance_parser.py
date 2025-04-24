@@ -37,6 +37,9 @@ def tokenize_input(user_input: str) -> Endpoint:
         headers[key.strip()] = value.strip()
       i += 1
 
+    elif token == "-v":
+      pass
+
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
 
