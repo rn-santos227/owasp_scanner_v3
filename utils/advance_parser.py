@@ -13,6 +13,7 @@ def tokenize_input(user_input: str) -> Endpoint:
 
   url = ""
   method = "GET"
+  headers = {}
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
