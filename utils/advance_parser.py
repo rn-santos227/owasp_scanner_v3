@@ -30,4 +30,5 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
   if endpoint.timeout:
     parts.extend(["-t", str(endpoint.timeout)])
 
-  
+  if endpoint.verbose:
+    pass
