@@ -32,3 +32,5 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
 
   if endpoint.verbose:
     parts.append("-v")
+
+  return " ".join(parts)
