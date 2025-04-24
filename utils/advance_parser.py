@@ -28,6 +28,7 @@ def tokenize_input(user_input: str) -> Endpoint:
 
     elif token == "-m" and i + 1 < len(tokens):
       method = tokens[index + 1].upper()
+      index += 1
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
