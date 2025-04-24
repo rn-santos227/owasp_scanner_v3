@@ -16,6 +16,7 @@ def tokenize_input(user_input: str) -> Endpoint:
   headers = {}
   timeout = 10.0
   verbose = False
+  data = None
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
