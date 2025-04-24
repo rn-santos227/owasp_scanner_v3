@@ -1,5 +1,8 @@
-from classes.Endpoint import Endpoint
+import json as json_lib
 import shlex
+
+from classes.Endpoint import Endpoint
+
 import helpers.color_text as color
 
 from classes.File import File
@@ -21,4 +24,4 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
     parts.extend(["-d", endpoint.data])
 
   if endpoint.json:
-    pass
+    json_str = json_lib.dumps(endpoint.json)
