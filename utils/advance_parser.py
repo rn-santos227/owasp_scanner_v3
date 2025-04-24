@@ -12,6 +12,7 @@ def tokenize_input(user_input: str) -> Endpoint:
   tokens = shlex.split(user_input.strip())
 
   url = ""
+  method = "GET"
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
