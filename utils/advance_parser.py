@@ -26,6 +26,9 @@ def tokenize_input(user_input: str) -> Endpoint:
     if token.startswith("http"):
       url = token
 
+    elif token == "-m" and i + 1 < len(tokens):
+      pass
+
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
 
