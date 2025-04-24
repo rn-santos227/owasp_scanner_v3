@@ -31,7 +31,7 @@ def tokenize_input(user_input: str) -> Endpoint:
       index += 1
 
     elif token == "-h" and index + 1 < len(tokens):
-      pass
+      header = tokens[index + 1]
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
