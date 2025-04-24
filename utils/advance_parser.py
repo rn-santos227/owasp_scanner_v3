@@ -19,3 +19,6 @@ def endpoint_to_string(endpoint: Endpoint) -> str:
 
   if endpoint.data:
     parts.extend(["-d", endpoint.data])
+
+  if endpoint.json:
+    pass
