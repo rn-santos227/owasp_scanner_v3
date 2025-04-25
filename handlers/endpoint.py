@@ -48,6 +48,9 @@ def _read_endpoint():
     question = [inquirer.List("selected", message="Select an endpoint to view details", choices=list(choices.keys()))]
     answer = inquirer.prompt(question)
 
+    if answer:
+      selected_str = choices[answer["selected"]]
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
