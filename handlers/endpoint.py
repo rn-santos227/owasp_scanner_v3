@@ -30,6 +30,9 @@ def _create_endpoint():
   raw = input("Enter the full endpoint string (e.g., https://api.site.com -m GET -h Auth:token): ").strip()
   endpoint = tokenize_input(raw)
 
+  if endpoint and endpoint.is_valid():
+    pass
+
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
