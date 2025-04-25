@@ -44,6 +44,9 @@ def tokenize_input(user_input: str) -> Endpoint:
       data = tokens[i + 1]
       i += 1
 
+    elif token == "-j" and i + 1 < len(tokens):
+      pass
+
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
 
