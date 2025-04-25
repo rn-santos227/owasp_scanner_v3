@@ -50,6 +50,7 @@ def tokenize_input(user_input: str) -> Endpoint:
       
       except json_lib.JSONDecodeError:
         pass
+      i += 1
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
