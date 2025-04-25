@@ -43,16 +43,6 @@ def _create_endpoint():
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
-  if endpoints:
-    for i, endpoint in enumerate(endpoints, 1):
-      print(f"{i}. {endpoint.strip()}")
-
-  else:
-    color.warning("No endpoints found.")
-
-  input("Press Enter to Continue...")
-  handle_endpoint()
-
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
