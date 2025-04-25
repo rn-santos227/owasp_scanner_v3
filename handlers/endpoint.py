@@ -45,6 +45,7 @@ def _read_endpoint():
 
   if endpoints:
     choices = {f"{i + 1}. {line.strip()}": line.strip() for i, line in enumerate(endpoints)}
+    question = [inquirer.List("selected", message="Select an endpoint to view details", choices=list(choices.keys()))]
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
