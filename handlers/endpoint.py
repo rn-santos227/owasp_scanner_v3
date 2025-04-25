@@ -34,6 +34,9 @@ def _create_endpoint():
     file_writer(_FILE_ENDPOINTS, str(endpoint))
     color.light_green(f"Endpoint added:\n{str(endpoint)}\n")
 
+  else:
+    color.warning("Failed to parse or validate the endpoint. Please try again.")
+
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
