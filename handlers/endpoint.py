@@ -31,7 +31,7 @@ def _create_endpoint():
   endpoint = tokenize_input(raw)
 
   if endpoint and endpoint.is_valid():
-    pass
+    file_writer(_FILE_ENDPOINTS, str(endpoint))
 
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
