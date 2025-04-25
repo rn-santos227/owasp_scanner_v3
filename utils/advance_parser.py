@@ -58,6 +58,7 @@ def tokenize_input(user_input: str) -> Endpoint:
 
     if not endpoint_obj.is_valid():
       color.warning("Invalid endpoint or method. Skipping...")
+      return None
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
