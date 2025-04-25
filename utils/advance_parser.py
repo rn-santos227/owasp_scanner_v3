@@ -46,7 +46,7 @@ def tokenize_input(user_input: str) -> Endpoint:
 
     elif token == "-j" and i + 1 < len(tokens):
       try:
-        pass
+        json_data = json_lib.loads(tokens[i + 1])
       
       except json_lib.JSONDecodeError:
         pass
