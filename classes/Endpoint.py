@@ -33,7 +33,7 @@ class Endpoint:
     )
   
   def __str__(self) -> str:
-    pass
+    return endpoint_to_string(self)
   
   def to_dict(self) -> dict:
     return {
