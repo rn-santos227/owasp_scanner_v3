@@ -43,6 +43,9 @@ def _create_endpoint():
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
+  if endpoints:
+    pass
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
