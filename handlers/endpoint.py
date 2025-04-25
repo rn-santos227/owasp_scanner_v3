@@ -26,20 +26,8 @@ _endpoint_menu = [
 ]
 
 def _create_endpoint():
-  new_endpoint = input("Enter the new endpoint: ").strip()
+  user_input = input("Enter full endpoint input (e.g., http://site.com -m GET -h Authorization:Bearer ...): ").strip()
 
-  if new_endpoint:
-    file_writer(_FILE_ENDPOINTS, new_endpoint)
-    color.light_green(f"✓ Endpoint '{new_endpoint}' has been added.\n")
-
-  elif not validate_url(new_endpoint):
-    color.warning("Invalid URL! Please enter a valid HTTP or HTTPS URL.")
-  
-  else:
-    color.warning("No endpoint entered. Returning to menu.")
-
-  input("Press Enter to Continue...")
-  handle_endpoint()
 
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)

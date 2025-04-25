@@ -49,7 +49,6 @@ class Endpoint:
   
   def is_valid(self) -> bool:
     return validate_url(self.url) and validate_method(self.method)
-
   
   def _normalize_method(self, method):
     try:
