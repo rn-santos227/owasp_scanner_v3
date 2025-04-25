@@ -6,8 +6,9 @@ from classes.Option import Option
 
 from helpers.file_reader import file_reader
 from helpers.file_writer import file_writer, overwrite_file
+
+from utils.advance_parser import tokenize_input
 from utils.clear_screen import clear_screen
-from utils.validate_url import validate_url
 
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
@@ -26,7 +27,7 @@ _endpoint_menu = [
 ]
 
 def _create_endpoint():
-  user_input = input("Enter full endpoint input (e.g., http://site.com -m GET -h Authorization:Bearer ...): ").strip()
+  raw = input("Enter the full endpoint string (e.g., https://api.site.com -m GET -h Auth:token): ").strip()
 
 
 def _read_endpoint():
