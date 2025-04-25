@@ -44,7 +44,7 @@ def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
   if endpoints:
-    pass
+    choices = {f"{i + 1}. {line.strip()}": line.strip() for i, line in enumerate(endpoints)}
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
