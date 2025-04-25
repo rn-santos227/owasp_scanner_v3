@@ -35,22 +35,24 @@ def tokenize_input(user_input: str) -> Endpoint:
       if ":" in header:
         key, value = header.split(":", 1)
         headers[key.strip()] = value.strip()
-      i += 1
+      index += 1
 
     elif token == "-v":
       verbose = True
 
-    elif token == "-d" and i + 1 < len(tokens):
-      data = tokens[i + 1]
-      i += 1
+    elif token == "-d" and index + 1 < len(tokens):
+      data = tokens[index + 1]
+      index += 1
 
-    elif token == "-j" and i + 1 < len(tokens):
+    elif token == "-j" and index + 1 < len(tokens):
       try:
         json_data = json_lib.loads(tokens[i + 1])
       
       except json_lib.JSONDecodeError:
         pass
-      i += 1
+      index += 1
+    
+    index += 1
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
