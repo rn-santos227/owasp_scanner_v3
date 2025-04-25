@@ -18,6 +18,7 @@ def tokenize_input(user_input: str) -> Endpoint:
   verbose = False
   data = None
   json_data = None
+  response = None
 
   index = 0
   while index < len(tokens):
@@ -53,6 +54,7 @@ def tokenize_input(user_input: str) -> Endpoint:
       index += 1
     
     index += 1
+    endpoint_obj = Endpoint(url, method, headers, timeout, verbose, data, json_data, response)
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
