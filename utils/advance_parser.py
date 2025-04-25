@@ -57,7 +57,7 @@ def tokenize_input(user_input: str) -> Endpoint:
     endpoint_obj = Endpoint(url, method, headers, timeout, verbose, data, json_data, response)
 
     if not endpoint_obj.is_valid():
-      pass
+      color.warning("Invalid endpoint or method. Skipping...")
 
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
