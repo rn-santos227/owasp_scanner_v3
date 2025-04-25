@@ -28,7 +28,7 @@ _endpoint_menu = [
 
 def _create_endpoint():
   raw = input("Enter the full endpoint string (e.g., https://api.site.com -m GET -h Auth:token): ").strip()
-
+  endpoint = tokenize_input(raw)
 
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
