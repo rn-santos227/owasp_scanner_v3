@@ -40,6 +40,9 @@ def tokenize_input(user_input: str) -> Endpoint:
     elif token == "-v":
       verbose = True
 
+    elif token == "-d" and i + 1 < len(tokens):
+      pass
+
 def endpoint_to_string(endpoint: Endpoint) -> str:
   parts = [endpoint.url]
 
