@@ -32,6 +32,7 @@ def _create_endpoint():
 
   if endpoint and endpoint.is_valid():
     file_writer(_FILE_ENDPOINTS, str(endpoint))
+    color.light_green(f"Endpoint added:\n{str(endpoint)}\n")
 
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
