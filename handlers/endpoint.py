@@ -101,7 +101,9 @@ def _update_endpoint():
 
     else:
       color.warning("No new value entered. Endpoint remains unchanged.")
-
+  else:
+    color.warning("No valid selection made.")
+    
   _pause()
 
 def _delete_endpoint():
