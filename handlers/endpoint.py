@@ -102,8 +102,7 @@ def _update_endpoint():
     else:
       color.warning("No new value entered. Endpoint remains unchanged.")
 
-  input("\nPress Enter to Continue...")
-  handle_endpoint()
+  _pause()
 
 def _delete_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
