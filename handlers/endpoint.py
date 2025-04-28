@@ -61,7 +61,9 @@ def _read_endpoint():
         print(f"Timeout: {selected_endpoint.timeout} seconds")
         print(f"Data: {selected_endpoint.data if selected_endpoint.data else 'None'}")
         print(f"JSON Payload: {selected_endpoint.json if selected_endpoint.json else 'None'}")
-        
+        print(f"Verbose: {'Enabled' if selected_endpoint.verbose else 'Disabled'}")
+      
+      
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
