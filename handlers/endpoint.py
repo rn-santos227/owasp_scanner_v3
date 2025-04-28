@@ -50,6 +50,7 @@ def _read_endpoint():
 
     if answer:
       selected_str = choices[answer["selected"]]
+      selected_endpoint = tokenize_input(selected_str)
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
