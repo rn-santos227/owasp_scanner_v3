@@ -53,7 +53,7 @@ def _read_endpoint():
       selected_endpoint = tokenize_input(selected_str)
 
       if selected_endpoint and selected_endpoint.is_valid():
-        pass
+        color.banner(f"Details of Endpoint: {selected_endpoint.url}")
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
