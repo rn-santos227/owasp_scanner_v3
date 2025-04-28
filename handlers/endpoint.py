@@ -70,6 +70,8 @@ def _read_endpoint():
   else:
     color.warning("No endpoints found.")
 
+  input("Press Enter to Continue...")
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
