@@ -81,8 +81,7 @@ def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
     color.warning("No endpoints found.")
-    input("Press Enter to Continue...")
-    handle_endpoint()
+    _pause()
     return
   
   choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(endpoints)}
