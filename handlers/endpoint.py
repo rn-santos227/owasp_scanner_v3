@@ -56,6 +56,7 @@ def _read_endpoint():
         color.banner(f"Details of Endpoint: {selected_endpoint.url}")
 
         print(f"URL: {selected_endpoint.url}")
+        print(f"Method: {selected_endpoint.method}")
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
