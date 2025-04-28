@@ -55,6 +55,8 @@ def _read_endpoint():
       if selected_endpoint and selected_endpoint.is_valid():
         color.banner(f"Details of Endpoint: {selected_endpoint.url}")
 
+        print(f"URL: {selected_endpoint.url}")
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
