@@ -63,7 +63,9 @@ def _read_endpoint():
         print(f"JSON Payload: {selected_endpoint.json if selected_endpoint.json else 'None'}")
         print(f"Verbose: {'Enabled' if selected_endpoint.verbose else 'Disabled'}")
       
-      
+      else:
+        color.warning("Invalid or corrupted endpoint format. Could not display details.")
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
