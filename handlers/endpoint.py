@@ -40,9 +40,8 @@ def _create_endpoint():
 
   else:
     color.warning("Failed to parse or validate the endpoint. Please try again.")
-
-  input("Press Enter to Continue...")
-  handle_endpoint()
+  
+  _pause()
 
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
