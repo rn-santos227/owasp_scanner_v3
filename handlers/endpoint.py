@@ -27,7 +27,7 @@ _endpoint_menu = [
 ]
 
 def _pause():
-  pass
+  input("\nPress Enter to Continue...")
 
 def _create_endpoint():
   raw = input("Enter the full endpoint string (e.g., https://api.site.com -m GET -h Auth:token): ").strip()
