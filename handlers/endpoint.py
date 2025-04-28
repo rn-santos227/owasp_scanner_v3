@@ -65,6 +65,9 @@ def _read_endpoint():
       
       else:
         color.warning("Invalid or corrupted endpoint format. Could not display details.")
+    else:
+      color.warning("No valid selection made.")
+
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
