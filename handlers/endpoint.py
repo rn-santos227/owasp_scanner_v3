@@ -52,6 +52,9 @@ def _read_endpoint():
       selected_str = choices[answer["selected"]]
       selected_endpoint = tokenize_input(selected_str)
 
+      if selected_endpoint and selected_endpoint.is_valid():
+        pass
+
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
   if not endpoints:
