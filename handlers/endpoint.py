@@ -79,6 +79,7 @@ def _read_endpoint():
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
+  
   if not endpoints:
     color.warning("No endpoints found.")
     _pause()
@@ -90,7 +91,8 @@ def _update_endpoint():
 
   if answer:
     selected_endpoint = choices[answer["selected"]]
-    new_endpoint = input(f"Enter the new value for '{selected_endpoint}': ").strip()
+    raw = input(f"Enter the new value for '{selected_endpoint}': ").strip()
+    new_endpoint = tokenize_input(raw)
 
     if new_endpoint:
       endpoints = [new_endpoint if ep.strip() == selected_endpoint else ep for ep in endpoints]
