@@ -46,35 +46,31 @@ def _create_endpoint():
 def _read_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
 
-  if endpoints:
-    choices = {f"{i + 1}. {line.strip()}": line.strip() for i, line in enumerate(endpoints)}
-    question = [inquirer.List("selected", message="Select an endpoint to view details", choices=list(choices.keys()))]
-    answer = inquirer.prompt(question)
+  choices = {f"{i + 1}. {line.strip()}": line.strip() for i, line in enumerate(endpoints)}
+  question = [inquirer.List("selected", message="Select an endpoint to view details", choices=list(choices.keys()))]
+  answer = inquirer.prompt(question)
 
-    if answer:
-      selected_str = choices[answer["selected"]]
-      selected_endpoint = tokenize_input(selected_str)
+  if answer:
+    selected_str = choices[answer["selected"]]
+    selected_endpoint = tokenize_input(selected_str)
 
-      if selected_endpoint and selected_endpoint.is_valid():
-        color.banner(f"Details of Endpoint: {selected_endpoint.url}")
+    if selected_endpoint and selected_endpoint.is_valid():
+      color.banner(f"Details of Endpoint: {selected_endpoint.url}")
 
-        print(f"URL: {selected_endpoint.url}")
-        print(f"Method: {selected_endpoint.method}")
-        print(f"Headers: {selected_endpoint.headers if selected_endpoint.headers else 'None'}")
-        print(f"Timeout: {selected_endpoint.timeout} seconds")
-        print(f"Data: {selected_endpoint.data if selected_endpoint.data else 'None'}")
-        print(f"JSON Payload: {selected_endpoint.json if selected_endpoint.json else 'None'}")
-        print(f"Verbose: {'Enabled' if selected_endpoint.verbose else 'Disabled'}")
-      
-      else:
-        color.warning("Invalid or corrupted endpoint format. Could not display details.")
+      print(f"URL: {selected_endpoint.url}")
+      print(f"Method: {selected_endpoint.method}")
+      print(f"Headers: {selected_endpoint.headers if selected_endpoint.headers else 'None'}")
+      print(f"Timeout: {selected_endpoint.timeout} seconds")
+      print(f"Data: {selected_endpoint.data if selected_endpoint.data else 'None'}")
+      print(f"JSON Payload: {selected_endpoint.json if selected_endpoint.json else 'None'}")
+      print(f"Verbose: {'Enabled' if selected_endpoint.verbose else 'Disabled'}")
+    
     else:
-      color.warning("No valid selection made.")
+      color.warning("Invalid or corrupted endpoint format. Could not display details.")
   else:
-    color.warning("No endpoints found.")
+    color.warning("No valid selection made.")
 
-  input("Press Enter to Continue...")
-  handle_endpoint()
+  _pause()
 
 def _update_endpoint():
   endpoints = file_reader(_FILE_ENDPOINTS)
