@@ -26,6 +26,9 @@ _endpoint_menu = [
   ),
 ]
 
+def _pause():
+  pass
+
 def _create_endpoint():
   raw = input("Enter the full endpoint string (e.g., https://api.site.com -m GET -h Auth:token): ").strip()
   endpoint = tokenize_input(raw)
