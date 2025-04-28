@@ -125,8 +125,7 @@ def _delete_endpoint():
     
     color.light_red(f"✗ Endpoint '{selected_endpoint}' has been deleted.\n")
 
-  input("Press Enter to Continue...")
-  handle_endpoint()
+  _pause()
 
 def handle_endpoint(banner = ""):
   clear_screen()
