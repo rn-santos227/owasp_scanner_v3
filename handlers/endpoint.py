@@ -49,6 +49,7 @@ def _read_endpoint():
   if not endpoints:
     color.warning("No endpoints found.")
     _pause()
+    return
 
   choices = {f"{i + 1}. {line.strip()}": line.strip() for i, line in enumerate(endpoints)}
   question = [inquirer.List("selected", message="Select an endpoint to view details", choices=list(choices.keys()))]
