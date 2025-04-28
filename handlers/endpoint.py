@@ -103,7 +103,7 @@ def _update_endpoint():
       color.warning("No new value entered. Endpoint remains unchanged.")
   else:
     color.warning("No valid selection made.")
-    
+
   _pause()
 
 def _delete_endpoint():
@@ -111,8 +111,7 @@ def _delete_endpoint():
 
   if not endpoints:
     color.warning("No endpoints found.")
-    input("\nPress Enter to Continue...")
-    handle_endpoint()
+    _pause()
     return
 
   choices = {f"{i+1}. {ep.strip()}": ep.strip() for i, ep in enumerate(endpoints)}
