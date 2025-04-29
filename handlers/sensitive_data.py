@@ -26,6 +26,7 @@ _sensitive_data_menu = [
 
 def _pause():
   input("Press Enter to Continue...")
+  handle_sensitive_data()
 
 def _count_sensitive_data():
   content = file_reader(_FILE_KEYS)
