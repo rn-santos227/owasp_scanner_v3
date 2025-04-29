@@ -12,6 +12,9 @@ from utils.validate_url import validate_url
 
 _FILE_ENDPOINTS = File.FILE_ENDPOINTS.value
 
+def _pause():
+  input("\nPress Enter to Continue...")
+
 def _choose_or_add_endpoint() -> str | None:
   endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
   
