@@ -24,6 +24,9 @@ _dictionary_menu = [
   ),
 ]
 
+def _pause():
+  pass
+
 def _count_dictionary():
   content = file_reader(_FILE_PASSWORDS)
   message = f"There are total of {len(content)} words available in passwords.\n"
