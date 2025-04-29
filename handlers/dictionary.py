@@ -44,8 +44,7 @@ def _search_dictionary():
   else:
     color.warning(f"Password '{query}' not found.\n")
   
-  input("Press Enter to Continue...")
-  handle_dictionary()
+  _pause()
 
 def _add_dictionary():
   new_password = input("Enter new password to add: ").strip()
