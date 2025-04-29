@@ -70,7 +70,7 @@ def handle_individual_scan():
   endpoint = _choose_or_add_endpoint()
   if not endpoint:
     color.warning("No valid endpoint provided.")
-    input("Press Enter to Continue...")
+    _pause()
     return
   
   color.info(f"\nRunning {scanner.value.id} - {scanner.value.name} on {endpoint}...\n")
