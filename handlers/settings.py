@@ -73,6 +73,7 @@ def change_proxy_urls(settings):
   message = f"Current Value: {settings[Config.CONFIG_5]}"
   color.light_green(message)
   new_value = input("New Proxies Value: ")
+  update_config(Config.CONFIG_5.value, new_value)
 
 def handle_config(banner):
   clear_screen()
