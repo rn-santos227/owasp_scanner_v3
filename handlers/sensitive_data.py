@@ -93,8 +93,7 @@ def _delete_sensitve_data():
     overwrite_file(_FILE_KEYS, updated_data)
     color.light_green(f"\n✗ '{selected_data}' has been deleted.\n")
 
-  input("Press Enter to Continue...")
-  handle_sensitive_data()
+  _pause()
 
 def handle_sensitive_data(banner = ""):
   clear_screen()
