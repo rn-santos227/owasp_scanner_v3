@@ -24,6 +24,9 @@ _sensitive_data_menu = [
   ),
 ]
 
+def _pause():
+  pass
+
 def _count_sensitive_data():
   content = file_reader(_FILE_KEYS)
 
