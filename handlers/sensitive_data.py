@@ -37,8 +37,7 @@ def _count_sensitive_data():
   else:
     color.warning("\nNo sensitive data found.\n")
 
-  input("Press Enter to Continue...")
-  handle_sensitive_data()
+  _pause()
 
 def _search_sensitive_data():
   query = input("Enter the keyword to search: ").strip()
