@@ -64,7 +64,7 @@ def handle_individual_scan():
   scanner = _choose_scanner()
   if not scanner:
     color.warning("No scanner selected.")
-    input("Press Enter to Continue...")
+    _pause()
     return
   
   endpoint = _choose_or_add_endpoint()
