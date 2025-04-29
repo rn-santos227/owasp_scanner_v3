@@ -59,8 +59,7 @@ def _search_sensitive_data():
     else:
       color.warning("\nNo matches found.")
 
-  input("\nPress Enter to Continue...")
-  handle_sensitive_data()
+  _pause()
 
 def _add_sensitive_data():
   new_data = input("Enter the new sensitive key: ").strip()
