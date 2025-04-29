@@ -32,11 +32,12 @@ def _show_tokens():
 
   if not tokens:
     color.warning("\nNo authentication tokens found.\n")
-  _pause()
+    _pause()
   
   color.banner("\nStored Authentication Tokens:")
   for index, token in enumerate(tokens, 1):
     print(f"{index}. {token.strip()}")
+  _pause()
 
 def _add_token():
   new_token = input("\nEnter new authentication token: ").strip()
