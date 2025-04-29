@@ -25,7 +25,7 @@ _user_menu = [
 ]
 
 def _pause():
-  pass
+  input("Press Enter to Continue...")
 
 def _count_usernames():
   content = file_reader(_FILE_USERNAMES)
