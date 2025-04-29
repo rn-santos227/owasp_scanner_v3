@@ -32,9 +32,8 @@ def _show_tokens():
 
   if not tokens:
     color.warning("\nNo authentication tokens found.\n")
-    input("Press Enter to Continue...")
-    handle_token()
-
+  _pause()
+  
   color.banner("\nStored Authentication Tokens:")
   for index, token in enumerate(tokens, 1):
     print(f"{index}. {token.strip()}")
