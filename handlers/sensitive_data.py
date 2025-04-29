@@ -71,8 +71,7 @@ def _add_sensitive_data():
     file_writer(_FILE_KEYS, new_data)
     color.light_green(f"\n✓ '{new_data}' has been added.\n")
 
-  input("Press Enter to Continue...")
-  handle_sensitive_data()
+  _pause()
 
 def _delete_sensitve_data():
   content = file_reader(_FILE_KEYS)
