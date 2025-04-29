@@ -23,6 +23,9 @@ _token_menu = [
   )
 ]
 
+def _pause():
+  pass
+
 def _show_tokens():
   tokens = file_reader(_FILE_TOKENS)
 
