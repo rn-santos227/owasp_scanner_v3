@@ -26,6 +26,7 @@ _dictionary_menu = [
 
 def _pause():
   input("Press Enter to Continue...")
+  handle_dictionary()
 
 def _count_dictionary():
   content = file_reader(_FILE_PASSWORDS)
