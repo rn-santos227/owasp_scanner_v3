@@ -33,8 +33,7 @@ def _count_dictionary():
   message = f"There are total of {len(content)} words available in passwords.\n"
   color.light_green(message)
 
-  input("Press Enter to Continue...")
-  handle_dictionary()
+  _pause()
   
 def _search_dictionary():
   query = input("Enter password to search: ").strip()
