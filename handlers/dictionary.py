@@ -54,7 +54,6 @@ def _add_dictionary():
 
   _pause()
 
-
 def _delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
   content = file_reader(_FILE_PASSWORDS)
@@ -66,8 +65,7 @@ def _delete_dictionary():
   else:
     color.warning(f"Password '{password_to_delete}' not found.\n")
 
-  input("Press Enter to Continue...")
-  handle_dictionary()
+  _pause()
 
 def handle_dictionary(banner = ""):
   clear_screen()
