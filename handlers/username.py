@@ -32,9 +32,7 @@ def _count_usernames():
   content = file_reader(_FILE_USERNAMES)
   message = f"There are total of {len(content)} words available for usernames.\n"
   color.light_green(message)
-
-  handle_username()
-  input("Press Enter to Continue...")
+  _pause()
 
 def _searh_username():
   query = input("Enter password to search: ").strip()
