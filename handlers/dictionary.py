@@ -52,8 +52,8 @@ def _add_dictionary():
     file_writer(_FILE_PASSWORDS, new_password)
     color.light_green(f"✓ Password '{new_password}' has been added.\n")
 
-  input("Press Enter to Continue...")
-  handle_dictionary()
+  _pause()
+
 
 def _delete_dictionary():
   password_to_delete = input("Enter password to delete: ").strip()
