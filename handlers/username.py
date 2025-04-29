@@ -24,6 +24,9 @@ _user_menu = [
   )
 ]
 
+def _pause():
+  pass
+
 def _count_usernames():
   content = file_reader(_FILE_USERNAMES)
   message = f"There are total of {len(content)} words available for usernames.\n"
