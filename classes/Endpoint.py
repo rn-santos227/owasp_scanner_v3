@@ -1,4 +1,3 @@
-from utils.advance_parser import endpoint_to_string
 from utils.validate_method import validate_method
 from utils.validate_url import validate_url
 
@@ -33,7 +32,10 @@ class Endpoint:
     )
   
   def __str__(self) -> str:
-    return f"{self.method} {self.url}" 
+    return f"{self.method} {self.url}"
+  
+  def to_cli_string(self) -> str:
+    pass
   
   def to_dict(self) -> dict:
     return {
