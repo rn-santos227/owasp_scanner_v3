@@ -57,7 +57,7 @@ def _manual_endpoint() -> str:
     else:
       color.warning("Invalid URL format. Please try again.")
     
-def handle_individual_scan():
+def handle_individual_scan(banner = ""):
   clear_screen()
   color.banner("Individual OWASP Scanner")
 
