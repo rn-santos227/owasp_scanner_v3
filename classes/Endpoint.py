@@ -35,7 +35,7 @@ class Endpoint:
     return f"{self.method} {self.url}"
   
   def to_cli_string(self) -> str:
-    pass
+    from utils.advance_parser import endpoint_to_string
   
   def to_dict(self) -> dict:
     return {
