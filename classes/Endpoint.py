@@ -33,7 +33,7 @@ class Endpoint:
     )
   
   def __str__(self) -> str:
-    return endpoint_to_string(self)
+    return f"{self.method} {self.url}" 
   
   def to_dict(self) -> dict:
     return {
