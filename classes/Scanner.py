@@ -16,3 +16,4 @@ class OWASP(Enum):
   OWASP_3 = Scanner(id="API03:2023", func_getter=lambda: __import__("modules.OWASP_api_03").check_api_03, name="Broken Object Property Level Authorization")
   OWASP_4 = Scanner(id="API04:2023", func_getter=lambda: __import__("modules.OWASP_api_04").check_api_04, name="Unrestricted Resource Consumption")
   OWASP_5 = Scanner(id="API05:2023", func_getter=lambda: __import__("modules.OWASP_api_05").check_api_05, name="Broken Function Level Authorization")
+  OWASP_6 = Scanner(id="API06:2023", func_getter=lambda: __import__("modules.OWASP_api_06").check_api_06, name="Unrestricted Access to Sensitive Business Flows")
