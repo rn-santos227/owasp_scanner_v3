@@ -56,7 +56,10 @@ def _manual_endpoint() -> str:
     
     else:
       color.warning("Invalid URL format. Please try again.")
-    
+
+def handle_quick_scan():
+  pass
+
 def handle_individual_scan(banner = ""):
   clear_screen()
   if banner:
