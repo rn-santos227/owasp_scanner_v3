@@ -59,7 +59,8 @@ def _manual_endpoint() -> str:
     
 def handle_individual_scan(banner = ""):
   clear_screen()
-  color.banner("Individual OWASP Scanner")
+  if banner:
+    color.banner(banner)
 
   scanner = _choose_scanner()
   if not scanner:
