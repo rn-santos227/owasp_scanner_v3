@@ -36,6 +36,7 @@ class Endpoint:
   
   def to_cli_string(self) -> str:
     from utils.advance_parser import endpoint_to_string
+    return endpoint_to_string(self)
   
   def to_dict(self) -> dict:
     return {
