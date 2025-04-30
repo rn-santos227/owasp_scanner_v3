@@ -12,3 +12,4 @@ class Scanner:
 
 class OWASP(Enum):
   OWASP_1 = Scanner(id="API01:2023", func_getter=lambda: __import__("modules.OWASP_api_01").check_api_01, name="Broken Object Level Authorization")
+  OWASP_2 = Scanner(id="API02:2023", func_getter=lambda: __import__("modules.OWASP_api_02").check_api_02, name="Broken Authentication")
