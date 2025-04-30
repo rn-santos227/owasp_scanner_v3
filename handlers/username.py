@@ -43,8 +43,7 @@ def _searh_username():
   else:
     color.warning(f"Username '{query}' not found.\n")
 
-  handle_username()
-  input("Press Enter to Continue...")
+  _pause()
 
 def _add_username():
   new_username = input("Enter new username to add: ").strip()
