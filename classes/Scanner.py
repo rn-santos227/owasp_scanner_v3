@@ -19,3 +19,4 @@ class OWASP(Enum):
   OWASP_6 = Scanner(id="API06:2023", func_getter=lambda: __import__("modules.OWASP_api_06").check_api_06, name="Unrestricted Access to Sensitive Business Flows")
   OWASP_7 = Scanner(id="API07:2023", func_getter=lambda: __import__("modules.OWASP_api_07").check_api_07, name="Server Side Request Forgery (SSRF)")
   OWASP_8 = Scanner(id="API08:2023", func_getter=lambda: __import__("modules.OWASP_api_08").check_api_08, name="Security Misconfiguration")
+  OWASP_9 = Scanner(id="API09:2023", func_getter=lambda: __import__("modules.OWASP_api_09").check_api_09, name="Improper Inventory Management")
