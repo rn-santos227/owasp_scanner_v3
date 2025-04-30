@@ -57,8 +57,7 @@ def _delete_username():
   usernames = file_reader(_FILE_USERNAMES)
 
   if not usernames:
-    color.warning("No usernames found.")
-    input("\nPress Enter to Continue...")
+    _pause()
     return
   
   choices = {f"{i+1}. {un.strip()}": un.strip() for i, un in enumerate(usernames)}
