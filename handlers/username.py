@@ -51,8 +51,7 @@ def _add_username():
     file_writer(_FILE_USERNAMES, new_username)
     color.light_green(f"✓ Password '{new_username}' has been added.\n")
 
-  handle_username()
-  input("Press Enter to Continue...")
+  _pause()
 
 def _delete_username():
   usernames = file_reader(_FILE_USERNAMES)
