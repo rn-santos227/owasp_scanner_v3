@@ -97,3 +97,4 @@ def handle_individual_scan(banner = ""):
 
 def handle_full_scane():
   clear_screen()
+  color.banner("Full OWASP Scan")
