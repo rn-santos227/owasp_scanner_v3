@@ -100,3 +100,5 @@ def handle_full_scane():
   color.banner("Full OWASP Scan")
 
   endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
+  if not endpoints:
+    pass
