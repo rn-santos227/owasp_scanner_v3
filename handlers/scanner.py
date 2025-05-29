@@ -101,4 +101,4 @@ def handle_full_scane():
 
   endpoints = [ep.strip() for ep in file_reader(_FILE_ENDPOINTS) if ep.strip()]
   if not endpoints:
-    pass
+    color.warning("No endpoints available to scan.")
