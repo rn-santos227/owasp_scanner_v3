@@ -68,7 +68,7 @@ def handle_quick_scan(banner = ""):
     return
   
   for scanner in OWASP:
-    pass
+    color.info(f"Running {scanner.value.id} - {scanner.value.name} on {endpoint}...")
 
 def handle_individual_scan(banner = ""):
   clear_screen()
