@@ -64,6 +64,8 @@ def handle_quick_scan(banner = ""):
   endpoint = _choose_or_add_endpoint()
   if not endpoint:
     color.warning("No valid endpoint provided.")
+    _pause()
+    return
 
 def handle_individual_scan(banner = ""):
   clear_screen()
