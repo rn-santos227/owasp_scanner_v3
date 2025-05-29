@@ -69,6 +69,10 @@ def handle_quick_scan(banner = ""):
   
   for scanner in OWASP:
     color.info(f"Running {scanner.value.id} - {scanner.value.name} on {endpoint}...")
+    try:
+      scanner.value.function(endpoint)
+    except Exception as e:
+      color.warning(f"Error running {scanner.value.id}: {e}")
 
 def handle_individual_scan(banner = ""):
   clear_screen()
