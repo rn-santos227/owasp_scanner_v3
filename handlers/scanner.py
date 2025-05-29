@@ -73,6 +73,8 @@ def handle_quick_scan(banner = ""):
       scanner.value.function(endpoint)
     except Exception as e:
       color.warning(f"Error running {scanner.value.id}: {e}")
+       
+  _pause()
 
 def handle_individual_scan(banner = ""):
   clear_screen()
