@@ -61,6 +61,8 @@ def handle_quick_scan(banner = ""):
   clear_screen()
   color.banner("Quick OWASP Scan")
 
+  endpoint = _choose_or_add_endpoint()
+
 def handle_individual_scan(banner = ""):
   clear_screen()
   if banner:
