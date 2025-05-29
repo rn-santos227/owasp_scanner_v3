@@ -59,6 +59,7 @@ def _manual_endpoint() -> str:
 
 def handle_quick_scan(banner = ""):
   clear_screen()
+  color.banner("Quick OWASP Scan")
 
 def handle_individual_scan(banner = ""):
   clear_screen()
