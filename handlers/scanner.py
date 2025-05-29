@@ -106,4 +106,4 @@ def handle_full_scane():
     return
   
   for endpoint in endpoints:
-    pass
+    color.info(f"\n--- Scanning endpoint: {endpoint} ---")
