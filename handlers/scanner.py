@@ -94,3 +94,6 @@ def handle_individual_scan(banner = ""):
     return
   
   color.info(f"\nRunning {scanner.value.id} - {scanner.value.name} on {endpoint}...\n")
+
+def handle_full_scane():
+  pass
