@@ -66,6 +66,9 @@ def handle_quick_scan(banner = ""):
     color.warning("No valid endpoint provided.")
     _pause()
     return
+  
+  for scanner in OWASP:
+    pass
 
 def handle_individual_scan(banner = ""):
   clear_screen()
