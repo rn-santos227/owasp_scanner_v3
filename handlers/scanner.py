@@ -103,3 +103,4 @@ def handle_full_scane():
   if not endpoints:
     color.warning("No endpoints available to scan.")
     _pause()
+    return
