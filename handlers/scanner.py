@@ -113,4 +113,4 @@ def handle_full_scane():
         scanner.value.function(endpoint)
 
       except Exception as e:
-        pass
+        color.warning(f"Error running {scanner.value.id}: {e}")
