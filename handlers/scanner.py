@@ -62,6 +62,8 @@ def handle_quick_scan(banner = ""):
   color.banner("Quick OWASP Scan")
 
   endpoint = _choose_or_add_endpoint()
+  if not endpoint:
+    color.warning("No valid endpoint provided.")
 
 def handle_individual_scan(banner = ""):
   clear_screen()
