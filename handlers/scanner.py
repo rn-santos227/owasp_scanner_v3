@@ -108,4 +108,4 @@ def handle_full_scane():
   for endpoint in endpoints:
     color.info(f"\n--- Scanning endpoint: {endpoint} ---")
     for scanner in OWASP:
-      pass
+      color.info(f"Running {scanner.value.id} - {scanner.value.name}...")
