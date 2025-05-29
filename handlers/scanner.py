@@ -110,7 +110,7 @@ def handle_full_scane():
     for scanner in OWASP:
       color.info(f"Running {scanner.value.id} - {scanner.value.name}...")
       try:
-        pass
+        scanner.value.function(endpoint)
 
       except Exception as e:
         pass
