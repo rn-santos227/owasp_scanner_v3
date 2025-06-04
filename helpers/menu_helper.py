@@ -40,7 +40,8 @@ def handle_choice(respond):
     handle_endpoint(banner)
 
   elif choice == Option.OPTION_02.value:
-    print(f"You selected: {Option.OPTION_02.value}")
+    banner = f"You selected: {Option.OPTION_02.value}"
+    handle_full_scan(banner)
 
   elif choice == Option.OPTION_03.value:
     print(f"You selected: {Option.OPTION_03.value}")
