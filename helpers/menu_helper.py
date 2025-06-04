@@ -8,6 +8,7 @@ from handlers.endpoint import handle_endpoint
 from handlers.sensitive_data import handle_sensitive_data
 from handlers.settings import handle_config
 from handlers.scanner import handle_full_scan
+from handlers.scanner import handle_quick_scan
 from handlers.scanner import handle_individual_scan
 from handlers.token import handle_token
 from handlers.username import handle_username
