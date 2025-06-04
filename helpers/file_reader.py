@@ -7,4 +7,6 @@ def file_reader(file : str):
   except Exception as err:
     message = color.warning(f"An error occurred: {err}")
     print(message)
+    return []
+  
   return content
