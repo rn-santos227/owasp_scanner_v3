@@ -17,3 +17,6 @@ def _load_file(file_path: str) -> list[str]:
 
 def _random_string(length: int = 8) -> str:
   return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+
+def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth: int = 10):
+  color.banner("------------------------ FUZZER ------------------------")
