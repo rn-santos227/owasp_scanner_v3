@@ -11,6 +11,7 @@ class Option(Enum):
   OPTION_08 = "Check List of Usernames"
   OPTION_09 = "Adjust Program Settings"
   OPTION_10 = "Open Instruction Manual"
+  OPTION_11 = "Run Fuzzer"
   DATA_1 = "Show Sensitive Data Count"
   DATA_2 = "Search Sensitive Data in List"
   DATA_3 = "Add New Sensitive Data to List"
