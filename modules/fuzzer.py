@@ -51,3 +51,4 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   for fuzz in fuzz_values:
     if fuzz.startswith('?') or fuzz.startswith('/'):
       url = parsed_url + fuzz
+      data = None
