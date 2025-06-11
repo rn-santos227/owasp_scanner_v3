@@ -29,3 +29,4 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
     return vulnerabilities, logs
   
   fuzz_values = _load_file(File.FILE_QUERIES.value)
+  fuzz_values += _load_file('dictionaries/malicious_payloads.txt')
