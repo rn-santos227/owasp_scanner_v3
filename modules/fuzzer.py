@@ -27,3 +27,5 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   if not parsed_url:
     color.warning("Invalid endpoint provided. Skipping fuzzing.")
     return vulnerabilities, logs
+  
+  fuzz_values = _load_file(File.FILE_QUERIES.value)
