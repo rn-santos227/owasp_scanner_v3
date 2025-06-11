@@ -58,7 +58,9 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
       data = fuzz
 
     try:
-      pass
+      response = requests.request(
+
+      )
 
     except requests.RequestException as e:
       color.warning(f"Error with input {fuzz}: {e}")
