@@ -37,6 +37,7 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
 
     )
     baseline_status = baseline.status_code
+    baseline_len = len(baseline.content)
   
   except requests.RequestException as e:
     color.warning(f"Baseline request failed: {e}")
