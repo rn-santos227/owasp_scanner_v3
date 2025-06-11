@@ -22,3 +22,5 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   color.banner("------------------------ FUZZER ------------------------")
   vulnerabilities = []
   logs = []
+
+  parsed_url = validate_url(endpoint)
