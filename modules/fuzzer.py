@@ -30,3 +30,4 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   
   fuzz_values = _load_file(File.FILE_QUERIES.value)
   fuzz_values += _load_file('dictionaries/malicious_payloads.txt')
+  fuzz_values += [f"?rand={_random_string()}" for _ in range(depth)]
