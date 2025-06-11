@@ -36,6 +36,10 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
     baseline = requests.request(
       method,
       parsed_url,
+      headers=headers,
+      timeout=timeout,
+      proxies=proxies,
+      verify=False
     )
     baseline_status = baseline.status_code
     baseline_len = len(baseline.content)
