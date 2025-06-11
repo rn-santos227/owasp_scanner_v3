@@ -47,3 +47,7 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   except requests.RequestException as e:
     color.warning(f"Baseline request failed: {e}")
     return vulnerabilities, logs
+  
+  for fuzz in fuzz_values:
+    if fuzz.startswith('?') or fuzz.startswith('/'):
+      url = parsed_url + fuzz
