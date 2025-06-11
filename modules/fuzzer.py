@@ -33,7 +33,9 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   fuzz_values += [f"?rand={_random_string()}" for _ in range(depth)]
 
   try:
-    pass
+    baseline = requests.request(
+
+    )
   
   except requests.RequestException as e:
     color.warning(f"Baseline request failed: {e}")
