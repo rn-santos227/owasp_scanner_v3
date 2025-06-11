@@ -72,6 +72,10 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
         msg = f"Anomaly with input {fuzz}: status {response.status_code}, size {len(response.content)}"
         color.red(msg)
 
+      else:
+        if len(logs) < 5:
+          logs.append(f"{fuzz}: {response.status_code}")
+
     except requests.RequestException as e:
       color.warning(f"Error with input {fuzz}: {e}")
 
