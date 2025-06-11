@@ -14,3 +14,6 @@ proxies = parse_config()[Config.CONFIG_5.value]
 
 def _load_file(file_path: str) -> list[str]:
   return [line.strip() for line in file_reader(file_path) if line.strip()]
+
+def _random_string(length: int = 8) -> str:
+  return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
