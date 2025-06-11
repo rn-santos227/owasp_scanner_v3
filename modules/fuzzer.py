@@ -59,7 +59,13 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
 
     try:
       response = requests.request(
-
+        method,
+        url,
+        headers=headers,
+        data=data,
+        timeout=timeout,
+        proxies=proxies,
+        verify=False,
       )
 
     except requests.RequestException as e:
