@@ -24,3 +24,5 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
   logs = []
 
   parsed_url = validate_url(endpoint)
+  if not parsed_url:
+    color.warning("Invalid endpoint provided. Skipping fuzzing.")
