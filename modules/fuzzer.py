@@ -20,3 +20,5 @@ def _random_string(length: int = 8) -> str:
 
 def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth: int = 10):
   color.banner("------------------------ FUZZER ------------------------")
+  vulnerabilities = []
+  logs = []
