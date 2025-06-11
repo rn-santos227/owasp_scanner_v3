@@ -69,7 +69,8 @@ def run_fuzzer(endpoint: str, method: str, headers: dict, timeout: float, depth:
       )
 
       if response.status_code != baseline_status or len(response.content) != baseline_len:
-        pass
+        msg = f"Anomaly with input {fuzz}: status {response.status_code}, size {len(response.content)}"
+        color.red(msg)
 
     except requests.RequestException as e:
       color.warning(f"Error with input {fuzz}: {e}")
