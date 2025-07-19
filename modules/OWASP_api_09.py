@@ -53,7 +53,6 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
   uncommon_methods = _load_file(_FILE_UNCOMMON_METHODS)
 
   total_tasks = len(sensitive_paths) + len(backup_suffixes) + len(uncommon_methods)
-  completed_tasks = 0
 
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_to_path = {}
@@ -70,12 +69,9 @@ def check_api_09(endpoint, method : str, headers: dict, timeout : float, verbose
       future = executor.submit(_send_request, parsed_url, method, headers, timeout, method_name)
       future_to_path[future] = f"Uncommon Method: {method_name}"
 
-    for future in as_completed(future_to_path):
+    for future in show_progress_bar(future_to_path, total_tasks, desc="Testing paths", unit=" check"):
       status_code = future.result()
       path_type = future_to_path[future]
-
-      completed_tasks += 1
-      show_progress_bar(completed_tasks, total_tasks)
 
       if status_code == 200:
         vulnerabilities.append(f"{path_type} accessible (Status: {status_code})")

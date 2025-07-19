@@ -52,7 +52,7 @@ def check_api_06(endpoint, method : str, headers: dict, timeout : float, verbose
 
     success_count = 0
     
-    for future in show_progress_bar(future_tasks, _send_request, desc="Testing Rate Limits", unit=" request"):
+    for future in show_progress_bar(future_tasks, len(future_tasks), desc="Testing Rate Limits", unit=" request"):
       status_code, _ = future.result()
 
       if status_code == 200:

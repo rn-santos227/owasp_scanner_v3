@@ -8,7 +8,7 @@ class File(Enum):
   FILE_IDS = "dictionaries/test_ids.txt"
   FILE_KEYS = "dictionaries/sensitive_keys.txt"
   FILE_KEYWORDS = "dictionaries/user_keywords.txt"
-  FILE_MALICIOUS = "dictionaries/malicious_payload.txt"
+  FILE_MALICIOUS = "dictionaries/malicious_payloads.txt"
   FILE_METHODS = "dictionaries/uncommon_methods.txt"
   FILE_PATHS = "dictionaries/sensitive_paths.txt"
   FILE_PASSWORDS = "dictionaries/passwords.txt"
@@ -19,3 +19,4 @@ class File(Enum):
   FILE_URLS = "files/usernames.txt"
   FILE_USERNAMES = "dictionaries/ssrf_test_urls.txt"
   FILE_WHITELIST = "dictionaries/whitelist_endpoints.txt"
+  

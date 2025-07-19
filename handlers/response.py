@@ -1,15 +1,21 @@
-import requests;
+import logging
+import requests
 
-def handle_response(request : requests, match_string, default_testing_length, verbose):
-  response = request.text
-  if match_string is not None:
-    for string in match_string:
-      if string in response:
-        print(f"[+] {request.request.method} - \"{str(string)}\" detected: {request.request.url}")
-      
-      if len(response) != default_testing_length:
-        print(f"[+] {request.request.method} - Different response length: {str(len(response))} - {request.request.url} ")
+logger = logging.getLogger(__name__)
 
-      if verbose:
-        print(f"[VERBOSE] {request.request.method} {str(len(response))}       {request.request.url}")
+def handle_response(response: requests.Response, match_strings, default_length: int, verbose: bool):
+  text = response.text
+  method = response.request.method
+  url = response.request.url
+
+  if match_strings:
+    for string in match_strings:
+      if string in text:
+        logger.info(f"{method} - \"{string}\" detected: {url}")
+
+  if len(text) != default_length:
+    logger.info(f"{method} - Different response length: {len(text)} - {url}")
+
+  if verbose:
+    logger.debug(f"{method} {len(text)} {url}")
          

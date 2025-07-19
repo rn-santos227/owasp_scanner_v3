@@ -52,11 +52,11 @@ def tokenize_input(user_input: str) -> Endpoint:
       index += 1
     
     index += 1
-    endpoint_obj = Endpoint(url, method, headers, timeout, verbose, data, json_data, response)
 
-    if not endpoint_obj.is_valid():
-      color.warning("Invalid endpoint or method. Skipping...")
-      return None
+  endpoint_obj = Endpoint(url, method, headers, timeout, verbose, data, json_data, response)
+  if not endpoint_obj.is_valid():
+    color.warning("Invalid endpoint or method. Skipping...")
+    return None
     
   return endpoint_obj
 

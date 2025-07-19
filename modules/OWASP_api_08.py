@@ -51,7 +51,7 @@ def check_api_08(endpoint, method : str, headers: dict, timeout : float, verbose
 
     with ThreadPoolExecutor() as executor:
       futures = {executor.submit(_check_header, h, v, insecure_headers): h for h, v in header_items}
-      for f in show_progress_bar(futures, "Scanning headers"):
+      for f in show_progress_bar(futures, len(futures), desc="Scanning headers"):
         result = f.result()
         if result:
           results.append(result)

@@ -1,7 +1,7 @@
 import requests
 import json as json_lib
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 import helpers.color_text as color
 
@@ -35,6 +35,16 @@ def _send_test_payload(endpoint: str, headers: dict, timeout: float, payload: di
     color.warning(f"Request error for payload {payload}: {e}")
     return json_lib.dumps(payload), None
 
+def _load_payloads(file_path: str) -> list[dict]:
+  lines = [line.strip() for line in file_reader(file_path) if line.strip()]
+  payloads = []
+  for line in lines:
+    try:
+      payloads.append(json_lib.loads(line))
+    except json_lib.JSONDecodeError:
+      payloads.append({"payload": line})
+  return payloads
+
 #API10:2023 - Unsafe Consumption of APIs
 def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose : bool, data : str = None, json : dict = None, response = None):
   flag_title = f"{OWASP.OWASP_10.value.id} - {OWASP.OWASP_10.value.name}"
@@ -43,20 +53,18 @@ def check_api_10(endpoint, method : str, headers: dict, timeout : float, verbose
   logs = []
 
   parsed_url = validate_url(endpoint)
+  payloads = _load_payloads(_FILE_MALICIOUS)
 
-  total_tasks = len(_FILE_MALICIOUS)
-  completed_tasks = 0
+  total_tasks = len(payloads)
 
   with ThreadPoolExecutor(max_workers=10) as executor:
     future_to_payload = {
       executor.submit(_send_test_payload, parsed_url, headers, timeout, payload): payload
-      for payload in _FILE_MALICIOUS
+      for payload in payloads
     }
 
-    for future in as_completed(future_to_payload):
+    for future in show_progress_bar(future_to_payload, total_tasks, desc="Testing payloads", unit=" payload"):
       payload_str, status_code = future.result()
-      completed_tasks += 1
-      show_progress_bar(completed_tasks, total_tasks)
 
       if status_code == 200:
         color.red(f"Potential unsafe behavior for payload: {payload_str}")
